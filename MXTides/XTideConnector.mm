@@ -72,8 +72,6 @@ static Dstr data;
         st.lat = [[NSNumber alloc] initWithDouble:si.operator [](i)->coordinates.lat()];
         st.lng = [[NSNumber alloc] initWithDouble:si.operator [](i)->coordinates.lng()];
         [sarr addObject:st];
-        //[[XTideConnector sharedConnector].stations addObject:st];
-        //NSLog(@"adding station: %@", st.name);
 	 }
     [XTideConnector sharedConnector].stations = [NSArray arrayWithArray:sarr];
 }

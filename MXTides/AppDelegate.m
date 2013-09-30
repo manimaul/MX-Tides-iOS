@@ -19,7 +19,6 @@
  */
 
 #import "AppDelegate.h"
-//#import "StartupViewController.h"
 
 @implementation AppDelegate
 {
