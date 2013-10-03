@@ -30,10 +30,6 @@
 		D00B966017F889AC0054E66F /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965A17F889AC0054E66F /* UIImageView+AFNetworking.m */; };
 		D00B966217F889E60054E66F /* AFKissXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B966117F889E60054E66F /* AFKissXMLRequestOperation.m */; };
 		D00B966617F88D320054E66F /* libWhirlyGlobe-MaplyComponent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D00B964E17F8871F0054E66F /* libWhirlyGlobe-MaplyComponent.a */; };
-		D00B966B17F88D9F0054E66F /* world.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D00B966717F88D9F0054E66F /* world.dbf */; };
-		D00B966C17F88D9F0054E66F /* world.prj in Resources */ = {isa = PBXBuildFile; fileRef = D00B966817F88D9F0054E66F /* world.prj */; };
-		D00B966D17F88D9F0054E66F /* world.shp in Resources */ = {isa = PBXBuildFile; fileRef = D00B966917F88D9F0054E66F /* world.shp */; };
-		D00B966E17F88D9F0054E66F /* world.shx in Resources */ = {isa = PBXBuildFile; fileRef = D00B966A17F88D9F0054E66F /* world.shx */; };
 		D00B967517F9CB250054E66F /* MXStationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967217F9CB250054E66F /* MXStationDatabase.m */; };
 		D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D00B967417F9CB250054E66F /* XTideConnector.mm */; };
 		D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967817F9CB3F0054E66F /* MXStation.m */; };
@@ -45,12 +41,28 @@
 		D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D00B968917F9CBCB0054E66F /* MXTides-Info.plist */; };
 		D00B968C17F9CBF50054E66F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968B17F9CBF50054E66F /* main.m */; };
 		D00B969617F9CC710054E66F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D00B969417F9CC710054E66F /* InfoPlist.strings */; };
-		D01CEEA517F09B8A0008431C /* IPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01CEEA417F09B8A0008431C /* IPad.storyboard */; };
+		D00B969F17F9DA720054E66F /* ne_110m_land.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D00B969B17F9DA720054E66F /* ne_110m_land.dbf */; };
+		D00B96A017F9DA720054E66F /* ne_110m_land.prj in Resources */ = {isa = PBXBuildFile; fileRef = D00B969C17F9DA720054E66F /* ne_110m_land.prj */; };
+		D00B96A117F9DA720054E66F /* ne_110m_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = D00B969D17F9DA720054E66F /* ne_110m_land.shp */; };
+		D00B96A217F9DA720054E66F /* ne_110m_land.shx in Resources */ = {isa = PBXBuildFile; fileRef = D00B969E17F9DA720054E66F /* ne_110m_land.shx */; };
 		D01CEEAC17F0AAFC0008431C /* MXMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01CEEAB17F0AAFC0008431C /* MXMapViewController.m */; };
 		D01CEEB017F0AEAE0008431C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D01CEEAF17F0AEAE0008431C /* AppDelegate.m */; };
 		D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01CEEB117F0AFB80008431C /* Images.xcassets */; };
 		D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */; };
 		D0A9C68717F75B1500A1E742 /* ocpnHarmonic.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */; };
+		D0ACDB8017FC9DCC00A39C2B /* tide.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB7F17FC9DCC00A39C2B /* tide.png */; };
+		D0ACDB8217FC9DD400A39C2B /* current.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8117FC9DD400A39C2B /* current.png */; };
+		D0ACDB8717FCA89600A39C2B /* ne_50m_land.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8317FCA89600A39C2B /* ne_50m_land.dbf */; };
+		D0ACDB8817FCA89600A39C2B /* ne_50m_land.prj in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8417FCA89600A39C2B /* ne_50m_land.prj */; };
+		D0ACDB8917FCA89600A39C2B /* ne_50m_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8517FCA89600A39C2B /* ne_50m_land.shp */; };
+		D0ACDB8A17FCA89600A39C2B /* ne_50m_land.shx in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8617FCA89600A39C2B /* ne_50m_land.shx */; };
+		D0ACDB8F17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8B17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf */; };
+		D0ACDB9017FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */; };
+		D0ACDB9117FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */; };
+		D0ACDB9217FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8E17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx */; };
+		D0BEECFC17FCBF7200FFA4A4 /* MXMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BEECFB17FCBF7200FFA4A4 /* MXMapView.m */; };
+		D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18717FCF76F0061E664 /* IPhone.storyboard */; };
+		D0CEA18A17FDE4990061E664 /* mxtidebg.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18917FDE4990061E664 /* mxtidebg.png */; };
 		D0E3455717F1023400872028 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC989E117DC28350071DA9E /* libz.dylib */; };
 		D0E345BE17F1099400872028 /* bit_pack.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456517F1092A00872028 /* bit_pack.c */; };
 		D0E345BF17F1099700872028 /* tide_db.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456717F1092A00872028 /* tide_db.c */; };
@@ -134,10 +146,6 @@
 		D00B965917F889AC0054E66F /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFXMLRequestOperation.m"; sourceTree = "<group>"; };
 		D00B965A17F889AC0054E66F /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		D00B966117F889E60054E66F /* AFKissXMLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFKissXMLRequestOperation.m; path = "../../workspace-ios/WhirlyGlobe/third-party/AFKissXMLRequestOperation/AFKissXMLRequestOperation.m"; sourceTree = "<group>"; };
-		D00B966717F88D9F0054E66F /* world.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.dbf; path = ../WhirlyGlobe/resources/vectors/shapefiles/world.dbf; sourceTree = "<group>"; };
-		D00B966817F88D9F0054E66F /* world.prj */ = {isa = PBXFileReference; lastKnownFileType = text; name = world.prj; path = ../WhirlyGlobe/resources/vectors/shapefiles/world.prj; sourceTree = "<group>"; };
-		D00B966917F88D9F0054E66F /* world.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.shp; path = ../WhirlyGlobe/resources/vectors/shapefiles/world.shp; sourceTree = "<group>"; };
-		D00B966A17F88D9F0054E66F /* world.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = world.shx; path = ../WhirlyGlobe/resources/vectors/shapefiles/world.shx; sourceTree = "<group>"; };
 		D00B967117F9CB250054E66F /* MXStationDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationDatabase.h; path = MXTides/MXStationDatabase.h; sourceTree = "<group>"; };
 		D00B967217F9CB250054E66F /* MXStationDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationDatabase.m; path = MXTides/MXStationDatabase.m; sourceTree = "<group>"; };
 		D00B967317F9CB250054E66F /* XTideConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTideConnector.h; path = MXTides/XTideConnector.h; sourceTree = "<group>"; };
@@ -158,7 +166,10 @@
 		D00B968B17F9CBF50054E66F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MXTides/main.m; sourceTree = SOURCE_ROOT; };
 		D00B968D17F9CC0C0054E66F /* MXTides-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MXTides-Prefix.pch"; path = "MXTides/MXTides-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		D00B969517F9CC710054E66F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MXTides/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D01CEEA417F09B8A0008431C /* IPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPad.storyboard; sourceTree = "<group>"; };
+		D00B969B17F9DA720054E66F /* ne_110m_land.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.dbf; path = resources/ne_110m_land/ne_110m_land.dbf; sourceTree = "<group>"; };
+		D00B969C17F9DA720054E66F /* ne_110m_land.prj */ = {isa = PBXFileReference; lastKnownFileType = text; name = ne_110m_land.prj; path = resources/ne_110m_land/ne_110m_land.prj; sourceTree = "<group>"; };
+		D00B969D17F9DA720054E66F /* ne_110m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shp; path = resources/ne_110m_land/ne_110m_land.shp; sourceTree = "<group>"; };
+		D00B969E17F9DA720054E66F /* ne_110m_land.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shx; path = resources/ne_110m_land/ne_110m_land.shx; sourceTree = "<group>"; };
 		D01CEEAA17F0AAFC0008431C /* MXMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMapViewController.h; path = MXTides/MXMapViewController.h; sourceTree = "<group>"; };
 		D01CEEAB17F0AAFC0008431C /* MXMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMapViewController.m; path = MXTides/MXMapViewController.m; sourceTree = "<group>"; };
 		D01CEEAE17F0AEAE0008431C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MXTides/AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +177,20 @@
 		D01CEEB117F0AFB80008431C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MXTides/Images.xcassets; sourceTree = "<group>"; };
 		D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = "harmonics-dwf-20121224-free.tcd"; path = "resources/harmonics-dwf-20121224-free.tcd"; sourceTree = "<group>"; };
 		D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = ocpnHarmonic.tcd; path = resources/ocpnHarmonic.tcd; sourceTree = "<group>"; };
+		D0ACDB7F17FC9DCC00A39C2B /* tide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tide.png; path = resources/tide.png; sourceTree = "<group>"; };
+		D0ACDB8117FC9DD400A39C2B /* current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = current.png; path = resources/current.png; sourceTree = "<group>"; };
+		D0ACDB8317FCA89600A39C2B /* ne_50m_land.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.dbf; path = resources/ne_50m_land/ne_50m_land.dbf; sourceTree = "<group>"; };
+		D0ACDB8417FCA89600A39C2B /* ne_50m_land.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ne_50m_land.prj; path = resources/ne_50m_land/ne_50m_land.prj; sourceTree = "<group>"; };
+		D0ACDB8517FCA89600A39C2B /* ne_50m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.shp; path = resources/ne_50m_land/ne_50m_land.shp; sourceTree = "<group>"; };
+		D0ACDB8617FCA89600A39C2B /* ne_50m_land.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.shx; path = resources/ne_50m_land/ne_50m_land.shx; sourceTree = "<group>"; };
+		D0ACDB8B17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.dbf; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.dbf; sourceTree = "<group>"; };
+		D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ne_50m_admin_0_countries.prj; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.prj; sourceTree = "<group>"; };
+		D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.shp; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp; sourceTree = "<group>"; };
+		D0ACDB8E17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.shx; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shx; sourceTree = "<group>"; };
+		D0BEECFA17FCBF7200FFA4A4 /* MXMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMapView.h; path = MXTides/MXMapView.h; sourceTree = "<group>"; };
+		D0BEECFB17FCBF7200FFA4A4 /* MXMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMapView.m; path = MXTides/MXMapView.m; sourceTree = "<group>"; };
+		D0CEA18717FCF76F0061E664 /* IPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPhone.storyboard; sourceTree = "<group>"; };
+		D0CEA18917FDE4990061E664 /* mxtidebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mxtidebg.png; path = resources/mxtidebg.png; sourceTree = "<group>"; };
 		D0E3455517F101E300872028 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D0E3456517F1092A00872028 /* bit_pack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bit_pack.c; sourceTree = "<group>"; };
 		D0E3456617F1092A00872028 /* tcd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tcd.h; sourceTree = "<group>"; };
@@ -293,7 +318,6 @@
 		2B62DD5116E7F0BC001F52FC = {
 			isa = PBXGroup;
 			children = (
-				D00B969417F9CC710054E66F /* InfoPlist.strings */,
 				D01CEEA317F09B500008431C /* MXTides */,
 				D0D3802917F1270F0071DDA9 /* Resources */,
 				D0E3456A17F1093B00872028 /* xtide */,
@@ -339,6 +363,7 @@
 		2B62DD6416E7F0BC001F52FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D00B969417F9CC710054E66F /* InfoPlist.strings */,
 				D00B968917F9CBCB0054E66F /* MXTides-Info.plist */,
 				D00B968B17F9CBF50054E66F /* main.m */,
 				D00B968D17F9CC0C0054E66F /* MXTides-Prefix.pch */,
@@ -411,9 +436,11 @@
 		D01CEEB517F0D0750008431C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D01CEEA417F09B8A0008431C /* IPad.storyboard */,
+				D0CEA18717FCF76F0061E664 /* IPhone.storyboard */,
 				D00B968617F9CB9F0054E66F /* MXStationTableViewCell.h */,
 				D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */,
+				D0BEECFA17FCBF7200FFA4A4 /* MXMapView.h */,
+				D0BEECFB17FCBF7200FFA4A4 /* MXMapView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -443,10 +470,21 @@
 		D0D3802917F1270F0071DDA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D00B966717F88D9F0054E66F /* world.dbf */,
-				D00B966817F88D9F0054E66F /* world.prj */,
-				D00B966917F88D9F0054E66F /* world.shp */,
-				D00B966A17F88D9F0054E66F /* world.shx */,
+				D0CEA18917FDE4990061E664 /* mxtidebg.png */,
+				D0ACDB8117FC9DD400A39C2B /* current.png */,
+				D0ACDB7F17FC9DCC00A39C2B /* tide.png */,
+				D0ACDB8B17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf */,
+				D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */,
+				D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */,
+				D0ACDB8E17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx */,
+				D0ACDB8317FCA89600A39C2B /* ne_50m_land.dbf */,
+				D0ACDB8417FCA89600A39C2B /* ne_50m_land.prj */,
+				D0ACDB8517FCA89600A39C2B /* ne_50m_land.shp */,
+				D0ACDB8617FCA89600A39C2B /* ne_50m_land.shx */,
+				D00B969B17F9DA720054E66F /* ne_110m_land.dbf */,
+				D00B969C17F9DA720054E66F /* ne_110m_land.prj */,
+				D00B969D17F9DA720054E66F /* ne_110m_land.shp */,
+				D00B969E17F9DA720054E66F /* ne_110m_land.shx */,
 				D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */,
 				D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */,
 			);
@@ -627,16 +665,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0ACDB9017FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj in Resources */,
 				D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */,
 				D0A9C68717F75B1500A1E742 /* ocpnHarmonic.tcd in Resources */,
 				D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */,
 				D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */,
 				D00B969617F9CC710054E66F /* InfoPlist.strings in Resources */,
-				D00B966B17F88D9F0054E66F /* world.dbf in Resources */,
-				D00B966C17F88D9F0054E66F /* world.prj in Resources */,
-				D00B966D17F88D9F0054E66F /* world.shp in Resources */,
-				D00B966E17F88D9F0054E66F /* world.shx in Resources */,
-				D01CEEA517F09B8A0008431C /* IPad.storyboard in Resources */,
+				D00B969F17F9DA720054E66F /* ne_110m_land.dbf in Resources */,
+				D00B96A017F9DA720054E66F /* ne_110m_land.prj in Resources */,
+				D00B96A117F9DA720054E66F /* ne_110m_land.shp in Resources */,
+				D0ACDB9117FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp in Resources */,
+				D00B96A217F9DA720054E66F /* ne_110m_land.shx in Resources */,
+				D0CEA18A17FDE4990061E664 /* mxtidebg.png in Resources */,
+				D0ACDB8F17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf in Resources */,
+				D0ACDB8A17FCA89600A39C2B /* ne_50m_land.shx in Resources */,
+				D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */,
+				D0ACDB8717FCA89600A39C2B /* ne_50m_land.dbf in Resources */,
+				D0ACDB8817FCA89600A39C2B /* ne_50m_land.prj in Resources */,
+				D0ACDB9217FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx in Resources */,
+				D0ACDB8917FCA89600A39C2B /* ne_50m_land.shp in Resources */,
+				D0ACDB8217FC9DD400A39C2B /* current.png in Resources */,
+				D0ACDB8017FC9DCC00A39C2B /* tide.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +713,7 @@
 				D0E345CA17F109DF00872028 /* HarmonicsFile.cc in Sources */,
 				D00B968C17F9CBF50054E66F /* main.m in Sources */,
 				D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */,
+				D0BEECFC17FCBF7200FFA4A4 /* MXMapView.m in Sources */,
 				D0E345CB17F109DF00872028 /* HarmonicsPath.cc in Sources */,
 				D0E345CC17F109DF00872028 /* Interval.cc in Sources */,
 				D0E345CD17F109DF00872028 /* MetaField.cc in Sources */,
@@ -725,6 +775,7 @@
 				D00B969517F9CC710054E66F /* en */,
 			);
 			name = InfoPlist.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -809,10 +860,10 @@
 					"../WhirlyGlobe/third-party/AFNetworking/AFNetworking",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -836,10 +887,10 @@
 					"../WhirlyGlobe/third-party/AFNetworking/AFNetworking",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -13,6 +13,6 @@
 @interface MXStationLinkedList : NSObject
 
 -(MXStation*)getFirstStation;
--(void) addStation:(MXStation*)station;
+-(void)addStation:(MXStation*)station;
 
 @end

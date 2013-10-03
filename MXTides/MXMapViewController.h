@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WhirlyGlobeComponent.h"
 
-@interface MXMapViewController : UIViewController <WhirlyGlobeViewControllerDelegate> //<MaplyViewControllerDelegate>
+@interface MXMapViewController : UIViewController <WhirlyGlobeViewControllerDelegate> //WhirlyGlobeViewControllerDelegate> //<MaplyViewControllerDelegate>
 {
     /// This is the base class shared between the MaplyViewController and the WhirlyGlobeViewController
     MaplyBaseViewController *baseViewC;

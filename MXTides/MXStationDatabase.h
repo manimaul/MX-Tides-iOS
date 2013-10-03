@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MXStation.h"
+
+@class MXStationLinkedList;
 
 @interface MXStationDatabase : NSObject
+
++(MXStationDatabase *)sharedDatabase;
+
+- (NSUInteger)count;
+-(void)addStation:(MXStation*)station;
+-(NSArray*)getStationsBetweenMinLat:(NSNumber*)minLatitude maxLat:(NSNumber*)maxLatitude minLng:(NSNumber*)minLongitude maxLng:(NSNumber*)maxLongitude OfType:(StationType)sType;
+-(NSArray*)getAllStationsOfType:(StationType)sType;
 
 @end

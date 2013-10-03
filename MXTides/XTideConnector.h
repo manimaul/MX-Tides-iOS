@@ -10,8 +10,6 @@
 
 @interface XTideConnector : NSObject
 
-@property (nonatomic, strong) NSArray *stations;
-
 +(XTideConnector *)sharedConnector;
 -(void) loadAsync:(void(^)(void))completionBlock;
 -(BOOL) isLoaded;

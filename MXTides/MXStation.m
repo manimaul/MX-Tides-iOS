@@ -12,10 +12,15 @@
 
 -(StationType)getStationType
 {
-    if ([self.name rangeOfString:@"Current"].location == NSNotFound) {
-        return Current;
+    if ([self.name rangeOfString:@"Current"].location != NSNotFound) {
+        return CurrentStation;
     }    
-    return Tide;
+    return TideStation;
+}
+
+-(bool)hasNext
+{
+    return (self.nextStation != nil);
 }
 
 @end

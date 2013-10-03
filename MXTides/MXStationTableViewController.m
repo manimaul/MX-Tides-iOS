@@ -75,8 +75,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if ([xtideConn isLoaded])
-        return [xtideConn stations].count;
+//    if ([xtideConn isLoaded])
+//        return [xtideConn stations].count;
     
     return 0;
 }
@@ -86,10 +86,10 @@
     static NSString *CellIdentifier = @"stationcell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    if ([xtideConn isLoaded]) {
-        MXStation *sta = [[xtideConn stations] objectAtIndex:indexPath.row];
-        cell.textLabel.text = sta.name;
-    }
+//    if ([xtideConn isLoaded]) {
+//        MXStation *sta = [[xtideConn stations] objectAtIndex:indexPath.row];
+//        cell.textLabel.text = sta.name;
+//    }
     
     return cell;
 }

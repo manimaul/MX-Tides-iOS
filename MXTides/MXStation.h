@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    Tide,
-    Current
+    TideStation,
+    CurrentStation,
+    TideAndCurrentStations
 } StationType;
 
 @interface MXStation : NSObject
@@ -23,5 +24,6 @@ typedef enum {
 @property (nonatomic, retain) MXStation *nextStation;
 
 -(StationType)getStationType;
+-(bool)hasNext;
 
 @end

@@ -14,14 +14,11 @@
 @end
 
 @implementation MXMapNavigationController
-{
-    __weak XTideConnector *xTideConn;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    xTideConn = [XTideConnector sharedConnector];
+    XTideConnector *xTideConn = [XTideConnector sharedConnector];
     if (![xTideConn isLoaded]) {
         [xTideConn loadAsync:^{
             NSLog(@"xtide connector finished loading");

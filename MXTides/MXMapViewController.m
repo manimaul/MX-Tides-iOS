@@ -7,8 +7,9 @@
 //
 
 #import "MXMapViewController.h"
-//#import "AFJSONRequestOperation.h"
 #import "XTideConnector.h"
+#import "MXStationDatabase.h"
+#import "MXStationLinkedList.h"
 #import "MXStation.h"
 
 @interface MXMapViewController ()
@@ -20,75 +21,77 @@
 	// Base layer
 	MaplyViewControllerLayer *baseLayer;
 	MaplyComponentObject *latLonObj;
-	MaplyComponentObject *screenMarkersObj;
-	NSDictionary *vectorDesc;
+	MaplyComponentObject *stationMarkersObj;
+    NSArray *stationObjects;
+    //MaplyComponentObject *markersObj;
+	NSDictionary *landVecDesc;
+    //NSDictionary *landFineVecDesc;
+    NSDictionary *waterVecDesc;
     NSArray *vecObjects;
     MaplyComponentObject *autoLabels;
-    
-	// If we're in 3D mode, how far the elevation goes
-	int zoomLimit;
-	bool requireElev;
+    bool stationsHidden;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
     
+    stationsHidden = false;
+    
 	//load globe view
-	//globeViewC = [[WhirlyGlobeViewController alloc] init];
-	//mapViewC.delegate = self;
-	globeViewC = [[WhirlyGlobeViewController alloc] init];
+	globeViewC = [[WhirlyGlobeViewController alloc] init];;
+    baseViewC = globeViewC;
     globeViewC.delegate = self;
-	baseViewC = globeViewC;
+    
 	[self.view addSubview:baseViewC.view];
 	baseViewC.view.frame = self.view.bounds;
 	[self addChildViewController:baseViewC];
 	// Set the background color for the globe
 	//28 29 23
-	baseViewC.clearColor = [UIColor colorWithRed:239/255. green:235/255. blue:218/255. alpha:1.0]; //[UIColor whiteColor];
+	baseViewC.clearColor = [UIColor colorWithRed:211/255. green:234/255. blue:238/255. alpha:1.0]; //[UIColor whiteColor];
+    [baseViewC clearLights];
     
 	// Start up over Seattle
 	globeViewC.height = 1.0;
+    globeViewC.keepNorthUp = true;
 	[globeViewC animateToPosition:MaplyCoordinateMakeWithDegrees(-122.335939, 47.623839) time:1.0];
     
 	// Maximum number of objects for the layout engine to display
 	[baseViewC setMaxLayoutObjects:1000];
-    
-	globeViewC.keepNorthUp = YES;
-    
-	UIColor *vecColor = [UIColor colorWithRed:123/255. green:113/255. blue:54/255. alpha:1.];
-	float vecWidth = 4.0;
-	vectorDesc = @{ kMaplyColor: vecColor,
-		            kMaplyVecWidth: @(vecWidth),
-		            kMaplyFade: @(1.0),
-                    kMaplyFilled: @(0) };
     
 	//setup observer for when xtide loads
 	[[NSNotificationCenter defaultCenter] addObserver:self
 	                                         selector:@selector(handleXtideDidLoad)
 	                                             name:@"xtide.index.loaded"
 	                                           object:nil];
-    UIColor *lngLineColor = [UIColor colorWithRed:220/255. green:209/255. blue:172/255. alpha:1.];
-	[self addLinesLon:20 lat:10 color:lngLineColor];
-    [self loadWorldShp];
-}
-
-- (void)addScreenMarkers:(XTideConnector *)xtideConn {
-	CGSize size = CGSizeMake(40, 40);
-	UIImage *pinImage = [UIImage imageNamed:@"map_pin"];
     
-	NSMutableArray *markers = [NSMutableArray array];
-	for (MXStation *sta in[xtideConn stations]) {
-		MaplyScreenMarker *marker = [[MaplyScreenMarker alloc] init];
-		marker.image = pinImage;
-		marker.loc = MaplyCoordinateMakeWithDegrees(sta.lng.floatValue, sta.lat.floatValue);
-		marker.size = size;
-		marker.userObject = sta.name;
-		[markers addObject:marker];
-	}
-	screenMarkersObj = [baseViewC addScreenMarkers:markers desc:nil];
+    UIColor *landColor = [UIColor colorWithRed:202/255. green:186/255. blue:118/255. alpha:1.];
+	float vecWidth = 4.0;
+    landVecDesc = @{ kMaplyColor: landColor,
+                     kMaplyVecWidth: @(vecWidth),
+                     kMaplyFade: @(1.0),
+                     kMaplyFilled: @(1.0),
+                     kMaplyLoftedPolyHeight: @(.001)};
+    [self loadShapeFile:@"ne_110m_land" withKey:@"land" withDesc:landVecDesc];
+    [self addLinesLon:20 lat:10 color:landColor];
 }
 
-- (void)addLinesLon:(float)lonDelta lat:(float)latDelta color:(UIColor *)color {
+- (void)addStationVectors {
+	NSMutableArray *vectors = [[NSMutableArray alloc] init];
+	NSDictionary *desc = @{ kMaplyColor: [UIColor redColor] };
+    
+    for (MXStation *stn in [[MXStationDatabase sharedDatabase] getStationsBetweenMinLat:@(45.1) maxLat:@(49.7) minLng:@(-124.2) maxLng:@(-120.1) OfType:TideStation]) {
+        
+        MaplyCoordinate coord = MaplyCoordinateMakeWithDegrees(stn.lng.floatValue, stn.lat.floatValue);
+        
+        MaplyVectorObject *vec = [[MaplyVectorObject alloc] initWithPoint:&coord attributes:nil];
+        [vectors addObject:vec];
+    }
+    
+	stationMarkersObj = [baseViewC addVectors:vectors desc:desc];
+}
+
+- (void)addLinesLon:(float)lonDelta lat:(float)latDelta color:(UIColor *)color
+{
 	NSMutableArray *vectors = [[NSMutableArray alloc] init];
 	NSDictionary *desc = @{ kMaplyColor: color, kMaplySubdivType: kMaplySubdivSimple, kMaplySubdivEpsilon: @(0.001), kMaplyVecWidth: @(4.0) };
 	// Longitude lines
@@ -116,25 +119,40 @@
 }
 
 // Add world shapefile
-- (void)loadWorldShp
+- (void)loadShapeFile:(NSString*)shapeFile withKey:(NSString*)theKey withDesc:(NSDictionary*)desc
 {
-    //NSMutableArray *locVecObjects = [NSMutableArray array];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        MaplyVectorDatabase *shp = [MaplyVectorDatabase vectorDatabaseWithShape:@"world"];
-        MaplyComponentObject *mco = [baseViewC addVectors:@[[shp fetchAllVectors]] desc:vectorDesc];
+        MaplyVectorDatabase *shp = [MaplyVectorDatabase vectorDatabaseWithShape:shapeFile];
+        MaplyComponentObject *mco = [baseViewC addLoftedPolys:@[[shp fetchAllVectors]] key:theKey cache:shp desc:desc];
+        NSMutableArray *vecObj = [NSMutableArray arrayWithArray:vecObjects];
         if (mco) {
-            vecObjects = @[mco];
+            [vecObj addObject:mco];
         }
+        vecObjects = vecObj;
     });
 }
 
-- (void)handleXtideDidLoad {
-	//place pins on map
-    
-    //this works but is too slow... TODO:
-    
-	//XTideConnector *xtideConn = [XTideConnector sharedConnector];
-	//[self addScreenMarkers:xtideConn];
+- (void)handleXtideDidLoad
+{
+    [self addStationScreenMarkers];
+}
+
+- (void)addStationScreenMarkers {
+    CGSize size = CGSizeMake(20, 20);
+	UIImage *pinImage = [UIImage imageNamed:@"tide"];
+
+	NSMutableArray *markers = [NSMutableArray array];
+    for (MXStation *stn in [[MXStationDatabase sharedDatabase] getAllStationsOfType:TideStation])
+    {
+		MaplyScreenMarker *marker = [[MaplyScreenMarker alloc] init];
+		marker.image = pinImage;
+		marker.loc = MaplyCoordinateMakeWithDegrees(stn.lng.floatValue, stn.lat.floatValue);
+		marker.size = size;
+		marker.userObject = stn.name;
+		[markers addObject:marker];
+	}
+    stationObjects = [NSArray arrayWithArray:markers];
+	stationMarkersObj = [baseViewC addScreenMarkers:stationObjects desc:nil];
 }
 
 - (void)viewDidUnload {
@@ -162,11 +180,73 @@
 	}
 }
 
+-(void)showStations
+{
+    //globeViewC ge
+    if (stationsHidden) {
+        stationMarkersObj = [baseViewC addScreenMarkers:stationObjects desc:nil];
+        stationsHidden = false;
+    }
+    
+}
+
+-(void)showStationsDelayed
+{
+    if (stationsHidden) {
+        [self performSelector:@selector(showStations) withObject:NULL afterDelay:0.25];
+    }
+}
+
+-(void)hideStations
+{
+    //todo: only hide if there are more than 200
+    //we will need to be listening to map movement events to populate stations when camera changes
+    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(showStations) object:nil];
+    if (!stationsHidden) {
+        [baseViewC removeObject:stationMarkersObj];
+        stationsHidden = true;
+    }
+}
+
 #pragma mark - MaplyViewControllerDelegate
-/// Called when the user taps on or near an object.
-/// You're given the object you passed in originally, such as a MaplyScreenMarker
-- (void)maplyViewController:(MaplyViewController *)viewC didSelect:(NSObject *)selectedObj {
-	//todo:
+
+/// The user tapped at the given location.
+/// This won't be called if they tapped and selected, just if they tapped.
+- (void)globeViewController:(WhirlyGlobeViewController *)viewC didTapAt:(WGCoordinate)coord
+{
+    NSLog(@"tapat coord");
+    //todo
+}
+
+#pragma mark - UIResponder
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self hideStations];
+//    if (!stationsHidden) {
+//        NSLog(@"hiding stations on touchesBegan");
+//        [self hideStations];
+//    }
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self showStationsDelayed];
+//    if (stationsHidden) {
+//        NSLog(@"showing stations on touchesEnded");
+//        [self showStationsDelayed];
+//    }
+}
+
+-(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self hideStations];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self showStationsDelayed];\
 }
 
 @end

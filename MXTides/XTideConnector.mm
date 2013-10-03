@@ -8,6 +8,7 @@
 
 #import "XTideConnector.h"
 #import "MXStation.h"
+#import "MXStationDatabase.h"
 #include "common.hh"
 
 static StationIndex si;
@@ -53,8 +54,9 @@ static Dstr data;
 
 -(BOOL)isLoaded
 {
-    if ([XTideConnector sharedConnector].loaded  && [[XTideConnector sharedConnector].stations count] == 0)
-        NSLog(@"Error: XtideConnector is loaded but there are no stations in array!");
+    MXStationDatabase *db = [MXStationDatabase sharedDatabase];
+    if (self.loaded && db.count == 0)
+        NSLog(@"Error: XtideConnector is loaded but there are no stations in database!");
     
     return [XTideConnector sharedConnector].loaded ;
 }
@@ -65,15 +67,17 @@ static Dstr data;
                                                          ofType:@"tcd"];
     NSLog(@"loading harmonics file: %@", filePath);
     loadHarmonics([filePath cStringUsingEncoding:NSUTF8StringEncoding]);
-    NSMutableArray *sarr = [NSMutableArray new];
-	 for (int i=0; i<si.size(); ++i) {
+    //NSMutableArray *sarr = [NSMutableArray new];
+    
+    MXStationDatabase *db = [MXStationDatabase sharedDatabase];
+    for (int i=0; i<si.size(); ++i) {
         MXStation *st = [[MXStation alloc] init];
         st.name = [NSString stringWithUTF8String:si.operator [](i)->name.aschar()];
         st.lat = [[NSNumber alloc] initWithDouble:si.operator [](i)->coordinates.lat()];
         st.lng = [[NSNumber alloc] initWithDouble:si.operator [](i)->coordinates.lng()];
-        [sarr addObject:st];
+        [db addStation:st];
 	 }
-    [XTideConnector sharedConnector].stations = [NSArray arrayWithArray:sarr];
+    //[XTideConnector sharedConnector].stations = [NSArray arrayWithArray:sarr];
 }
 
 -(NSString*)getAboutWithStationName:(NSString*)name andDate:(NSDate*)date
