@@ -19,50 +19,25 @@
 		2B62DDBE16E7F54B001F52FC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDBD16E7F54B001F52FC /* MobileCoreServices.framework */; };
 		2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8218CC176FCB7C0012322A /* CoreLocation.framework */; };
 		2BEA1E6B171E0F310039F1A4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEA1E6A171E0F300039F1A4 /* CoreText.framework */; };
-		D00B965017F889120054E66F /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B964F17F889120054E66F /* AFHTTPClient.m */; };
-		D00B965217F8892D0054E66F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965117F8892D0054E66F /* AFHTTPRequestOperation.m */; };
-		D00B965417F889630054E66F /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965317F889630054E66F /* AFImageRequestOperation.m */; };
-		D00B965B17F889AC0054E66F /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965517F889AC0054E66F /* AFJSONRequestOperation.m */; };
-		D00B965C17F889AC0054E66F /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965617F889AC0054E66F /* AFNetworkActivityIndicatorManager.m */; };
-		D00B965D17F889AC0054E66F /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965717F889AC0054E66F /* AFPropertyListRequestOperation.m */; };
-		D00B965E17F889AC0054E66F /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965817F889AC0054E66F /* AFURLConnectionOperation.m */; };
-		D00B965F17F889AC0054E66F /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965917F889AC0054E66F /* AFXMLRequestOperation.m */; };
-		D00B966017F889AC0054E66F /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B965A17F889AC0054E66F /* UIImageView+AFNetworking.m */; };
-		D00B966217F889E60054E66F /* AFKissXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B966117F889E60054E66F /* AFKissXMLRequestOperation.m */; };
-		D00B966617F88D320054E66F /* libWhirlyGlobe-MaplyComponent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D00B964E17F8871F0054E66F /* libWhirlyGlobe-MaplyComponent.a */; };
 		D00B967517F9CB250054E66F /* MXStationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967217F9CB250054E66F /* MXStationDatabase.m */; };
 		D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D00B967417F9CB250054E66F /* XTideConnector.mm */; };
 		D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967817F9CB3F0054E66F /* MXStation.m */; };
-		D00B967C17F9CB3F0054E66F /* MXStationLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967A17F9CB3F0054E66F /* MXStationLinkedList.m */; };
-		D00B968317F9CB610054E66F /* MXMapNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967E17F9CB610054E66F /* MXMapNavigationController.m */; };
-		D00B968417F9CB610054E66F /* MXSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968017F9CB610054E66F /* MXSplitViewController.m */; };
-		D00B968517F9CB610054E66F /* MXStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968217F9CB610054E66F /* MXStationTableViewController.m */; };
 		D00B968817F9CB9F0054E66F /* MXStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */; };
 		D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D00B968917F9CBCB0054E66F /* MXTides-Info.plist */; };
 		D00B968C17F9CBF50054E66F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968B17F9CBF50054E66F /* main.m */; };
 		D00B969617F9CC710054E66F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D00B969417F9CC710054E66F /* InfoPlist.strings */; };
-		D00B969F17F9DA720054E66F /* ne_110m_land.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D00B969B17F9DA720054E66F /* ne_110m_land.dbf */; };
-		D00B96A017F9DA720054E66F /* ne_110m_land.prj in Resources */ = {isa = PBXBuildFile; fileRef = D00B969C17F9DA720054E66F /* ne_110m_land.prj */; };
-		D00B96A117F9DA720054E66F /* ne_110m_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = D00B969D17F9DA720054E66F /* ne_110m_land.shp */; };
-		D00B96A217F9DA720054E66F /* ne_110m_land.shx in Resources */ = {isa = PBXBuildFile; fileRef = D00B969E17F9DA720054E66F /* ne_110m_land.shx */; };
-		D01CEEAC17F0AAFC0008431C /* MXMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01CEEAB17F0AAFC0008431C /* MXMapViewController.m */; };
+		D0109E6D1800910B00311DDC /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0109E6C1800910B00311DDC /* UIImage+Rotate.m */; };
 		D01CEEB017F0AEAE0008431C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D01CEEAF17F0AEAE0008431C /* AppDelegate.m */; };
 		D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01CEEB117F0AFB80008431C /* Images.xcassets */; };
+		D0266F3C17FE31E3002E7982 /* MXStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F3B17FE31E3002E7982 /* MXStartViewController.m */; };
+		D0266F3F17FE4B2C002E7982 /* MXStationTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F3E17FE4B2C002E7982 /* MXStationTabBarController.m */; };
+		D0266F4217FE67EC002E7982 /* MXDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */; };
+		D0266F4517FE6A25002E7982 /* MXGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F4417FE6A25002E7982 /* MXGraphViewController.m */; };
 		D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */; };
 		D0A9C68717F75B1500A1E742 /* ocpnHarmonic.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */; };
-		D0ACDB8017FC9DCC00A39C2B /* tide.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB7F17FC9DCC00A39C2B /* tide.png */; };
-		D0ACDB8217FC9DD400A39C2B /* current.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8117FC9DD400A39C2B /* current.png */; };
-		D0ACDB8717FCA89600A39C2B /* ne_50m_land.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8317FCA89600A39C2B /* ne_50m_land.dbf */; };
-		D0ACDB8817FCA89600A39C2B /* ne_50m_land.prj in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8417FCA89600A39C2B /* ne_50m_land.prj */; };
-		D0ACDB8917FCA89600A39C2B /* ne_50m_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8517FCA89600A39C2B /* ne_50m_land.shp */; };
-		D0ACDB8A17FCA89600A39C2B /* ne_50m_land.shx in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8617FCA89600A39C2B /* ne_50m_land.shx */; };
-		D0ACDB8F17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8B17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf */; };
-		D0ACDB9017FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */; };
-		D0ACDB9117FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */; };
-		D0ACDB9217FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx in Resources */ = {isa = PBXBuildFile; fileRef = D0ACDB8E17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx */; };
-		D0BEECFC17FCBF7200FFA4A4 /* MXMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BEECFB17FCBF7200FFA4A4 /* MXMapView.m */; };
 		D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18717FCF76F0061E664 /* IPhone.storyboard */; };
 		D0CEA18A17FDE4990061E664 /* mxtidebg.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18917FDE4990061E664 /* mxtidebg.png */; };
+		D0CEA1DA17FE30340061E664 /* MXStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */; };
 		D0E3455717F1023400872028 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC989E117DC28350071DA9E /* libz.dylib */; };
 		D0E345BE17F1099400872028 /* bit_pack.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456517F1092A00872028 /* bit_pack.c */; };
 		D0E345BF17F1099700872028 /* tide_db.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456717F1092A00872028 /* tide_db.c */; };
@@ -103,23 +78,6 @@
 		D0E345E217F109DF00872028 /* ZoneIndex.cc in Sources */ = {isa = PBXBuildFile; fileRef = D0E345BB17F1093B00872028 /* ZoneIndex.cc */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D00B964D17F8871F0054E66F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D00B964817F8871E0054E66F /* WhirlyGlobe-MaplyComponent.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2B11E0DB15B4C030007AAE3F;
-			remoteInfo = "WhirlyGlobe-MaplyComponent";
-		};
-		D00B966317F88BF20054E66F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D00B964817F8871E0054E66F /* WhirlyGlobe-MaplyComponent.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2B11E0DA15B4C030007AAE3F;
-			remoteInfo = "WhirlyGlobe-MaplyComponent";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		2B0D630D17A2EE0400C3298D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		2B62DD5A16E7F0BC001F52FC /* MX Tides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MX Tides.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +93,6 @@
 		2B8218CC176FCB7C0012322A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2BC989E117DC28350071DA9E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		2BEA1E6A171E0F300039F1A4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		D00B964817F8871E0054E66F /* WhirlyGlobe-MaplyComponent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "WhirlyGlobe-MaplyComponent.xcodeproj"; path = "../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/WhirlyGlobe-MaplyComponent.xcodeproj"; sourceTree = "<group>"; };
 		D00B964F17F889120054E66F /* AFHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFHTTPClient.m"; sourceTree = "<group>"; };
 		D00B965117F8892D0054E66F /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFHTTPRequestOperation.m"; sourceTree = "<group>"; };
 		D00B965317F889630054E66F /* AFImageRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFImageRequestOperation.m"; sourceTree = "<group>"; };
@@ -152,14 +109,6 @@
 		D00B967417F9CB250054E66F /* XTideConnector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XTideConnector.mm; path = MXTides/XTideConnector.mm; sourceTree = "<group>"; };
 		D00B967717F9CB3F0054E66F /* MXStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStation.h; path = MXTides/MXStation.h; sourceTree = "<group>"; };
 		D00B967817F9CB3F0054E66F /* MXStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStation.m; path = MXTides/MXStation.m; sourceTree = "<group>"; };
-		D00B967917F9CB3F0054E66F /* MXStationLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationLinkedList.h; path = MXTides/MXStationLinkedList.h; sourceTree = "<group>"; };
-		D00B967A17F9CB3F0054E66F /* MXStationLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationLinkedList.m; path = MXTides/MXStationLinkedList.m; sourceTree = "<group>"; };
-		D00B967D17F9CB610054E66F /* MXMapNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMapNavigationController.h; path = MXTides/MXMapNavigationController.h; sourceTree = "<group>"; };
-		D00B967E17F9CB610054E66F /* MXMapNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMapNavigationController.m; path = MXTides/MXMapNavigationController.m; sourceTree = "<group>"; };
-		D00B967F17F9CB610054E66F /* MXSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXSplitViewController.h; path = MXTides/MXSplitViewController.h; sourceTree = "<group>"; };
-		D00B968017F9CB610054E66F /* MXSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXSplitViewController.m; path = MXTides/MXSplitViewController.m; sourceTree = "<group>"; };
-		D00B968117F9CB610054E66F /* MXStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTableViewController.h; path = MXTides/MXStationTableViewController.h; sourceTree = "<group>"; };
-		D00B968217F9CB610054E66F /* MXStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTableViewController.m; path = MXTides/MXStationTableViewController.m; sourceTree = "<group>"; };
 		D00B968617F9CB9F0054E66F /* MXStationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTableViewCell.h; path = MXTides/MXStationTableViewCell.h; sourceTree = "<group>"; };
 		D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTableViewCell.m; path = MXTides/MXStationTableViewCell.m; sourceTree = "<group>"; };
 		D00B968917F9CBCB0054E66F /* MXTides-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MXTides-Info.plist"; path = "MXTides/MXTides-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -170,15 +119,21 @@
 		D00B969C17F9DA720054E66F /* ne_110m_land.prj */ = {isa = PBXFileReference; lastKnownFileType = text; name = ne_110m_land.prj; path = resources/ne_110m_land/ne_110m_land.prj; sourceTree = "<group>"; };
 		D00B969D17F9DA720054E66F /* ne_110m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shp; path = resources/ne_110m_land/ne_110m_land.shp; sourceTree = "<group>"; };
 		D00B969E17F9DA720054E66F /* ne_110m_land.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shx; path = resources/ne_110m_land/ne_110m_land.shx; sourceTree = "<group>"; };
-		D01CEEAA17F0AAFC0008431C /* MXMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMapViewController.h; path = MXTides/MXMapViewController.h; sourceTree = "<group>"; };
-		D01CEEAB17F0AAFC0008431C /* MXMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMapViewController.m; path = MXTides/MXMapViewController.m; sourceTree = "<group>"; };
+		D0109E6B1800910B00311DDC /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		D0109E6C1800910B00311DDC /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		D01CEEAE17F0AEAE0008431C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MXTides/AppDelegate.h; sourceTree = "<group>"; };
 		D01CEEAF17F0AEAE0008431C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MXTides/AppDelegate.m; sourceTree = "<group>"; };
 		D01CEEB117F0AFB80008431C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MXTides/Images.xcassets; sourceTree = "<group>"; };
+		D0266F3A17FE31E3002E7982 /* MXStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStartViewController.h; path = MXTides/MXStartViewController.h; sourceTree = "<group>"; };
+		D0266F3B17FE31E3002E7982 /* MXStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStartViewController.m; path = MXTides/MXStartViewController.m; sourceTree = "<group>"; };
+		D0266F3D17FE4B2C002E7982 /* MXStationTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTabBarController.h; path = MXTides/MXStationTabBarController.h; sourceTree = "<group>"; };
+		D0266F3E17FE4B2C002E7982 /* MXStationTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTabBarController.m; path = MXTides/MXStationTabBarController.m; sourceTree = "<group>"; };
+		D0266F4017FE67EC002E7982 /* MXDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXDetailsViewController.h; path = MXTides/MXDetailsViewController.h; sourceTree = "<group>"; };
+		D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXDetailsViewController.m; path = MXTides/MXDetailsViewController.m; sourceTree = "<group>"; };
+		D0266F4317FE6A25002E7982 /* MXGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXGraphViewController.h; path = MXTides/MXGraphViewController.h; sourceTree = "<group>"; };
+		D0266F4417FE6A25002E7982 /* MXGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXGraphViewController.m; path = MXTides/MXGraphViewController.m; sourceTree = "<group>"; };
 		D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = "harmonics-dwf-20121224-free.tcd"; path = "resources/harmonics-dwf-20121224-free.tcd"; sourceTree = "<group>"; };
 		D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = ocpnHarmonic.tcd; path = resources/ocpnHarmonic.tcd; sourceTree = "<group>"; };
-		D0ACDB7F17FC9DCC00A39C2B /* tide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tide.png; path = resources/tide.png; sourceTree = "<group>"; };
-		D0ACDB8117FC9DD400A39C2B /* current.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = current.png; path = resources/current.png; sourceTree = "<group>"; };
 		D0ACDB8317FCA89600A39C2B /* ne_50m_land.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.dbf; path = resources/ne_50m_land/ne_50m_land.dbf; sourceTree = "<group>"; };
 		D0ACDB8417FCA89600A39C2B /* ne_50m_land.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ne_50m_land.prj; path = resources/ne_50m_land/ne_50m_land.prj; sourceTree = "<group>"; };
 		D0ACDB8517FCA89600A39C2B /* ne_50m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.shp; path = resources/ne_50m_land/ne_50m_land.shp; sourceTree = "<group>"; };
@@ -187,10 +142,10 @@
 		D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ne_50m_admin_0_countries.prj; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.prj; sourceTree = "<group>"; };
 		D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.shp; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp; sourceTree = "<group>"; };
 		D0ACDB8E17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.shx; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shx; sourceTree = "<group>"; };
-		D0BEECFA17FCBF7200FFA4A4 /* MXMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMapView.h; path = MXTides/MXMapView.h; sourceTree = "<group>"; };
-		D0BEECFB17FCBF7200FFA4A4 /* MXMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMapView.m; path = MXTides/MXMapView.m; sourceTree = "<group>"; };
 		D0CEA18717FCF76F0061E664 /* IPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPhone.storyboard; sourceTree = "<group>"; };
 		D0CEA18917FDE4990061E664 /* mxtidebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mxtidebg.png; path = resources/mxtidebg.png; sourceTree = "<group>"; };
+		D0CEA1D817FE30340061E664 /* MXStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTableViewController.h; path = MXTides/MXStationTableViewController.h; sourceTree = "<group>"; };
+		D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTableViewController.m; path = MXTides/MXStationTableViewController.m; sourceTree = "<group>"; };
 		D0E3455517F101E300872028 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D0E3456517F1092A00872028 /* bit_pack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bit_pack.c; sourceTree = "<group>"; };
 		D0E3456617F1092A00872028 /* tcd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tcd.h; sourceTree = "<group>"; };
@@ -286,10 +241,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00B966617F88D320054E66F /* libWhirlyGlobe-MaplyComponent.a in Frameworks */,
+				2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */,
 				D0E3455717F1023400872028 /* libz.dylib in Frameworks */,
 				2B0D630E17A2EE0400C3298D /* libxml2.dylib in Frameworks */,
-				2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */,
 				2BEA1E6B171E0F310039F1A4 /* CoreText.framework in Frameworks */,
 				2B62DDBE16E7F54B001F52FC /* MobileCoreServices.framework in Frameworks */,
 				2B62DD6216E7F0BC001F52FC /* CoreGraphics.framework in Frameworks */,
@@ -318,6 +272,7 @@
 		2B62DD5116E7F0BC001F52FC = {
 			isa = PBXGroup;
 			children = (
+				D0109E6E1800916500311DDC /* Categories */,
 				D01CEEA317F09B500008431C /* MXTides */,
 				D0D3802917F1270F0071DDA9 /* Resources */,
 				D0E3456A17F1093B00872028 /* xtide */,
@@ -327,7 +282,6 @@
 				2B0D633017A2EEE900C3298D /* AFKissXMLRequestOperation */,
 				2B62DD5C16E7F0BC001F52FC /* Frameworks */,
 				2B62DD5B16E7F0BC001F52FC /* Products */,
-				D00B964817F8871E0054E66F /* WhirlyGlobe-MaplyComponent.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -388,12 +342,13 @@
 			name = AFNetworking;
 			sourceTree = "<group>";
 		};
-		D00B964917F8871E0054E66F /* Products */ = {
+		D0109E6E1800916500311DDC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				D00B964E17F8871F0054E66F /* libWhirlyGlobe-MaplyComponent.a */,
+				D0109E6B1800910B00311DDC /* UIImage+Rotate.h */,
+				D0109E6C1800910B00311DDC /* UIImage+Rotate.m */,
 			);
-			name = Products;
+			name = Categories;
 			sourceTree = "<group>";
 		};
 		D01CEEA317F09B500008431C /* MXTides */ = {
@@ -421,14 +376,16 @@
 		D01CEEB417F0D05F0008431C /* View_Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D00B967F17F9CB610054E66F /* MXSplitViewController.h */,
-				D00B968017F9CB610054E66F /* MXSplitViewController.m */,
-				D01CEEAA17F0AAFC0008431C /* MXMapViewController.h */,
-				D01CEEAB17F0AAFC0008431C /* MXMapViewController.m */,
-				D00B968117F9CB610054E66F /* MXStationTableViewController.h */,
-				D00B968217F9CB610054E66F /* MXStationTableViewController.m */,
-				D00B967D17F9CB610054E66F /* MXMapNavigationController.h */,
-				D00B967E17F9CB610054E66F /* MXMapNavigationController.m */,
+				D0266F3A17FE31E3002E7982 /* MXStartViewController.h */,
+				D0266F3B17FE31E3002E7982 /* MXStartViewController.m */,
+				D0CEA1D817FE30340061E664 /* MXStationTableViewController.h */,
+				D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */,
+				D0266F3D17FE4B2C002E7982 /* MXStationTabBarController.h */,
+				D0266F3E17FE4B2C002E7982 /* MXStationTabBarController.m */,
+				D0266F4017FE67EC002E7982 /* MXDetailsViewController.h */,
+				D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */,
+				D0266F4317FE6A25002E7982 /* MXGraphViewController.h */,
+				D0266F4417FE6A25002E7982 /* MXGraphViewController.m */,
 			);
 			name = View_Controllers;
 			sourceTree = "<group>";
@@ -439,8 +396,6 @@
 				D0CEA18717FCF76F0061E664 /* IPhone.storyboard */,
 				D00B968617F9CB9F0054E66F /* MXStationTableViewCell.h */,
 				D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */,
-				D0BEECFA17FCBF7200FFA4A4 /* MXMapView.h */,
-				D0BEECFB17FCBF7200FFA4A4 /* MXMapView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -450,8 +405,6 @@
 			children = (
 				D00B967717F9CB3F0054E66F /* MXStation.h */,
 				D00B967817F9CB3F0054E66F /* MXStation.m */,
-				D00B967917F9CB3F0054E66F /* MXStationLinkedList.h */,
-				D00B967A17F9CB3F0054E66F /* MXStationLinkedList.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -471,8 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				D0CEA18917FDE4990061E664 /* mxtidebg.png */,
-				D0ACDB8117FC9DD400A39C2B /* current.png */,
-				D0ACDB7F17FC9DCC00A39C2B /* tide.png */,
 				D0ACDB8B17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf */,
 				D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */,
 				D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */,
@@ -606,7 +557,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D00B966417F88BF20054E66F /* PBXTargetDependency */,
 			);
 			name = MXTides;
 			productName = WhirlyGlobeComponentTester;
@@ -637,12 +587,6 @@
 			mainGroup = 2B62DD5116E7F0BC001F52FC;
 			productRefGroup = 2B62DD5B16E7F0BC001F52FC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D00B964917F8871E0054E66F /* Products */;
-					ProjectRef = D00B964817F8871E0054E66F /* WhirlyGlobe-MaplyComponent.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2B62DD5916E7F0BC001F52FC /* MXTides */,
@@ -650,42 +594,18 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		D00B964E17F8871F0054E66F /* libWhirlyGlobe-MaplyComponent.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libWhirlyGlobe-MaplyComponent.a";
-			remoteRef = D00B964D17F8871F0054E66F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		2B62DD5816E7F0BC001F52FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0ACDB9017FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj in Resources */,
 				D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */,
 				D0A9C68717F75B1500A1E742 /* ocpnHarmonic.tcd in Resources */,
 				D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */,
 				D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */,
 				D00B969617F9CC710054E66F /* InfoPlist.strings in Resources */,
-				D00B969F17F9DA720054E66F /* ne_110m_land.dbf in Resources */,
-				D00B96A017F9DA720054E66F /* ne_110m_land.prj in Resources */,
-				D00B96A117F9DA720054E66F /* ne_110m_land.shp in Resources */,
-				D0ACDB9117FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp in Resources */,
-				D00B96A217F9DA720054E66F /* ne_110m_land.shx in Resources */,
 				D0CEA18A17FDE4990061E664 /* mxtidebg.png in Resources */,
-				D0ACDB8F17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf in Resources */,
-				D0ACDB8A17FCA89600A39C2B /* ne_50m_land.shx in Resources */,
 				D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */,
-				D0ACDB8717FCA89600A39C2B /* ne_50m_land.dbf in Resources */,
-				D0ACDB8817FCA89600A39C2B /* ne_50m_land.prj in Resources */,
-				D0ACDB9217FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx in Resources */,
-				D0ACDB8917FCA89600A39C2B /* ne_50m_land.shp in Resources */,
-				D0ACDB8217FC9DD400A39C2B /* current.png in Resources */,
-				D0ACDB8017FC9DCC00A39C2B /* tide.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,39 +616,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CEA1DA17FE30340061E664 /* MXStationTableViewController.m in Sources */,
 				D0E345C017F109DF00872028 /* Amplitude.cc in Sources */,
-				D00B968417F9CB610054E66F /* MXSplitViewController.m in Sources */,
-				D00B967C17F9CB3F0054E66F /* MXStationLinkedList.m in Sources */,
 				D0E345C117F109DF00872028 /* Angle.cc in Sources */,
 				D00B967517F9CB250054E66F /* MXStationDatabase.m in Sources */,
 				D0E345C217F109DF00872028 /* Colors.cc in Sources */,
-				D00B968317F9CB610054E66F /* MXMapNavigationController.m in Sources */,
 				D0E345C317F109DF00872028 /* Constituent.cc in Sources */,
 				D0E345C417F109DF00872028 /* ConstituentSet.cc in Sources */,
 				D0E345C517F109DF00872028 /* Coordinates.cc in Sources */,
 				D0E345C617F109DF00872028 /* CurrentBearing.cc in Sources */,
+				D0266F3F17FE4B2C002E7982 /* MXStationTabBarController.m in Sources */,
 				D0E345C717F109DF00872028 /* Date.cc in Sources */,
 				D0E345C817F109DF00872028 /* Dstr.cc in Sources */,
 				D0E345C917F109DF00872028 /* Global.cc in Sources */,
 				D0E345CA17F109DF00872028 /* HarmonicsFile.cc in Sources */,
 				D00B968C17F9CBF50054E66F /* main.m in Sources */,
 				D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */,
-				D0BEECFC17FCBF7200FFA4A4 /* MXMapView.m in Sources */,
 				D0E345CB17F109DF00872028 /* HarmonicsPath.cc in Sources */,
 				D0E345CC17F109DF00872028 /* Interval.cc in Sources */,
 				D0E345CD17F109DF00872028 /* MetaField.cc in Sources */,
+				D0266F4517FE6A25002E7982 /* MXGraphViewController.m in Sources */,
 				D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */,
 				D0E345CE17F109DF00872028 /* Nullable.cc in Sources */,
 				D0E345CF17F109DF00872028 /* NullableInterval.cc in Sources */,
 				D0E345D017F109DF00872028 /* NullablePredictionValue.cc in Sources */,
 				D0E345D117F109DF00872028 /* Offsets.cc in Sources */,
-				D00B968517F9CB610054E66F /* MXStationTableViewController.m in Sources */,
+				D0266F3C17FE31E3002E7982 /* MXStartViewController.m in Sources */,
 				D0E345D217F109DF00872028 /* PredictionValue.cc in Sources */,
 				D0E345D317F109DF00872028 /* Settings.cc in Sources */,
 				D0E345D417F109DF00872028 /* Skycal.cc in Sources */,
 				D0E345D517F109DF00872028 /* Speed.cc in Sources */,
+				D0266F4217FE67EC002E7982 /* MXDetailsViewController.m in Sources */,
 				D0E345D617F109DF00872028 /* Station.cc in Sources */,
 				D0E345D717F109DF00872028 /* StationIndex.cc in Sources */,
+				D0109E6D1800910B00311DDC /* UIImage+Rotate.m in Sources */,
 				D0E345D817F109DF00872028 /* StationRef.cc in Sources */,
 				D0E345D917F109DF00872028 /* SubordinateStation.cc in Sources */,
 				D0E345DA17F109DF00872028 /* tide.cc in Sources */,
@@ -744,29 +665,10 @@
 				D0E345BE17F1099400872028 /* bit_pack.c in Sources */,
 				D0E345BF17F1099700872028 /* tide_db.c in Sources */,
 				D01CEEB017F0AEAE0008431C /* AppDelegate.m in Sources */,
-				D01CEEAC17F0AAFC0008431C /* MXMapViewController.m in Sources */,
-				D00B965217F8892D0054E66F /* AFHTTPRequestOperation.m in Sources */,
-				D00B965417F889630054E66F /* AFImageRequestOperation.m in Sources */,
-				D00B965B17F889AC0054E66F /* AFJSONRequestOperation.m in Sources */,
-				D00B965C17F889AC0054E66F /* AFNetworkActivityIndicatorManager.m in Sources */,
-				D00B965D17F889AC0054E66F /* AFPropertyListRequestOperation.m in Sources */,
-				D00B965E17F889AC0054E66F /* AFURLConnectionOperation.m in Sources */,
-				D00B966217F889E60054E66F /* AFKissXMLRequestOperation.m in Sources */,
-				D00B965F17F889AC0054E66F /* AFXMLRequestOperation.m in Sources */,
-				D00B966017F889AC0054E66F /* UIImageView+AFNetworking.m in Sources */,
-				D00B965017F889120054E66F /* AFHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D00B966417F88BF20054E66F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "WhirlyGlobe-MaplyComponent";
-			targetProxy = D00B966317F88BF20054E66F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D00B969417F9CC710054E66F /* InfoPlist.strings */ = {
@@ -860,7 +762,7 @@
 					"../WhirlyGlobe/third-party/AFNetworking/AFNetworking",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -887,7 +789,7 @@
 					"../WhirlyGlobe/third-party/AFNetworking/AFNetworking",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
 				TARGETED_DEVICE_FAMILY = 1;

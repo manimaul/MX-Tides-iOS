@@ -11,8 +11,16 @@
 #import "MXStationDatabase.h"
 #include "common.hh"
 
-static StationIndex si;
-static Dstr data;
+typedef struct {
+    const char *value;
+    const char *details;
+    const char *time;
+    bool rising;
+    float radians;
+} MXPrediction;
+
+static StationIndex stationIndex;
+static const double kPi = 3.14159265359;
 
 @interface XTideConnector ()
 
@@ -53,125 +61,222 @@ static Dstr data;
 }
 
 -(BOOL)isLoaded
-{
-    MXStationDatabase *db = [MXStationDatabase sharedDatabase];
-    if (self.loaded && db.count == 0)
-        NSLog(@"Error: XtideConnector is loaded but there are no stations in database!");
-    
+{   
     return [XTideConnector sharedConnector].loaded ;
 }
 
 -(void)loadz
 {
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"ocpnHarmonic"
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"harmonics-dwf-20121224-free"
                                                          ofType:@"tcd"];
     NSLog(@"loading harmonics file: %@", filePath);
     loadHarmonics([filePath cStringUsingEncoding:NSUTF8StringEncoding]);
     //NSMutableArray *sarr = [NSMutableArray new];
     
     MXStationDatabase *db = [MXStationDatabase sharedDatabase];
-    for (int i=0; i<si.size(); ++i) {
+    for (int i=0; i<stationIndex.size(); ++i) {
         MXStation *st = [[MXStation alloc] init];
-        st.name = [NSString stringWithUTF8String:si.operator [](i)->name.aschar()];
-        st.lat = [[NSNumber alloc] initWithDouble:si.operator [](i)->coordinates.lat()];
-        st.lng = [[NSNumber alloc] initWithDouble:si.operator [](i)->coordinates.lng()];
+        st.name = [NSString stringWithUTF8String:stationIndex.operator [](i)->name.aschar()];
+        st.lat = [[NSNumber alloc] initWithDouble:stationIndex.operator [](i)->coordinates.lat()];
+        st.lng = [[NSNumber alloc] initWithDouble:stationIndex.operator [](i)->coordinates.lng()];
         [db addStation:st];
 	 }
     //[XTideConnector sharedConnector].stations = [NSArray arrayWithArray:sarr];
 }
 
--(NSString*)getAboutWithStationName:(NSString*)name andDate:(NSDate*)date
+-(void)setupStation:(MXStation*)station forDate:(NSDate*)date
 {
-    getAbout([name cStringUsingEncoding:NSUTF8StringEncoding], [date timeIntervalSince1970]);
-    return [NSString stringWithUTF8String:data.utf8().aschar()];
-}
-
--(NSString*)getPredictionWithStationName:(NSString*)name andDate:(NSDate*)date
-{
-    getPrediction([name cStringUsingEncoding:NSUTF8StringEncoding], [date timeIntervalSince1970]);
-    return [NSString stringWithUTF8String:data.utf8().aschar()];
+    const char * cStrName = [station.name cStringUsingEncoding:NSUTF8StringEncoding];
+    long epoch = [date timeIntervalSince1970];
+    
+    MXPrediction pred = getPrediction(cStrName, epoch);
+    
+    station.rising = pred.rising;
+    station.radians = pred.radians;
+    station.prediction = [NSString stringWithUTF8String:pred.value];
+    station.predictionTime = [NSString stringWithUTF8String:pred.time];
+    station.predictionDetails = [NSString stringWithUTF8String:getPlainTrimmedData(cStrName, epoch)];
+    
 }
 
 #pragma mark - c++
-static void getStationIndex() {
-	//si.sort(si.sortByName);
-	data = "";
-	for (int i=0; i<si.size(); ++i) {
-		si.operator[](i)->name.aschar();
-		data += si.operator [](i)->name.aschar();
-		data += ";";
-		data += si.operator [](i)->coordinates.lat();
-		data += ";";
-		data += si.operator [](i)->coordinates.lng();
-		data += "\n";
-	}
-}
 
-static void getAbout(Dstr station, long epoch) {
-	StationRef *sr = si.getStationRefByName(station);
-	Station *sa = sr->load();
-    
+static char* getAbout(Dstr station, long epoch) {
+    Dstr data;
+	Station *sa = (stationIndex.getStationRefByName(station))->load();
 	sa->setUnits(Units::feet);
 	Timestamp ts = Timestamp(epoch);
     
-	data = "";
 	sa->print(data, ts, ts, Mode::about, Format::text);
+    
+    delete sa;
+    
+    return data.utf8().asdupchar();
 }
 
-static void getPrediction(Dstr station, long epoch) {
-	StationRef *sr = si.getStationRefByName(station);
-	Station *sa = sr->load();
-    
+static MXPrediction getPrediction(Dstr station, long epoch) {
+	Dstr data;
+	Station *sa = (stationIndex.getStationRefByName(station))->load();
 	sa->setUnits(Units::feet);
+    
+    //prediction now
 	Timestamp ts = Timestamp(epoch);
+    
+    MXPrediction pred;
+    
+    Dstr timeStr;
+    ts.print(timeStr, sa->timezone);
+    pred.time = timeStr.utf8().asdupchar();
     
 	PredictionValue value = sa->predictTideLevel(ts);
+    double pNow = value.val();
+    value.print(data);
     
-	data = "";
-	value.print(data);
+    //prediction in another 30 minutes
+    ts += Interval(1800);
+    double pLater = sa->predictTideLevel(ts).val();
+    
+    
+    if (pNow >= 0) {
+        pred.radians = (sa->maxCurrentBearing.mdegrees * kPi) / 180;
+        if (sa->isCurrent) {
+            Dstr ds;
+            sa->maxCurrentBearing.print(ds);
+            data += ", ";
+            data += ds;
+        }
+    } else {
+        pred.radians = (sa->minCurrentBearing.mdegrees * kPi) / 180;
+        if (sa->isCurrent) {
+            Dstr ds;
+            sa->minCurrentBearing.print(ds);
+            data += ", ";
+            data += ds;
+        }
+    }
+    
+    if (pLater > pNow) {
+        pred.rising = true;
+        if (!sa->isCurrent)
+            data += ", rising";
+    } else {
+        pred.rising = false;
+        if (!sa->isCurrent)
+            data += ", falling";
+    }
+    
+    pred.value = data.utf8().asdupchar();
+    
+    delete sa;
+    
+    return pred;
 }
 
-static void getData(Dstr station, long epoch, Mode::Mode mode) {
-	StationRef *sr = si.getStationRefByName(station);
-	Station *sa = sr->load();
-	sa->setUnits(Units::feet);
+static char* getPlainTrimmedData(Dstr station, long epoch)
+{
+    Dstr data;
+    Station *sa = (stationIndex.getStationRefByName(station))->load();
     
-	struct tm morning;
-	struct tm evening;
+    TideEventsOrganizer organizer;
+    sa->predictTideEvents(getMorning(epoch), getEvening(epoch), organizer);
+    TideEventsIterator it = organizer.begin();
+    while (it != organizer.end()) {
+        Dstr line;
+        TideEvent te = it->second;
+        te.eventTime.printTime(line, sa->timezone);
+        line += ' ';
+        
+        if (!te.isSunMoonEvent()) {
+            Dstr lvl;
+            te.eventLevel.printnp(lvl);
+            line += lvl;
+            line += ' ';
+        }
+        
+        line += te.longDescription();
+        
+        data += line;
+        data += '\n';
+        ++it;
+    }
     
-	//time(&rawtime);
-	morning = *localtime(&epoch);
-	evening = *localtime(&epoch);
+    delete sa;
     
-	//rewind to the begining of the day
+    return data.utf8().asdupchar();
+}
+
+static Timestamp getMorning(long epoch) {
+    tm morning;
+    morning = *localtime(&epoch);
+    
+    //rewind to the begining of the day
 	morning.tm_hour = 0;
 	morning.tm_min = 0;
 	morning.tm_sec = 0;
     
-	//fast forward to the end of the day
+    return Timestamp(mktime(&morning));
+}
+
+static Timestamp getEvening(long epoch) {
+    tm evening;
+    evening = *localtime(&epoch);
+    
+    //fast forward to the end of the day
 	evening.tm_hour = 24;
 	evening.tm_min = 0;
 	evening.tm_sec = 0;
     
-	Timestamp starttime = Timestamp(mktime(&morning));
-	Timestamp endtime = Timestamp(mktime(&evening));
-    
-	data = "";
-	sa->print(data, starttime, endtime, mode, Format::text);
+    return Timestamp(mktime(&evening));
 }
 
-static void getTimestamp(Dstr station, long epoch) {
-	StationRef *sr = si.getStationRefByName(station);
-	Station *sa = sr->load();
-	Timestamp t = Timestamp(epoch);
-    
-	data = "";
-	t.print(data, sa->timezone);
-}
+//static char* getData(Dstr station, long epoch, Mode::Mode mode) {
+//    Dstr data;
+//    Station *sa = (stationIndex.getStationRefByName(station))->load();
+//    //std::auto_ptr<Station> sa (sr->load());
+//	sa->setUnits(Units::feet);
+//    
+//	struct tm morning;
+//	struct tm evening;
+//    
+//	//time(&rawtime);
+//	morning = *localtime(&epoch);
+//	evening = *localtime(&epoch);
+//    
+//	//rewind to the begining of the day
+//	morning.tm_hour = 0;
+//	morning.tm_min = 0;
+//	morning.tm_sec = 0;
+//    
+//	//fast forward to the end of the day
+//	evening.tm_hour = 24;
+//	evening.tm_min = 0;
+//	evening.tm_sec = 0;
+//    
+//	Timestamp starttime = Timestamp(mktime(&morning));
+//	Timestamp endtime = Timestamp(mktime(&evening));
+//    
+//	sa->print(data, starttime, endtime, mode, Format::text);
+//    
+//    delete sa;
+//    
+//    return data.utf8().asdupchar();
+//}
+
+//static char* getTimestamp(Dstr station, long epoch) {
+//    Dstr data;
+//	Station *sa = (stationIndex.getStationRefByName(station))->load();
+//	Timestamp t = Timestamp(epoch);
+//    
+//	t.print(data, sa->timezone);
+//    
+//    delete sa;
+//    
+//    return data.utf8().asdupchar();
+//}
 
 static void loadHarmonics(const char* path)
 {
-    si.addHarmonicsFile(path);
+    stationIndex.addHarmonicsFile(path);
 }
 
 @end

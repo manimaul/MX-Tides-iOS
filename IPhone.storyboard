@@ -1,173 +1,895 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="NhJ-I0-QCS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gW0-Zq-igp">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--Map Navigation Controller - Item-->
-        <scene sceneID="q8J-Vf-LD1">
+        <!--Station Table View Controller - Nearby-->
+        <scene sceneID="Prq-mN-7Uv">
             <objects>
-                <navigationController definesPresentationContext="YES" id="n0M-hY-vm8" customClass="MXMapNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ovQ-8V-DWi"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xcx-Fe-DTe">
+                <tableViewController storyboardIdentifier="StationTable" id="vNd-Ni-zA9" customClass="MXStationTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" id="20D-od-7Nz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StationCell" rowHeight="120" id="IhW-5D-TzX" customClass="MXStationTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IhW-5D-TzX" id="kGu-TG-Qaf">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="119"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Station Name" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="247" translatesAutoresizingMaskIntoConstraints="NO" id="H2i-H2-IGF">
+                                            <rect key="frame" x="20" y="57" width="247" height="42"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 mi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDz-E2-HiV">
+                                            <rect key="frame" x="221" y="20" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Slx-9f-AvL">
+                                            <rect key="frame" x="20" y="20" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Slx-9f-AvL" firstAttribute="leading" secondItem="kGu-TG-Qaf" secondAttribute="leading" constant="20" id="JBq-cH-GOB"/>
+                                        <constraint firstItem="H2i-H2-IGF" firstAttribute="top" secondItem="JDz-E2-HiV" secondAttribute="bottom" constant="16" id="Pce-0p-prN"/>
+                                        <constraint firstItem="JDz-E2-HiV" firstAttribute="bottom" secondItem="Slx-9f-AvL" secondAttribute="bottom" constant="1" id="Pp4-rx-Fo6"/>
+                                        <constraint firstItem="H2i-H2-IGF" firstAttribute="leading" secondItem="kGu-TG-Qaf" secondAttribute="leading" constant="20" id="Ueu-ge-7M0"/>
+                                        <constraint firstItem="H2i-H2-IGF" firstAttribute="top" secondItem="Slx-9f-AvL" secondAttribute="bottom" constant="17" id="Uz0-ve-URl"/>
+                                        <constraint firstItem="Slx-9f-AvL" firstAttribute="top" secondItem="kGu-TG-Qaf" secondAttribute="top" constant="20" id="Vjw-XM-pnZ"/>
+                                        <constraint firstItem="JDz-E2-HiV" firstAttribute="top" secondItem="kGu-TG-Qaf" secondAttribute="top" constant="20" id="fy9-fr-ucw"/>
+                                        <constraint firstAttribute="trailing" secondItem="JDz-E2-HiV" secondAttribute="trailing" constant="33" id="naO-a5-s4E"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="stationDist" destination="JDz-E2-HiV" id="fP0-jk-y5D"/>
+                                    <outlet property="stationIcn" destination="Slx-9f-AvL" id="Vlk-bj-CwG"/>
+                                    <outlet property="stationName" destination="H2i-H2-IGF" id="4bs-H8-vs0"/>
+                                    <segue destination="Qi9-jt-3US" kind="push" id="he4-zo-yHl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vNd-Ni-zA9" id="gkw-f6-tWy"/>
+                            <outlet property="delegate" destination="vNd-Ni-zA9" id="SkD-3h-xs9"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Nearby" id="Ern-d1-3Mj"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sk3-vD-yp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="-366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="34Z-0N-ouV">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gW0-Zq-igp" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K24-NI-fAD">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="CxF-jx-v8o" kind="relationship" relationship="rootViewController" id="zdk-Ka-LIH"/>
+                        <segue destination="6Sr-5j-oht" kind="relationship" relationship="rootViewController" id="fJR-LS-4Nm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pd5-CF-5Da" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHP-MK-ecK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="553" y="97"/>
+            <point key="canvasLocation" x="191" y="-372"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vgg-YF-QR6">
+        <!--Start View Controller - MX Tides-->
+        <scene sceneID="VQR-HY-6xM">
             <objects>
-                <viewController id="NhJ-I0-QCS" sceneMemberID="viewController">
+                <viewController id="6Sr-5j-oht" customClass="MXStartViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aWz-iT-x5B"/>
-                        <viewControllerLayoutGuide type="bottom" id="bJm-VP-eG0"/>
+                        <viewControllerLayoutGuide type="top" id="vQb-nB-AQZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rsS-At-9KC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CZQ-Nh-NQG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="7Op-If-FRA">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxtidebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fvj-aS-iVd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mxtidebg.png" translatesAutoresizingMaskIntoConstraints="NO" id="mBf-Bt-OTn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8N-QZ-VH6">
-                                <rect key="frame" x="178" y="235" width="122" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1I-se-tqI">
+                                <rect key="frame" x="207" y="186" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Currents">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" image="current">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="currentButtonPress:" destination="6Sr-5j-oht" eventType="touchUpInside" id="uQ1-1O-N1O"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyH-7b-6g3">
-                                <rect key="frame" x="20" y="235" width="122" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w3-Tl-dGX">
+                                <rect key="frame" x="63" y="186" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Tides">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="jPF-1M-Nch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <state key="normal" image="tide">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tideButtonPress:" destination="6Sr-5j-oht" eventType="touchUpInside" id="EbM-zJ-y67"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ld-1v-jPD">
-                                <rect key="frame" x="1" y="0.0" width="319" height="227"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCq-jx-dc2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MXTide" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znf-J3-xE1">
-                                        <rect key="frame" x="-1" y="20" width="320" height="69"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji0-Jf-hcG">
+                                        <rect key="frame" x="20" y="20" width="280" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="56"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezn-83-xuF">
-                                        <rect key="frame" x="20" y="103" width="280" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="jBn-RY-OFE"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="47.238223 N" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CU-LH-heV">
-                                        <rect key="frame" x="20" y="144" width="280" height="22"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unavailable!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZy-9j-SQi">
+                                        <rect key="frame" x="20" y="50" width="280" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="Uaa-L7-Pmi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="122.239838 W" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGl-4Z-SVJ">
-                                        <rect key="frame" x="20" y="185" width="280" height="22"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Er0-st-bXb">
+                                        <rect key="frame" x="20" y="80" width="280" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.45098042488098145" green="0.7137255072593689" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" red="0.45098042490000001" green="0.71372550729999995" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Er0-st-bXb" firstAttribute="top" secondItem="JZy-9j-SQi" secondAttribute="bottom" constant="8" symbolic="YES" id="41Y-4i-sBU"/>
+                                    <constraint firstItem="Ji0-Jf-hcG" firstAttribute="leading" secondItem="FCq-jx-dc2" secondAttribute="leading" constant="20" symbolic="YES" id="BtG-tc-agv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ji0-Jf-hcG" secondAttribute="trailing" constant="20" symbolic="YES" id="PGT-If-Rh2"/>
+                                    <constraint firstItem="JZy-9j-SQi" firstAttribute="leading" secondItem="Ji0-Jf-hcG" secondAttribute="leading" id="Qul-IA-xBL"/>
+                                    <constraint firstItem="Ji0-Jf-hcG" firstAttribute="top" secondItem="FCq-jx-dc2" secondAttribute="top" constant="20" symbolic="YES" id="UKg-Dj-QYQ"/>
+                                    <constraint firstItem="JZy-9j-SQi" firstAttribute="trailing" secondItem="Er0-st-bXb" secondAttribute="trailing" id="fQ4-o3-hDZ"/>
+                                    <constraint firstItem="Er0-st-bXb" firstAttribute="leading" secondItem="JZy-9j-SQi" secondAttribute="leading" id="llc-gJ-yjR"/>
+                                    <constraint firstItem="JZy-9j-SQi" firstAttribute="top" secondItem="Ji0-Jf-hcG" secondAttribute="bottom" constant="8" symbolic="YES" id="t6j-1p-849"/>
+                                    <constraint firstAttribute="bottom" secondItem="Er0-st-bXb" secondAttribute="bottom" constant="23" id="w42-vu-kTQ"/>
+                                    <constraint firstItem="Ji0-Jf-hcG" firstAttribute="trailing" secondItem="JZy-9j-SQi" secondAttribute="trailing" id="wLh-xZ-iNA"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OJ-fq-Tca">
+                                <rect key="frame" x="56" y="352" width="58" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Sj0-xD-oMW"/>
+                                </constraints>
+                                <state key="normal" title="About">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GIz-H5-uuF" kind="push" id="hvE-C3-OM4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tides" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITv-HE-oUf">
+                                <rect key="frame" x="20" y="157" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Currents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlc-fp-XHJ">
+                                <rect key="frame" x="159" y="157" width="141" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.45098042490000001" green="0.71372550729999995" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="rsS-At-9KC" firstAttribute="top" secondItem="j1I-se-tqI" secondAttribute="bottom" constant="185" id="0wn-5y-cCU"/>
+                            <constraint firstAttribute="bottom" secondItem="mBf-Bt-OTn" secondAttribute="bottom" id="6Xj-u8-CcR"/>
+                            <constraint firstItem="0w3-Tl-dGX" firstAttribute="baseline" secondItem="j1I-se-tqI" secondAttribute="baseline" id="6pV-nx-q5c"/>
+                            <constraint firstItem="ITv-HE-oUf" firstAttribute="top" secondItem="FCq-jx-dc2" secondAttribute="bottom" constant="27" id="8Wy-3W-ivY"/>
+                            <constraint firstItem="0w3-Tl-dGX" firstAttribute="leading" secondItem="7Op-If-FRA" secondAttribute="leading" constant="63" id="Js6-h2-9qK"/>
+                            <constraint firstItem="j1I-se-tqI" firstAttribute="top" secondItem="mlc-fp-XHJ" secondAttribute="bottom" constant="8" symbolic="YES" id="JuE-aO-uPB"/>
+                            <constraint firstItem="0w3-Tl-dGX" firstAttribute="centerX" secondItem="1OJ-fq-Tca" secondAttribute="centerX" id="O30-Wq-UYw"/>
+                            <constraint firstItem="1OJ-fq-Tca" firstAttribute="leading" secondItem="7Op-If-FRA" secondAttribute="leading" constant="56" id="Pdt-wV-SqS"/>
+                            <constraint firstItem="j1I-se-tqI" firstAttribute="leading" secondItem="0w3-Tl-dGX" secondAttribute="trailing" constant="99" id="Toa-0x-Rhm"/>
+                            <constraint firstItem="mBf-Bt-OTn" firstAttribute="top" secondItem="FCq-jx-dc2" secondAttribute="top" id="W4q-vo-CII"/>
+                            <constraint firstItem="mlc-fp-XHJ" firstAttribute="top" secondItem="ITv-HE-oUf" secondAttribute="top" id="YXP-pt-UHU"/>
+                            <constraint firstItem="mlc-fp-XHJ" firstAttribute="leading" secondItem="ITv-HE-oUf" secondAttribute="trailing" constant="8" symbolic="YES" id="YYm-Af-dTO"/>
+                            <constraint firstItem="0w3-Tl-dGX" firstAttribute="centerY" secondItem="mBf-Bt-OTn" secondAttribute="centerY" id="aLP-xL-xrV"/>
+                            <constraint firstItem="0w3-Tl-dGX" firstAttribute="top" secondItem="ITv-HE-oUf" secondAttribute="bottom" constant="8" symbolic="YES" id="bOD-oH-x3G"/>
+                            <constraint firstAttribute="trailing" secondItem="mlc-fp-XHJ" secondAttribute="trailing" constant="20" symbolic="YES" id="ezQ-As-1Ow"/>
+                            <constraint firstItem="FCq-jx-dc2" firstAttribute="trailing" secondItem="mBf-Bt-OTn" secondAttribute="trailing" id="h6J-bz-E49"/>
+                            <constraint firstItem="ITv-HE-oUf" firstAttribute="centerX" secondItem="0w3-Tl-dGX" secondAttribute="centerX" id="hCr-vN-dHg"/>
+                            <constraint firstItem="ITv-HE-oUf" firstAttribute="leading" secondItem="7Op-If-FRA" secondAttribute="leading" constant="20" symbolic="YES" id="l0u-z6-19D"/>
+                            <constraint firstItem="j1I-se-tqI" firstAttribute="bottom" secondItem="0w3-Tl-dGX" secondAttribute="bottom" id="man-pu-4Js"/>
+                            <constraint firstItem="FCq-jx-dc2" firstAttribute="top" secondItem="7Op-If-FRA" secondAttribute="top" id="p8i-lF-4mo"/>
+                            <constraint firstAttribute="trailing" secondItem="mBf-Bt-OTn" secondAttribute="trailing" id="pNs-WN-0RP"/>
+                            <constraint firstItem="FCq-jx-dc2" firstAttribute="leading" secondItem="7Op-If-FRA" secondAttribute="leading" id="rUW-5u-mWp"/>
+                            <constraint firstAttribute="bottom" secondItem="1OJ-fq-Tca" secondAttribute="bottom" constant="20" symbolic="YES" id="s2u-2s-XLk"/>
+                            <constraint firstItem="FCq-jx-dc2" firstAttribute="leading" secondItem="mBf-Bt-OTn" secondAttribute="leading" id="vQd-mK-EPC"/>
+                            <constraint firstItem="j1I-se-tqI" firstAttribute="centerX" secondItem="mlc-fp-XHJ" secondAttribute="centerX" id="zdl-Fv-AkE"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="MX Tides" id="vsm-iz-ntk"/>
+                    <connections>
+                        <outlet property="currentButton" destination="j1I-se-tqI" id="8Ia-PJ-ubj"/>
+                        <outlet property="latLabel" destination="JZy-9j-SQi" id="tGv-ZS-M0j"/>
+                        <outlet property="lngLabel" destination="Er0-st-bXb" id="bAl-0g-Rzi"/>
+                        <outlet property="tideButton" destination="0w3-Tl-dGX" id="KXi-Zf-ng2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ysJ-r9-Hjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUF-hT-rRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="909"/>
+            <point key="canvasLocation" x="704" y="-372"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="SDm-dl-oNh">
+        <!--View Controller - License-->
+        <scene sceneID="7Dt-a2-rUZ">
             <objects>
-                <tableViewController id="Qdo-wB-VmK" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kAa-oF-NjD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f5n-6E-0Vj">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f5n-6E-0Vj" id="spD-aA-t8E">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Qdo-wB-VmK" id="DPh-In-1uk"/>
-                            <outlet property="delegate" destination="Qdo-wB-VmK" id="QqA-R7-BQJ"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0eJ-Pb-9Hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="aLW-ZX-Sdo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dn8-M0-1xE"/>
+                        <viewControllerLayoutGuide type="bottom" id="G5c-hU-pAs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kM1-xP-JqO">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXq-o0-qMg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
+                                <mutableString key="text">GNU GENERAL PUBLIC LICENSE
+
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. &lt;http://fsf.org/>
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+
+Preamble
+
+The GNU General Public License is a free, copyleft license for software and other kinds of works.
+
+The licenses for most software and other practical works are designed to take away your freedom to share and change the works.  By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users.  We, the Free Software Foundation, use the GNU General Public License for most of our software; it applies also to any other work released this way by its authors.  You can apply it to your programs, too.
+
+When we speak of free software, we are referring to freedom, not price.  Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for them if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs, and that you know you can do these things.
+
+To protect your rights, we need to prevent others from denying you these rights or asking you to surrender the rights.  Therefore, you have certain responsibilities if you distribute copies of the software, or if you modify it:  responsibilities to respect the freedom of others.
+
+For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received.  You must make sure that they, too, receive or can get the source code.  And you must show them these terms so they know their rights.
+
+Developers that use the GNU GPL protect your rights with two steps:  (1) assert copyright on the software, and (2) offer you this License giving you legal permission to copy, distribute and/or modify it.
+
+For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software.  For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions.
+
+Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so.  This is fundamentally incompatible with the aim of protecting users' freedom to change the software.  The systematic pattern of such abuse occurs in the area of products for individuals to use, which is precisely where it is most unacceptable.  Therefore, we have designed this version of the GPL to prohibit the practice for those products.  If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users.
+
+Finally, every program is threatened constantly by software patents.  States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary.  To prevent this, the GPL assures that patents cannot be used to render the program non-free.
+
+The precise terms and conditions for copying, distribution and modification follow.
+
+TERMS AND CONDITIONS
+
+0. Definitions.
+
+“This License” refers to version 3 of the GNU General Public License.
+
+“Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.
+
+“The Program” refers to any copyrightable work licensed under this License.  Each licensee is addressed as “you”.  “Licensees” and “recipients” may be individuals or organizations.
+
+To “modify” a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy.  The resulting work is called a “modified version” of the earlier work or a work “based on” the earlier work.
+
+A “covered work” means either the unmodified Program or a work based on the Program.
+
+To “propagate” a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy.  Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.
+
+To “convey” a work means any kind of propagation that enables other parties to make or receive copies.  Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
+
+An interactive user interface displays “Appropriate Legal Notices” to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License.  If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.
+
+1. Source Code.
+
+The “source code” for a work means the preferred form of the work for making modifications to it.  “Object code” means any non-source form of a work.
+
+A “Standard Interface” means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.
+
+The “System Libraries” of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form.  A “Major Component”, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.
+
+The “Corresponding Source” for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities.  However, it does not include the work's System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work.  For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.
+
+The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.
+
+The Corresponding Source for a work in source code form is that same work.
+
+2. Basic Permissions.
+
+All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met.  This License explicitly affirms your unlimited permission to run the unmodified Program.  The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work.  This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.
+
+You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force.  You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright.  Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.
+
+Conveying under any other circumstances is permitted solely under the conditions stated below.  Sublicensing is not allowed; section 10 makes it unnecessary.
+
+3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.
+
+When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work's users, your or third parties' legal rights to forbid circumvention of technological measures.
+
+4. Conveying Verbatim Copies.
+
+You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.
+
+You may charge any price or no price for each copy that you convey, and you may offer support or warranty protection for a fee.
+
+5. Conveying Modified Source Versions.
+
+You may convey a work based on the Program, or the modifications to produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:
+
+a)  The work must carry prominent notices stating that you modified it, and giving a relevant date.
+b)  The work must carry prominent notices stating that it is released under this License and any conditions added under section 7.  This requirement modifies the requirement in section 4 to “keep intact all notices”.
+c)  You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy.  This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged.  This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.
+d)  If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.
+A compilation of a covered work with other separate and independent works, which are not by their nature extensions of the covered work, and which are not combined with it such as to form a larger program, in or on a volume of a storage or distribution medium, is called an “aggregate” if the compilation and its resulting copyright are not used to limit the access or legal rights of the compilation's users beyond what the individual works permit.  Inclusion of a covered work in an aggregate does not cause this License to apply to the other parts of the aggregate.
+
+6. Conveying Non-Source Forms.
+
+You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:
+
+a)  Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.
+b)  Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.
+c)  Convey individual copies of the object code with a copy of the written offer to provide the Corresponding Source.  This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.
+d)  Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge.  You need not require recipients to copy the Corresponding Source along with the object code.  If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source.  Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.
+e)  Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.
+A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.
+
+A “User Product” is either (1) a “consumer product”, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling.  In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage.  For a particular product received by a particular user, “normally used” refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product.  A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.
+
+“Installation Information” for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source.  The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.
+
+If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information.  But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
+
+The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed.  Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.
+
+Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.
+
+7. Additional Terms.
+
+“Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions.  Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law.  If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
+
+When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it.  (Additional permissions may be written to require their own removal in certain cases when you modify the work.)  You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
+
+Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
+
+a)  Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+b)  Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+c)  Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+d)  Limiting the use for publicity purposes of names of licensors or authors of the material; or
+e)  Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+f)  Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
+All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10.  If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term.  If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
+
+If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
+
+Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.
+
+8. Termination.
+
+You may not propagate or modify a covered work except as expressly provided under this License.  Any attempt otherwise to propagate or modify it is void, and will automatically terminate your rights under this License (including any patent licenses granted under the third paragraph of section 11).
+
+However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.
+
+Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.
+
+Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License.  If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10.
+
+9. Acceptance Not Required for Having Copies.
+
+You are not required to accept this License in order to receive or run a copy of the Program.  Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance.  However, nothing other than this License grants you permission to propagate or modify any covered work.  These actions infringe copyright if you do not accept this License.  Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so.
+
+10. Automatic Licensing of Downstream Recipients.
+
+Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License.  You are not responsible for enforcing compliance by third parties with this License.
+
+An “entity transaction” is a transaction transferring control of an organization, or substantially all assets of one, or subdividing an organization, or merging organizations.  If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party's predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.
+
+You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License.  For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it.
+
+11. Patents.
+
+A “contributor” is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based.  The work thus licensed is called the contributor's “contributor version”.
+
+A contributor's “essential patent claims” are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version.  For purposes of this definition, “control” includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.
+
+Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor's essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.
+
+In the following three paragraphs, a “patent license” is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement).  To “grant” such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.
+
+If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients.  “Knowingly relying” means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient's use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.
+
+If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.
+
+A patent license is “discriminatory” if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License.  You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.
+
+Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law.
+
+12. No Surrender of Others' Freedom.
+
+If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License.  If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all.  For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program.
+
+13. Use with the GNU Affero General Public License.
+
+Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work.  The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction through a network will apply to the combination as such.
+
+14. Revised Versions of this License.
+
+The Free Software Foundation may publish revised and/or new versions of the GNU General Public License from time to time.  Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number.  If the Program specifies that a certain numbered version of the GNU General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation.  If the Program does not specify a version number of the GNU General Public License, you may choose any version ever published by the Free Software Foundation.
+
+If the Program specifies that a proxy can decide which future versions of the GNU General Public License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Program.
+
+Later license versions may give you additional or different permissions.  However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.
+
+15. Disclaimer of Warranty.
+
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+16. Limitation of Liability.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+17. Interpretation of Sections 15 and 16.
+
+If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.
+
+END OF TERMS AND CONDITIONS
+
+How to Apply These Terms to Your New Programs
+
+If you develop a new program, and you want it to be of the greatest possible use to the public, the best way to achieve this is to make it free software which everyone can redistribute and change under these terms.
+
+To do so, attach the following notices to the program.  It is safest to attach them to the start of each source file to most effectively state the exclusion of warranty; and each file should have at least the “copyright” line and a pointer to where the full notice is found.
+
+    &lt;one line to give the program's name and a brief idea of what it does.>
+    Copyright (C) &lt;year>  &lt;name of author>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see &lt;http://www.gnu.org/licenses/>.
+Also add information on how to contact you by electronic and paper mail.
+
+If the program does terminal interaction, make it output a short notice like this when it starts in an interactive mode:
+
+    &lt;program>  Copyright (C) &lt;year>  &lt;name of author>
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+The hypothetical commands `show w' and `show c' should show the appropriate parts of the General Public License.  Of course, your program's commands might be different; for a GUI interface, you would use an “about box”.
+
+You should also get your employer (if you work as a programmer) or school, if any, to sign a “copyright disclaimer” for the program, if necessary.  For more information on this, and how to apply and follow the GNU GPL, see &lt;http://www.gnu.org/licenses/>.
+
+The GNU General Public License does not permit incorporating your program into proprietary programs.  If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library.  If this is what you want to do, use the GNU Lesser General Public License instead of this License.  But first, please read &lt;http://www.gnu.org/philosophy/why-not-lgpl.html>.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YXq-o0-qMg" secondAttribute="trailing" id="4Dm-gG-Kdb"/>
+                            <constraint firstItem="YXq-o0-qMg" firstAttribute="leading" secondItem="kM1-xP-JqO" secondAttribute="leading" id="Bzs-ai-lkW"/>
+                            <constraint firstItem="YXq-o0-qMg" firstAttribute="top" secondItem="kM1-xP-JqO" secondAttribute="top" id="JM9-pZ-imB"/>
+                            <constraint firstAttribute="bottom" secondItem="YXq-o0-qMg" secondAttribute="bottom" id="TQV-Ch-ddO"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="License" id="mfy-Tn-VAN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bl-ev-cVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147" y="973"/>
+            <point key="canvasLocation" x="1781" y="341"/>
+        </scene>
+        <!--Station Tab Bar Controller - Station-->
+        <scene sceneID="EVt-d2-avt">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="1fq-zU-IkZ" customClass="MXStationTabBarController" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Station" id="Qwg-gy-yL0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="uYg-d5-IE5">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Pdi-Jx-AEb" kind="relationship" relationship="viewControllers" id="q2x-z0-wJ0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2c-1C-fS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2355" y="-1558"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="fPg-IJ-0hm">
+        <scene sceneID="nHX-3I-4It">
             <objects>
-                <viewController id="YBh-Fw-ig1" sceneMemberID="viewController">
+                <viewController id="gYS-9u-uo1" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3St-vk-pMM"/>
-                        <viewControllerLayoutGuide type="bottom" id="Wtb-Ds-uQg"/>
+                        <viewControllerLayoutGuide type="top" id="tCT-hd-0Sl"/>
+                        <viewControllerLayoutGuide type="bottom" id="U1I-ND-DoU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FV5-uz-rih">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="hgb-TG-4rM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Nte-NO-MDQ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nRu-BU-ZxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRM-cw-Bfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147" y="-683"/>
+            <point key="canvasLocation" x="2355" y="-759"/>
         </scene>
-        <!--Map View Controller-->
-        <scene sceneID="8gH-yu-7IE">
+        <!--Graph View Controller - Graph-->
+        <scene sceneID="2dw-sz-EdH">
             <objects>
-                <viewController id="CxF-jx-v8o" customClass="MXMapViewController" sceneMemberID="viewController">
+                <viewController id="Pdi-Jx-AEb" customClass="MXGraphViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="77X-bM-407"/>
-                        <viewControllerLayoutGuide type="bottom" id="MJ5-QH-7cv"/>
+                        <viewControllerLayoutGuide type="top" id="X1K-C8-Nxm"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZWs-0e-wct"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bl3-M4-mJ7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="m6U-Vs-iN4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="x5v-D4-u4v"/>
+                    <tabBarItem key="tabBarItem" title="Graph" id="9mG-Zf-UYG"/>
+                    <navigationItem key="navigationItem" id="14S-eM-7ZP"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OUx-1N-JdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFM-9E-ItR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1147" y="97"/>
+            <point key="canvasLocation" x="2835" y="-1386"/>
+        </scene>
+        <!--Details View Controller - Prediction-->
+        <scene sceneID="Ei7-NV-epK">
+            <objects>
+                <viewController id="Qi9-jt-3US" customClass="MXDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tgZ-Qm-4kt"/>
+                        <viewControllerLayoutGuide type="bottom" id="wwe-Ep-UfU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AaW-sV-uoE">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Des Moines, East Passage, Puget Sound, Washington" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="W4m-ou-FBM">
+                                <rect key="frame" x="20" y="11" width="280" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="D9E-HA-IOg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.37 feet, rising" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6N-nt-YrK">
+                                <rect key="frame" x="69" y="60" width="231" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-qA-b7T">
+                                <rect key="frame" x="92" y="351" width="136" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Saturday">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dateBtnSel:" destination="Qi9-jt-3US" eventType="touchUpInside" id="0OV-II-sul"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wZa-Kh-hVW">
+                                <rect key="frame" x="20" y="60" width="41" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="Kq1-YB-iTG"/>
+                                    <constraint firstAttribute="height" constant="41" id="nJ0-1P-H7L"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARD-3T-G5x">
+                                <rect key="frame" x="20" y="109" width="280" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2013-10-05 2:42 PM PDT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gi-5V-USa">
+                                <rect key="frame" x="20" y="322" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4ed-c7-DZ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnM-ey-ddu">
+                                <rect key="frame" x="237" y="351" width="63" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=">>">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextDay:" destination="Qi9-jt-3US" eventType="touchUpInside" id="vlY-v9-lDe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-R8-SrJ">
+                                <rect key="frame" x="20" y="351" width="64" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="O30-sb-aw2"/>
+                                </constraints>
+                                <state key="normal" title="&lt;&lt;">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevDay:" destination="Qi9-jt-3US" eventType="touchUpInside" id="5yX-0y-CJX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="ARD-3T-G5x" firstAttribute="trailing" secondItem="I6N-nt-YrK" secondAttribute="trailing" id="15O-zY-L7T"/>
+                            <constraint firstItem="5gn-qA-b7T" firstAttribute="leading" secondItem="AaW-sV-uoE" secondAttribute="leading" constant="92" id="3d1-pQ-0rQ"/>
+                            <constraint firstItem="Je0-R8-SrJ" firstAttribute="top" secondItem="7gi-5V-USa" secondAttribute="bottom" constant="8" symbolic="YES" id="49f-jj-6tl"/>
+                            <constraint firstItem="I6N-nt-YrK" firstAttribute="leading" secondItem="wZa-Kh-hVW" secondAttribute="trailing" constant="8" symbolic="YES" id="4Ly-ss-8Zv"/>
+                            <constraint firstItem="ARD-3T-G5x" firstAttribute="top" secondItem="I6N-nt-YrK" secondAttribute="bottom" constant="8" symbolic="YES" id="8Kw-Hm-sAT"/>
+                            <constraint firstItem="ARD-3T-G5x" firstAttribute="leading" secondItem="7gi-5V-USa" secondAttribute="leading" id="9Hc-Ou-mW6"/>
+                            <constraint firstItem="SnM-ey-ddu" firstAttribute="centerY" secondItem="5gn-qA-b7T" secondAttribute="centerY" id="Cwt-Ke-3BF"/>
+                            <constraint firstItem="SnM-ey-ddu" firstAttribute="leading" secondItem="AaW-sV-uoE" secondAttribute="leading" constant="237" id="D64-Sv-Ocb"/>
+                            <constraint firstItem="SnM-ey-ddu" firstAttribute="trailing" secondItem="7gi-5V-USa" secondAttribute="trailing" id="IpM-UM-V8k"/>
+                            <constraint firstItem="W4m-ou-FBM" firstAttribute="leading" secondItem="AaW-sV-uoE" secondAttribute="leading" constant="20" symbolic="YES" id="J4b-UW-vjp"/>
+                            <constraint firstItem="5gn-qA-b7T" firstAttribute="centerX" secondItem="AaW-sV-uoE" secondAttribute="centerX" id="Mse-2M-dln"/>
+                            <constraint firstAttribute="bottom" secondItem="Je0-R8-SrJ" secondAttribute="bottom" constant="20" symbolic="YES" id="N9A-O2-bvR"/>
+                            <constraint firstItem="W4m-ou-FBM" firstAttribute="top" secondItem="tgZ-Qm-4kt" secondAttribute="bottom" constant="11" id="O7y-ZC-dqN"/>
+                            <constraint firstItem="ARD-3T-G5x" firstAttribute="leading" secondItem="wZa-Kh-hVW" secondAttribute="leading" id="PbR-LW-RNi"/>
+                            <constraint firstItem="5gn-qA-b7T" firstAttribute="bottom" secondItem="SnM-ey-ddu" secondAttribute="bottom" id="S11-aJ-bkX"/>
+                            <constraint firstItem="7gi-5V-USa" firstAttribute="top" secondItem="ARD-3T-G5x" secondAttribute="bottom" constant="8" symbolic="YES" id="UTy-wd-R5T"/>
+                            <constraint firstItem="5gn-qA-b7T" firstAttribute="leading" secondItem="Je0-R8-SrJ" secondAttribute="trailing" constant="8" symbolic="YES" id="Wet-QX-iMG"/>
+                            <constraint firstItem="W4m-ou-FBM" firstAttribute="trailing" secondItem="I6N-nt-YrK" secondAttribute="trailing" id="Wov-Va-MgI"/>
+                            <constraint firstItem="I6N-nt-YrK" firstAttribute="top" secondItem="W4m-ou-FBM" secondAttribute="bottom" constant="8" symbolic="YES" id="cZf-sY-QQb"/>
+                            <constraint firstItem="ARD-3T-G5x" firstAttribute="top" secondItem="wZa-Kh-hVW" secondAttribute="bottom" constant="8" symbolic="YES" id="gSo-9P-Amf"/>
+                            <constraint firstAttribute="trailing" secondItem="W4m-ou-FBM" secondAttribute="trailing" constant="20" symbolic="YES" id="gvr-cY-WmP"/>
+                            <constraint firstItem="5gn-qA-b7T" firstAttribute="top" secondItem="7gi-5V-USa" secondAttribute="bottom" constant="8" symbolic="YES" id="hpu-dh-OAF"/>
+                            <constraint firstItem="ARD-3T-G5x" firstAttribute="trailing" secondItem="7gi-5V-USa" secondAttribute="trailing" id="l2V-vQ-rgy"/>
+                            <constraint firstItem="5gn-qA-b7T" firstAttribute="bottom" secondItem="Je0-R8-SrJ" secondAttribute="bottom" id="mLZ-VM-V9l"/>
+                            <constraint firstItem="wZa-Kh-hVW" firstAttribute="top" secondItem="W4m-ou-FBM" secondAttribute="bottom" constant="8" symbolic="YES" id="pmb-If-1be"/>
+                            <constraint firstItem="wZa-Kh-hVW" firstAttribute="leading" secondItem="W4m-ou-FBM" secondAttribute="leading" id="t3w-5O-vkJ"/>
+                            <constraint firstItem="7gi-5V-USa" firstAttribute="leading" secondItem="Je0-R8-SrJ" secondAttribute="leading" id="x32-ES-mwm"/>
+                            <constraint firstItem="SnM-ey-ddu" firstAttribute="top" secondItem="7gi-5V-USa" secondAttribute="bottom" constant="8" symbolic="YES" id="xiX-ez-6r8"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="Details" id="zaM-VO-y7B"/>
+                    <navigationItem key="navigationItem" title="Prediction" id="hFl-QX-ojP">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="y3L-Lx-vYd">
+                            <connections>
+                                <segue destination="gYS-9u-uo1" kind="push" id="2bJ-wP-7gv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateButton" destination="5gn-qA-b7T" id="5kh-JF-L0P"/>
+                        <outlet property="dateLabel" destination="7gi-5V-USa" id="Jfo-5v-jHO"/>
+                        <outlet property="imgView" destination="wZa-Kh-hVW" id="6qa-7I-YTU"/>
+                        <outlet property="stationNameLabel" destination="W4m-ou-FBM" id="IzU-1L-v9L"/>
+                        <outlet property="stationPredictionLabel" destination="I6N-nt-YrK" id="rlc-fk-Cit"/>
+                        <outlet property="txtView" destination="ARD-3T-G5x" id="W5x-IW-6Ag"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Gl-W7-9dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781" y="-366"/>
+        </scene>
+        <!--View Controller - About-->
+        <scene sceneID="kOn-Qe-hnq">
+            <objects>
+                <viewController id="GIz-H5-uuF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FGs-h9-XPz"/>
+                        <viewControllerLayoutGuide type="bottom" id="eAW-Yd-EWQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Opi-Om-uLd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MX Tides © 2013 Will Kamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8E4-Jv-gHz">
+                                <rect key="frame" x="20" y="48" width="280" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Yf7-RX-HFB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xtide2 © David Flater" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-OA-2bf">
+                                <rect key="frame" x="20" y="185" width="280" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="1HZ-pF-glm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.flaterco.com/xtide/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMt-1F-lyY">
+                                <rect key="frame" x="20" y="203" width="184" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="rE4-NB-o0J"/>
+                                    <constraint firstAttribute="height" constant="10" id="u6T-4R-3di"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/manimaul/MX-Tides-iOS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-LI-We3">
+                                <rect key="frame" x="20" y="66" width="244" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="dMA-Sy-qDS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERc-Ov-wXn">
+                                <rect key="frame" x="20" y="221" width="280" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
+                                <mutableString key="text">The algorithm that XTide uses to predict tides is the one used by the National Ocean Service in the U.S.  It is significantly more accurate than the simple tide clocks that can be bought in novelty stores.  However, it takes more to predict tides accurately than just a spiffy algorithm—you also need some special data for each and every location for which you want to predict tides.  XTide reads these data from harmonics files.
+
+Ultimately, XTide's predictions can only be as good as the available harmonics data.  It is up to you to verify that the predictions for your locale match up acceptably well with the officially sanctioned ones.
+
+Deviations of 1 minute from official predictions are typical for locations having the latest data.
+Deviations of 20 minutes are typical for locations that are using obsolete data.
+Much longer deviations indicate a problem.
+The XTide software distribution resides at http://www.flaterco.com/xtide/files.html.
+
+XTide and its documentation are maintained by David Flater (dave@flaterco.com).</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-XW-aYm">
+                                <rect key="frame" x="0.0" y="137" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MX Tides is a &quot;port&quot; of XTide2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeX-3A-Ygv">
+                                        <rect key="frame" x="20" y="10" width="280" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45098042488098145" green="0.7137255072593689" blue="0.93725496530532837" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KeX-3A-Ygv" firstAttribute="leading" secondItem="sqW-XW-aYm" secondAttribute="leading" constant="20" symbolic="YES" id="XiI-bS-4sw"/>
+                                    <constraint firstItem="KeX-3A-Ygv" firstAttribute="top" secondItem="sqW-XW-aYm" secondAttribute="top" constant="10" id="ZuW-vc-LGp"/>
+                                    <constraint firstAttribute="trailing" secondItem="KeX-3A-Ygv" secondAttribute="trailing" constant="20" symbolic="YES" id="eEc-t2-HVF"/>
+                                    <constraint firstItem="KeX-3A-Ygv" firstAttribute="centerY" secondItem="sqW-XW-aYm" secondAttribute="centerY" id="okA-zu-rrb"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMz-JB-9Ok">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MX Tides 1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wca-XS-Qad">
+                                        <rect key="frame" x="20" y="9" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78823536630000002" green="0.7254902124" blue="0.47843140360000003" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wca-XS-Qad" firstAttribute="top" secondItem="EMz-JB-9Ok" secondAttribute="top" constant="9" id="7Fc-4f-XZ2"/>
+                                    <constraint firstAttribute="trailing" secondItem="wca-XS-Qad" secondAttribute="trailing" constant="20" symbolic="YES" id="hlB-hK-GeL"/>
+                                    <constraint firstItem="wca-XS-Qad" firstAttribute="leading" secondItem="EMz-JB-9Ok" secondAttribute="leading" constant="20" symbolic="YES" id="wAr-Fn-4Jr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mBo-s0-r02">
+                                <rect key="frame" x="20" y="89" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XoV-cs-5Mc"/>
+                                </constraints>
+                                <string key="text">MX Tides provides tide and current predictions for the nearest 10 NOAA tide stations to your geographic location presented in a simple format.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="EMz-JB-9Ok" firstAttribute="top" secondItem="Opi-Om-uLd" secondAttribute="top" id="0y3-fM-tZP"/>
+                            <constraint firstItem="EMz-JB-9Ok" firstAttribute="centerX" secondItem="8E4-Jv-gHz" secondAttribute="centerX" id="6T6-3q-p4Y"/>
+                            <constraint firstItem="Mdk-LI-We3" firstAttribute="leading" secondItem="mBo-s0-r02" secondAttribute="leading" id="7NQ-gZ-ZJF"/>
+                            <constraint firstItem="BMt-1F-lyY" firstAttribute="centerY" secondItem="Opi-Om-uLd" secondAttribute="centerY" id="A5V-Hy-wBT"/>
+                            <constraint firstItem="8E4-Jv-gHz" firstAttribute="top" secondItem="Opi-Om-uLd" secondAttribute="top" constant="48" id="Aai-Wb-udx"/>
+                            <constraint firstItem="8E4-Jv-gHz" firstAttribute="top" secondItem="EMz-JB-9Ok" secondAttribute="bottom" constant="8" symbolic="YES" id="FEg-LF-Wga"/>
+                            <constraint firstItem="8E4-Jv-gHz" firstAttribute="leading" secondItem="Mdk-LI-We3" secondAttribute="leading" id="Fbb-2G-g2Q"/>
+                            <constraint firstItem="mBo-s0-r02" firstAttribute="trailing" secondItem="8E4-Jv-gHz" secondAttribute="trailing" id="Gqx-af-U4K"/>
+                            <constraint firstItem="ERc-Ov-wXn" firstAttribute="top" secondItem="BMt-1F-lyY" secondAttribute="bottom" constant="8" symbolic="YES" id="J3M-Ih-KPc"/>
+                            <constraint firstItem="4jQ-OA-2bf" firstAttribute="leading" secondItem="mBo-s0-r02" secondAttribute="leading" id="MZ6-tJ-tde"/>
+                            <constraint firstAttribute="bottom" secondItem="ERc-Ov-wXn" secondAttribute="bottom" constant="20" symbolic="YES" id="MdW-6i-5w6"/>
+                            <constraint firstItem="4jQ-OA-2bf" firstAttribute="top" secondItem="sqW-XW-aYm" secondAttribute="bottom" constant="8" symbolic="YES" id="SVl-J1-8uT"/>
+                            <constraint firstItem="sqW-XW-aYm" firstAttribute="leading" secondItem="EMz-JB-9Ok" secondAttribute="leading" id="UWg-Bp-Z7s"/>
+                            <constraint firstItem="Mdk-LI-We3" firstAttribute="top" secondItem="8E4-Jv-gHz" secondAttribute="bottom" constant="8" symbolic="YES" id="Zp7-Kb-4jk"/>
+                            <constraint firstItem="4jQ-OA-2bf" firstAttribute="trailing" secondItem="ERc-Ov-wXn" secondAttribute="trailing" id="aN1-fZ-zfM"/>
+                            <constraint firstItem="sqW-XW-aYm" firstAttribute="trailing" secondItem="EMz-JB-9Ok" secondAttribute="trailing" id="b39-SZ-sEw"/>
+                            <constraint firstItem="ERc-Ov-wXn" firstAttribute="leading" secondItem="BMt-1F-lyY" secondAttribute="leading" id="cey-te-ZTw"/>
+                            <constraint firstItem="4jQ-OA-2bf" firstAttribute="trailing" secondItem="mBo-s0-r02" secondAttribute="trailing" id="d0J-2v-zQc"/>
+                            <constraint firstItem="8E4-Jv-gHz" firstAttribute="leading" secondItem="Opi-Om-uLd" secondAttribute="leading" constant="20" symbolic="YES" id="eDm-eb-d9Y"/>
+                            <constraint firstItem="mBo-s0-r02" firstAttribute="top" secondItem="Mdk-LI-We3" secondAttribute="bottom" constant="8" symbolic="YES" id="kjJ-WP-SC3"/>
+                            <constraint firstItem="BMt-1F-lyY" firstAttribute="leading" secondItem="4jQ-OA-2bf" secondAttribute="leading" id="qBb-Ep-RNa"/>
+                            <constraint firstItem="sqW-XW-aYm" firstAttribute="top" secondItem="mBo-s0-r02" secondAttribute="bottom" constant="8" symbolic="YES" id="rXE-Bx-Hh7"/>
+                            <constraint firstItem="sqW-XW-aYm" firstAttribute="leading" secondItem="Opi-Om-uLd" secondAttribute="leading" id="w8N-Sb-oRg"/>
+                            <constraint firstItem="BMt-1F-lyY" firstAttribute="top" secondItem="4jQ-OA-2bf" secondAttribute="bottom" constant="8" symbolic="YES" id="z1l-wu-Rso"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="About" id="wfU-U7-yDd">
+                        <barButtonItem key="rightBarButtonItem" title="License" id="Dr8-Oe-EmA">
+                            <connections>
+                                <segue destination="aLW-ZX-Sdo" kind="push" id="nq5-V1-QIP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRN-fw-6t2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="341"/>
         </scene>
     </scenes>
     <resources>
-        <image name="mxtidebg.png" width="320" height="568"/>
+        <image name="current" width="20" height="20"/>
+        <image name="mxtidebg.png" width="640" height="1136"/>
+        <image name="tide" width="20" height="20"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

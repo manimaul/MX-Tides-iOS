@@ -2,60 +2,41 @@
 //  MXStationTableViewController.m
 //  MXTides
 //
-//  Created by William Kamp on 9/24/13.
+//  Created by William Kamp on 10/3/13.
 //  Copyright (c) 2013 Will Kamp. All rights reserved.
 //
 
 #import "MXStationTableViewController.h"
+#import "MXStationDatabase.h"
 #import "XTideConnector.h"
 #import "MXStation.h"
+#import "MXStationTableViewCell.h"
+#import "MXDetailsViewController.h"
 
 @interface MXStationTableViewController ()
 
+@property (nonatomic) NSArray *stationList;
+@property (nonatomic) UIImage *tideImg;
+@property (nonatomic) UIImage *currImg;
+@property (nonatomic) StationType sType;
+
 @end
 
-@implementation MXStationTableViewController {
-    __weak XTideConnector *xtideConn;
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation MXStationTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleXtideDidLoad)
-                                                 name:@"xtide.index.loaded"
-                                               object:nil];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSString *tp = [[NSBundle mainBundle] pathForResource:@"tide" ofType:@"png"];
+    self.tideImg = [UIImage imageWithContentsOfFile:tp];
+    NSString *cp = [[NSBundle mainBundle] pathForResource:@"current" ofType:@"png"];
+    self.currImg = [UIImage imageWithContentsOfFile:cp];
 }
 
-- (void)handleXtideDidLoad
+- (void)setupData:(StationType)stationType withLocation:(CLLocation*)location
 {
-    [self.tableView reloadData];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    xtideConn = [XTideConnector sharedConnector];
-    if (![xtideConn isLoaded]) {
-        [xtideConn loadAsync:^{
-            NSLog(@"tide stations loaded");
-        }];
-    }
+    self.sType = stationType;
+    self.stationList = [[[MXStationDatabase sharedDatabase] getAllStationsOfType:stationType sortedByDistance:location] subarrayWithRange:NSMakeRange(0, 10)];    
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,81 +49,43 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-//    if ([xtideConn isLoaded])
-//        return [xtideConn stations].count;
-    
-    return 0;
+    return self.stationList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"stationcell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-//    if ([xtideConn isLoaded]) {
-//        MXStation *sta = [[xtideConn stations] objectAtIndex:indexPath.row];
-//        cell.textLabel.text = sta.name;
-//    }
+    static NSString *CellIdentifier = @"StationCell";
+    MXStationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    MXStation *stn = [self.stationList objectAtIndex:indexPath.row];
+    cell.stationName.text = stn.name;
+    cell.stationDist.text = [NSString stringWithFormat:@"Distance: %.1fmi",(stn.distMeters.doubleValue/1609.344)];
+    switch (self.sType) {
+        case TideStation:
+            cell.stationIcn.image = self.tideImg;
+            break;
+        case CurrentStation:
+            cell.stationIcn.image = self.currImg;
+            break;
+            
+        default:
+            break;
+    }
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)theSender
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    [super prepareForSegue:segue sender:theSender];
+    NSInteger index = self.tableView.indexPathForSelectedRow.item;
+    MXStation *stn = [self.stationList objectAtIndex:index];
+    MXDetailsViewController *vc = segue.destinationViewController;
+    vc.station = stn;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

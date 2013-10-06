@@ -27,15 +27,15 @@ CurrentBearing::CurrentBearing () {}
 
 CurrentBearing::CurrentBearing (uint16_t degrees, bool isTrue):
   Nullable(false),
-  _degrees(degrees),
+  mdegrees(degrees),
   isDegreesTrue(isTrue) {
-  assert (_degrees < 360);
+  assert (mdegrees < 360);
 }
 
 
 void CurrentBearing::print (Dstr &text_out) const {
   assert (!_isNull);
-  text_out = _degrees;
+  text_out = mdegrees;
   text_out += '°';
   if (isDegreesTrue)
     text_out += " true";

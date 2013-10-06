@@ -18,9 +18,11 @@
     return TideStation;
 }
 
--(bool)hasNext
+-(void)discardDetails
 {
-    return (self.nextStation != nil);
+    self.prediction = Nil;
+    self.predictionTime = Nil;
+    self.predictionDetails = Nil;
 }
 
 @end

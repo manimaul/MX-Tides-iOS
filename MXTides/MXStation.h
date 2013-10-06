@@ -16,14 +16,19 @@ typedef enum {
 
 @interface MXStation : NSObject
 
+-(StationType)getStationType;
+
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic) NSNumber *lat;
 @property (nonatomic) NSNumber *lng;
+@property (nonatomic) NSNumber *distMeters;
 
-//to store in a linked list
-@property (nonatomic, retain) MXStation *nextStation;
-
--(StationType)getStationType;
--(bool)hasNext;
+-(void)discardDetails;
+//detail properties to be discarded
+@property BOOL rising;
+@property CGFloat radians;
+@property NSString *prediction;
+@property NSString *predictionDetails;
+@property NSString *predictionTime;
 
 @end

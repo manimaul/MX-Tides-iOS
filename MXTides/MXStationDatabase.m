@@ -8,7 +8,6 @@
 
 
 #import "MXStationDatabase.h"
-#import "MXStationLinkedList.h"
 #import "MXStation.h"
 
 @implementation MXStationDatabase {
@@ -34,7 +33,7 @@
         //build dictionary with 180 integer keys for every degree latitude (-90 to 90)
         latitudes = [[NSMutableDictionary alloc] initWithCapacity:180];
         for (int lat = -90; lat < 91; lat++) {
-            [latitudes setObject:[MXStationLinkedList new] forKey:@(lat)];
+            [latitudes setObject:[NSMutableArray new] forKey:@(lat)];
         }
     }
     return self;
@@ -49,21 +48,43 @@
 {
     totalCount++;
     NSNumber *latKey = @(station.lat.intValue);
-    MXStationLinkedList *latList = [latitudes objectForKey:latKey];
-    [latList addStation:station];
-}   
+    NSMutableArray *latList = [latitudes objectForKey:latKey];
+    [latList addObject:station];
+    //[latList addStation:station];
+}
+
+-(NSArray*)getAllStationsOfType:(StationType)sType sortedByDistance:(CLLocation*)location
+{
+    NSArray *sArr = [self getAllStationsOfType:sType];
+    
+    //set the distances
+    for (MXStation *stn in sArr) {
+        CLLocation *stnLoc = [[CLLocation alloc] initWithLatitude:stn.lat.doubleValue longitude:stn.lng.doubleValue];
+        stn.distMeters = @([location distanceFromLocation:stnLoc]);
+    }
+    
+    //sort the array
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"distMeters"
+                                                 ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedArray;
+    sortedArray = [sArr sortedArrayUsingDescriptors:sortDescriptors];
+    
+    return sortedArray;
+}
 
 -(NSArray*)getAllStationsOfType:(StationType)sType
 {
     NSMutableArray *stnArr = [NSMutableArray new];
-    for (MXStationLinkedList *llist in [latitudes allValues]) {
-        MXStation *stn = [llist getFirstStation];
-        while (stn) {
+    
+    //yep this is a nested for loop... you wanted "all" the stations
+    for (NSMutableArray *llist in [latitudes allValues]) {
+        for (MXStation *stn in llist) {
             if (sType == TideAndCurrentStations)
                 [stnArr addObject:stn];
             else if (sType == [stn getStationType])
                 [stnArr addObject:stn];
-            stn = [stn nextStation];
         }
     }
     return [NSArray arrayWithArray:stnArr];
@@ -71,26 +92,17 @@
 
 -(NSArray*)getStationsAtLatitude:(NSNumber*)latitude
 {
-    NSMutableArray *stnArr = [NSMutableArray new];
-    MXStationLinkedList *llist = [latitudes objectForKey:@([latitude intValue])];
-    MXStation *stn = [llist getFirstStation];
-
-    while (stn) {
-        [stnArr addObject:stn];
-        stn = [stn nextStation];
-    }
-    
-    return [NSArray arrayWithArray:stnArr];
+    //NSMutableArray *stnArr = [NSMutableArray new];
+    NSMutableArray *llist = [latitudes objectForKey:@([latitude intValue])];
+    return [NSArray arrayWithArray:llist];
 }
 
 -(NSArray*)getStationsBetweenMinLat:(NSNumber*)minLatitude maxLat:(NSNumber*)maxLatitude minLng:(NSNumber*)minLongitude maxLng:(NSNumber*)maxLongitude OfType:(StationType)sType
 {
     NSMutableArray *stnArr = [NSMutableArray new];
     for (int i = minLatitude.intValue; i < maxLatitude.intValue; i++) {
-        MXStationLinkedList *llist = [latitudes objectForKey:@(i)];
-        MXStation *stn = [llist getFirstStation];
-        //NSLog(@"Station linkedlist head at lat-key:%d %@ lat:%@ lng:%@", i, stn.name, stn.lat, stn.lng);
-        while (stn) {
+        NSMutableArray *llist = [latitudes objectForKey:@(i)];
+        for (MXStation *stn in llist) {
             if (stn.lat.doubleValue >= minLatitude.doubleValue &&
                 stn.lat.doubleValue <= maxLatitude.doubleValue &&
                 stn.lng.doubleValue >= minLongitude.doubleValue &&
@@ -101,10 +113,8 @@
                 else if (sType == [stn getStationType])
                     [stnArr addObject:stn];
             }
-            stn = [stn nextStation];
         }
     }
-    
     return [NSArray arrayWithArray:stnArr];
 }
 

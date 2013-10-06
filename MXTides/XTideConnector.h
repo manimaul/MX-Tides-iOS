@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class MXStation;
+
 @interface XTideConnector : NSObject
 
 +(XTideConnector *)sharedConnector;
@@ -15,7 +17,9 @@
 -(BOOL) isLoaded;
 
 //call theses after isLoaded
--(NSString*)getAboutWithStationName:(NSString*)name andDate:(NSDate*)date;
--(NSString*)getPredictionWithStationName:(NSString*)name andDate:(NSDate*)date;
+-(void)setupStation:(MXStation*)station forDate:(NSDate*)date;
+//-(NSString*)getAboutWithStationName:(NSString*)name andDate:(NSDate*)date;
+//-(NSString*)getPredictionWithStationName:(NSString*)name andDate:(NSDate*)date;
+//-(NSString*)getPlainData:(NSString*)name andDate:(NSDate*)date;
 
 @end

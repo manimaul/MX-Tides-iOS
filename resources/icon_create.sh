@@ -15,6 +15,8 @@
 # inkscape --without-gui --export-png="mxtide_152x.png" --export-background-opacity=0 --export-width=152 --export-height=152 "mxtide.svg"
 #inkscape --without-gui --export-png="mxtide_99x.png" --export-background-opacity=0 --export-width=99 --export-height=99 "mxtide.svg"
 
-inkscape --without-gui --export-png="tide.png" --export-background-opacity=0 --export-width=20 --export-height=20 "tide.svg"
+inkscape --without-gui --export-png="tide_20x.png" --export-background-opacity=0 --export-width=20 --export-height=20 "tide.svg"
+inkscape --without-gui --export-png="tide_40x.png" --export-background-opacity=0 --export-width=40 --export-height=40 "tide.svg"
 
-inkscape --without-gui --export-png="current.png" --export-background-opacity=0 --export-width=20 --export-height=20 "current.svg"
+inkscape --without-gui --export-png="current_20x.png" --export-background-opacity=0 --export-width=20 --export-height=20 "current.svg"
+inkscape --without-gui --export-png="current_40x.png" --export-background-opacity=0 --export-width=40 --export-height=40 "current.svg"

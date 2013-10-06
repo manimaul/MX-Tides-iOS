@@ -10,4 +10,8 @@
 
 @interface MXStationTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *stationName;
+@property (nonatomic, weak) IBOutlet UILabel *stationDist;
+@property (nonatomic, weak) IBOutlet UIImageView *stationIcn;
+
 @end

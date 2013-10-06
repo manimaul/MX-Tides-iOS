@@ -41,9 +41,10 @@ public:
   // "true" qualifier attached.  This does not have fixed field width.
   // It is an error to attempt to print a null CurrentBearing.
   void print (Dstr &text_out) const;
-
+  uint16_t mdegrees;
+    
 protected:
-  uint16_t _degrees;
+  
   bool isDegreesTrue;
 };
 
