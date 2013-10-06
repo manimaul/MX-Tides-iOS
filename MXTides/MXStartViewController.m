@@ -13,7 +13,7 @@
 #import "MXStationDatabase.h"
 
 static bool haveLocation = false;
-static bool debug = true;
+static bool debug = false;
 
 @interface MXStartViewController ()
 
@@ -40,6 +40,7 @@ static bool debug = true;
     
     [self startLocationOrShowAlert];
     
+    //restart location when app resumes
     [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(startLocationOrShowAlert)
                                                name:UIApplicationWillEnterForegroundNotification
@@ -58,20 +59,36 @@ static bool debug = true;
 
 - (void)startLocationOrShowAlert
 {
-    if( [CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorized ) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Service Disabled"
-                                                        message:@"To re-enable, please go to Settings and turn on Location Service for this app."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        if (debug) {
-            [self.currentButton setEnabled:true];
-            [self.tideButton setEnabled:true];
-            self.location = [[CLLocation alloc] initWithLatitude:47.25 longitude:-122.3];
-        }
-    } else {
-        [locMan startUpdatingLocation];
+    switch ([CLLocationManager authorizationStatus]) {
+        case kCLAuthorizationStatusAuthorized:
+            [locMan startUpdatingLocation];
+            break;
+        case kCLAuthorizationStatusNotDetermined:
+            [locMan startUpdatingLocation];
+            break;
+        case kCLAuthorizationStatusDenied:
+            [self showLocationAlert];
+            break;
+        case kCLAuthorizationStatusRestricted:
+            [self showLocationAlert];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)showLocationAlert
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Service Disabled"
+                                                    message:@"To re-enable, please go to Settings and turn on Location Service for this app."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    if (debug) {
+        [self.currentButton setEnabled:true];
+        [self.tideButton setEnabled:true];
+        self.location = [[CLLocation alloc] initWithLatitude:47.25 longitude:-122.3];
     }
 }
 

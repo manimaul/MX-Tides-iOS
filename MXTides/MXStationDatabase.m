@@ -81,6 +81,8 @@
     //yep this is a nested for loop... you wanted "all" the stations
     for (NSMutableArray *llist in [latitudes allValues]) {
         for (MXStation *stn in llist) {
+            if (!stn.name)
+                continue;
             if (sType == TideAndCurrentStations)
                 [stnArr addObject:stn];
             else if (sType == [stn getStationType])
@@ -103,6 +105,8 @@
     for (int i = minLatitude.intValue; i < maxLatitude.intValue; i++) {
         NSMutableArray *llist = [latitudes objectForKey:@(i)];
         for (MXStation *stn in llist) {
+            if (!stn.name)
+                continue;
             if (stn.lat.doubleValue >= minLatitude.doubleValue &&
                 stn.lat.doubleValue <= maxLatitude.doubleValue &&
                 stn.lng.doubleValue >= minLongitude.doubleValue &&

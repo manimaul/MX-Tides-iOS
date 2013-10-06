@@ -7,38 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0D630E17A2EE0400C3298D /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B0D630D17A2EE0400C3298D /* libxml2.dylib */; };
 		2B62DD5E16E7F0BC001F52FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DD5D16E7F0BC001F52FC /* UIKit.framework */; };
 		2B62DD6016E7F0BC001F52FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DD5F16E7F0BC001F52FC /* Foundation.framework */; };
 		2B62DD6216E7F0BC001F52FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DD6116E7F0BC001F52FC /* CoreGraphics.framework */; };
-		2B62DDB416E7F4FD001F52FC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDB316E7F4FD001F52FC /* QuartzCore.framework */; };
-		2B62DDB616E7F505001F52FC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDB516E7F505001F52FC /* OpenGLES.framework */; };
-		2B62DDB816E7F509001F52FC /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDB716E7F509001F52FC /* libsqlite3.dylib */; };
-		2B62DDBA16E7F514001F52FC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDB916E7F514001F52FC /* SystemConfiguration.framework */; };
-		2B62DDBC16E7F51B001F52FC /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDBB16E7F51B001F52FC /* libstdc++.dylib */; };
-		2B62DDBE16E7F54B001F52FC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDBD16E7F54B001F52FC /* MobileCoreServices.framework */; };
 		2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8218CC176FCB7C0012322A /* CoreLocation.framework */; };
-		2BEA1E6B171E0F310039F1A4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BEA1E6A171E0F300039F1A4 /* CoreText.framework */; };
 		D00B967517F9CB250054E66F /* MXStationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967217F9CB250054E66F /* MXStationDatabase.m */; };
 		D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D00B967417F9CB250054E66F /* XTideConnector.mm */; };
 		D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967817F9CB3F0054E66F /* MXStation.m */; };
 		D00B968817F9CB9F0054E66F /* MXStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */; };
 		D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D00B968917F9CBCB0054E66F /* MXTides-Info.plist */; };
 		D00B968C17F9CBF50054E66F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968B17F9CBF50054E66F /* main.m */; };
-		D00B969617F9CC710054E66F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D00B969417F9CC710054E66F /* InfoPlist.strings */; };
-		D0109E6D1800910B00311DDC /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0109E6C1800910B00311DDC /* UIImage+Rotate.m */; };
 		D01CEEB017F0AEAE0008431C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D01CEEAF17F0AEAE0008431C /* AppDelegate.m */; };
 		D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01CEEB117F0AFB80008431C /* Images.xcassets */; };
 		D0266F3C17FE31E3002E7982 /* MXStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F3B17FE31E3002E7982 /* MXStartViewController.m */; };
-		D0266F3F17FE4B2C002E7982 /* MXStationTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F3E17FE4B2C002E7982 /* MXStationTabBarController.m */; };
 		D0266F4217FE67EC002E7982 /* MXDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */; };
-		D0266F4517FE6A25002E7982 /* MXGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F4417FE6A25002E7982 /* MXGraphViewController.m */; };
 		D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */; };
-		D0A9C68717F75B1500A1E742 /* ocpnHarmonic.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */; };
+		D08960941801E0B900AB99C7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08960931801E0B900AB99C7 /* UIImage+Rotate.m */; };
 		D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18717FCF76F0061E664 /* IPhone.storyboard */; };
-		D0CEA18A17FDE4990061E664 /* mxtidebg.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18917FDE4990061E664 /* mxtidebg.png */; };
 		D0CEA1DA17FE30340061E664 /* MXStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */; };
-		D0E3455717F1023400872028 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC989E117DC28350071DA9E /* libz.dylib */; };
 		D0E345BE17F1099400872028 /* bit_pack.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456517F1092A00872028 /* bit_pack.c */; };
 		D0E345BF17F1099700872028 /* tide_db.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456717F1092A00872028 /* tide_db.c */; };
 		D0E345C017F109DF00872028 /* Amplitude.cc in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456B17F1093B00872028 /* Amplitude.cc */; };
@@ -115,35 +101,17 @@
 		D00B968B17F9CBF50054E66F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MXTides/main.m; sourceTree = SOURCE_ROOT; };
 		D00B968D17F9CC0C0054E66F /* MXTides-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MXTides-Prefix.pch"; path = "MXTides/MXTides-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		D00B969517F9CC710054E66F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = MXTides/en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D00B969B17F9DA720054E66F /* ne_110m_land.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.dbf; path = resources/ne_110m_land/ne_110m_land.dbf; sourceTree = "<group>"; };
-		D00B969C17F9DA720054E66F /* ne_110m_land.prj */ = {isa = PBXFileReference; lastKnownFileType = text; name = ne_110m_land.prj; path = resources/ne_110m_land/ne_110m_land.prj; sourceTree = "<group>"; };
-		D00B969D17F9DA720054E66F /* ne_110m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shp; path = resources/ne_110m_land/ne_110m_land.shp; sourceTree = "<group>"; };
-		D00B969E17F9DA720054E66F /* ne_110m_land.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shx; path = resources/ne_110m_land/ne_110m_land.shx; sourceTree = "<group>"; };
-		D0109E6B1800910B00311DDC /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
-		D0109E6C1800910B00311DDC /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		D01CEEAE17F0AEAE0008431C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MXTides/AppDelegate.h; sourceTree = "<group>"; };
 		D01CEEAF17F0AEAE0008431C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MXTides/AppDelegate.m; sourceTree = "<group>"; };
 		D01CEEB117F0AFB80008431C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MXTides/Images.xcassets; sourceTree = "<group>"; };
 		D0266F3A17FE31E3002E7982 /* MXStartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStartViewController.h; path = MXTides/MXStartViewController.h; sourceTree = "<group>"; };
 		D0266F3B17FE31E3002E7982 /* MXStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStartViewController.m; path = MXTides/MXStartViewController.m; sourceTree = "<group>"; };
-		D0266F3D17FE4B2C002E7982 /* MXStationTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTabBarController.h; path = MXTides/MXStationTabBarController.h; sourceTree = "<group>"; };
-		D0266F3E17FE4B2C002E7982 /* MXStationTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTabBarController.m; path = MXTides/MXStationTabBarController.m; sourceTree = "<group>"; };
 		D0266F4017FE67EC002E7982 /* MXDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXDetailsViewController.h; path = MXTides/MXDetailsViewController.h; sourceTree = "<group>"; };
 		D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXDetailsViewController.m; path = MXTides/MXDetailsViewController.m; sourceTree = "<group>"; };
-		D0266F4317FE6A25002E7982 /* MXGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXGraphViewController.h; path = MXTides/MXGraphViewController.h; sourceTree = "<group>"; };
-		D0266F4417FE6A25002E7982 /* MXGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXGraphViewController.m; path = MXTides/MXGraphViewController.m; sourceTree = "<group>"; };
 		D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = "harmonics-dwf-20121224-free.tcd"; path = "resources/harmonics-dwf-20121224-free.tcd"; sourceTree = "<group>"; };
-		D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = ocpnHarmonic.tcd; path = resources/ocpnHarmonic.tcd; sourceTree = "<group>"; };
-		D0ACDB8317FCA89600A39C2B /* ne_50m_land.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.dbf; path = resources/ne_50m_land/ne_50m_land.dbf; sourceTree = "<group>"; };
-		D0ACDB8417FCA89600A39C2B /* ne_50m_land.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ne_50m_land.prj; path = resources/ne_50m_land/ne_50m_land.prj; sourceTree = "<group>"; };
-		D0ACDB8517FCA89600A39C2B /* ne_50m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.shp; path = resources/ne_50m_land/ne_50m_land.shp; sourceTree = "<group>"; };
-		D0ACDB8617FCA89600A39C2B /* ne_50m_land.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_land.shx; path = resources/ne_50m_land/ne_50m_land.shx; sourceTree = "<group>"; };
-		D0ACDB8B17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.dbf; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.dbf; sourceTree = "<group>"; };
-		D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ne_50m_admin_0_countries.prj; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.prj; sourceTree = "<group>"; };
-		D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.shp; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp; sourceTree = "<group>"; };
-		D0ACDB8E17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_50m_admin_0_countries.shx; path = resources/ne_50m_admin_0_countries/ne_50m_admin_0_countries.shx; sourceTree = "<group>"; };
+		D08960921801E0B900AB99C7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "MXTides/UIImage+Rotate.h"; sourceTree = "<group>"; };
+		D08960931801E0B900AB99C7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "MXTides/UIImage+Rotate.m"; sourceTree = "<group>"; };
 		D0CEA18717FCF76F0061E664 /* IPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPhone.storyboard; sourceTree = "<group>"; };
-		D0CEA18917FDE4990061E664 /* mxtidebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mxtidebg.png; path = resources/mxtidebg.png; sourceTree = "<group>"; };
 		D0CEA1D817FE30340061E664 /* MXStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTableViewController.h; path = MXTides/MXStationTableViewController.h; sourceTree = "<group>"; };
 		D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTableViewController.m; path = MXTides/MXStationTableViewController.m; sourceTree = "<group>"; };
 		D0E3455517F101E300872028 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
@@ -242,16 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */,
-				D0E3455717F1023400872028 /* libz.dylib in Frameworks */,
-				2B0D630E17A2EE0400C3298D /* libxml2.dylib in Frameworks */,
-				2BEA1E6B171E0F310039F1A4 /* CoreText.framework in Frameworks */,
-				2B62DDBE16E7F54B001F52FC /* MobileCoreServices.framework in Frameworks */,
 				2B62DD6216E7F0BC001F52FC /* CoreGraphics.framework in Frameworks */,
-				2B62DDBC16E7F51B001F52FC /* libstdc++.dylib in Frameworks */,
-				2B62DDBA16E7F514001F52FC /* SystemConfiguration.framework in Frameworks */,
-				2B62DDB816E7F509001F52FC /* libsqlite3.dylib in Frameworks */,
-				2B62DDB616E7F505001F52FC /* OpenGLES.framework in Frameworks */,
-				2B62DDB416E7F4FD001F52FC /* QuartzCore.framework in Frameworks */,
 				2B62DD5E16E7F0BC001F52FC /* UIKit.framework in Frameworks */,
 				2B62DD6016E7F0BC001F52FC /* Foundation.framework in Frameworks */,
 			);
@@ -272,7 +231,6 @@
 		2B62DD5116E7F0BC001F52FC = {
 			isa = PBXGroup;
 			children = (
-				D0109E6E1800916500311DDC /* Categories */,
 				D01CEEA317F09B500008431C /* MXTides */,
 				D0D3802917F1270F0071DDA9 /* Resources */,
 				D0E3456A17F1093B00872028 /* xtide */,
@@ -345,8 +303,8 @@
 		D0109E6E1800916500311DDC /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				D0109E6B1800910B00311DDC /* UIImage+Rotate.h */,
-				D0109E6C1800910B00311DDC /* UIImage+Rotate.m */,
+				D08960921801E0B900AB99C7 /* UIImage+Rotate.h */,
+				D08960931801E0B900AB99C7 /* UIImage+Rotate.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -354,12 +312,12 @@
 		D01CEEA317F09B500008431C /* MXTides */ = {
 			isa = PBXGroup;
 			children = (
+				D0109E6E1800916500311DDC /* Categories */,
 				D088551917F111D300B4C6D5 /* Model_Controllers */,
 				D088551717F111C100B4C6D5 /* Models */,
 				D01CEEB517F0D0750008431C /* Views */,
 				D01CEEB417F0D05F0008431C /* View_Controllers */,
 				D01CEEAD17F0AB5C0008431C /* Delegates */,
-				D01CEEB117F0AFB80008431C /* Images.xcassets */,
 			);
 			name = MXTides;
 			sourceTree = "<group>";
@@ -380,12 +338,8 @@
 				D0266F3B17FE31E3002E7982 /* MXStartViewController.m */,
 				D0CEA1D817FE30340061E664 /* MXStationTableViewController.h */,
 				D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */,
-				D0266F3D17FE4B2C002E7982 /* MXStationTabBarController.h */,
-				D0266F3E17FE4B2C002E7982 /* MXStationTabBarController.m */,
 				D0266F4017FE67EC002E7982 /* MXDetailsViewController.h */,
 				D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */,
-				D0266F4317FE6A25002E7982 /* MXGraphViewController.h */,
-				D0266F4417FE6A25002E7982 /* MXGraphViewController.m */,
 			);
 			name = View_Controllers;
 			sourceTree = "<group>";
@@ -423,20 +377,7 @@
 		D0D3802917F1270F0071DDA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D0CEA18917FDE4990061E664 /* mxtidebg.png */,
-				D0ACDB8B17FCAC4A00A39C2B /* ne_50m_admin_0_countries.dbf */,
-				D0ACDB8C17FCAC4A00A39C2B /* ne_50m_admin_0_countries.prj */,
-				D0ACDB8D17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shp */,
-				D0ACDB8E17FCAC4A00A39C2B /* ne_50m_admin_0_countries.shx */,
-				D0ACDB8317FCA89600A39C2B /* ne_50m_land.dbf */,
-				D0ACDB8417FCA89600A39C2B /* ne_50m_land.prj */,
-				D0ACDB8517FCA89600A39C2B /* ne_50m_land.shp */,
-				D0ACDB8617FCA89600A39C2B /* ne_50m_land.shx */,
-				D00B969B17F9DA720054E66F /* ne_110m_land.dbf */,
-				D00B969C17F9DA720054E66F /* ne_110m_land.prj */,
-				D00B969D17F9DA720054E66F /* ne_110m_land.shp */,
-				D00B969E17F9DA720054E66F /* ne_110m_land.shx */,
-				D0A9C68617F75B1500A1E742 /* ocpnHarmonic.tcd */,
+				D01CEEB117F0AFB80008431C /* Images.xcassets */,
 				D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */,
 			);
 			name = Resources;
@@ -600,11 +541,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */,
-				D0A9C68717F75B1500A1E742 /* ocpnHarmonic.tcd in Resources */,
 				D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */,
 				D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */,
-				D00B969617F9CC710054E66F /* InfoPlist.strings in Resources */,
-				D0CEA18A17FDE4990061E664 /* mxtidebg.png in Resources */,
 				D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,7 +563,6 @@
 				D0E345C417F109DF00872028 /* ConstituentSet.cc in Sources */,
 				D0E345C517F109DF00872028 /* Coordinates.cc in Sources */,
 				D0E345C617F109DF00872028 /* CurrentBearing.cc in Sources */,
-				D0266F3F17FE4B2C002E7982 /* MXStationTabBarController.m in Sources */,
 				D0E345C717F109DF00872028 /* Date.cc in Sources */,
 				D0E345C817F109DF00872028 /* Dstr.cc in Sources */,
 				D0E345C917F109DF00872028 /* Global.cc in Sources */,
@@ -635,7 +572,6 @@
 				D0E345CB17F109DF00872028 /* HarmonicsPath.cc in Sources */,
 				D0E345CC17F109DF00872028 /* Interval.cc in Sources */,
 				D0E345CD17F109DF00872028 /* MetaField.cc in Sources */,
-				D0266F4517FE6A25002E7982 /* MXGraphViewController.m in Sources */,
 				D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */,
 				D0E345CE17F109DF00872028 /* Nullable.cc in Sources */,
 				D0E345CF17F109DF00872028 /* NullableInterval.cc in Sources */,
@@ -649,7 +585,7 @@
 				D0266F4217FE67EC002E7982 /* MXDetailsViewController.m in Sources */,
 				D0E345D617F109DF00872028 /* Station.cc in Sources */,
 				D0E345D717F109DF00872028 /* StationIndex.cc in Sources */,
-				D0109E6D1800910B00311DDC /* UIImage+Rotate.m in Sources */,
+				D08960941801E0B900AB99C7 /* UIImage+Rotate.m in Sources */,
 				D0E345D817F109DF00872028 /* StationRef.cc in Sources */,
 				D0E345D917F109DF00872028 /* SubordinateStation.cc in Sources */,
 				D0E345DA17F109DF00872028 /* tide.cc in Sources */,
