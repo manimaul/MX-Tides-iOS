@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 William Kamp. All rights reserved.
 //
 
-#import "XTideConnector.h"
+#import "XTideConnector.hh"
 #import "MXStation.h"
 #import "MXStationDatabase.h"
 #include "common.hh"

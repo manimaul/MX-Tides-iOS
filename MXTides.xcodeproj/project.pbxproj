@@ -90,7 +90,7 @@
 		D00B966117F889E60054E66F /* AFKissXMLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFKissXMLRequestOperation.m; path = "../../workspace-ios/WhirlyGlobe/third-party/AFKissXMLRequestOperation/AFKissXMLRequestOperation.m"; sourceTree = "<group>"; };
 		D00B967117F9CB250054E66F /* MXStationDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationDatabase.h; path = MXTides/MXStationDatabase.h; sourceTree = "<group>"; };
 		D00B967217F9CB250054E66F /* MXStationDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationDatabase.m; path = MXTides/MXStationDatabase.m; sourceTree = "<group>"; };
-		D00B967317F9CB250054E66F /* XTideConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XTideConnector.h; path = MXTides/XTideConnector.h; sourceTree = "<group>"; };
+		D00B967317F9CB250054E66F /* XTideConnector.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = XTideConnector.hh; path = MXTides/XTideConnector.hh; sourceTree = "<group>"; };
 		D00B967417F9CB250054E66F /* XTideConnector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = XTideConnector.mm; path = MXTides/XTideConnector.mm; sourceTree = "<group>"; };
 		D00B967717F9CB3F0054E66F /* MXStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStation.h; path = MXTides/MXStation.h; sourceTree = "<group>"; };
 		D00B967817F9CB3F0054E66F /* MXStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStation.m; path = MXTides/MXStation.m; sourceTree = "<group>"; };
@@ -368,7 +368,7 @@
 			children = (
 				D00B967117F9CB250054E66F /* MXStationDatabase.h */,
 				D00B967217F9CB250054E66F /* MXStationDatabase.m */,
-				D00B967317F9CB250054E66F /* XTideConnector.h */,
+				D00B967317F9CB250054E66F /* XTideConnector.hh */,
 				D00B967417F9CB250054E66F /* XTideConnector.mm */,
 			);
 			name = Model_Controllers;

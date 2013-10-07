@@ -8,7 +8,7 @@
 
 #import "MXStationTableViewController.h"
 #import "MXStationDatabase.h"
-#import "XTideConnector.h"
+#import "XTideConnector.hh"
 #import "MXStation.h"
 #import "MXStationTableViewCell.h"
 #import "MXDetailsViewController.h"

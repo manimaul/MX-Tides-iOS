@@ -7,7 +7,7 @@
 //
 
 #import "MXDetailsViewController.h"
-#import "XTideConnector.h"
+#import "XTideConnector.hh"
 #import "MXStation.h"
 #import "UIImage+Rotate.h"
 

@@ -9,7 +9,7 @@
 #import "MXStartViewController.h"
 #import "MXStationTableViewController.h"
 #import "MXStation.h"
-#import "XTideConnector.h"
+#import "XTideConnector.hh"
 #import "MXStationDatabase.h"
 
 static bool haveLocation = false;
