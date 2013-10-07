@@ -257,7 +257,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="281"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
-                                <mutableString key="text">GNU GENERAL PUBLIC LICENSE
+                                <string key="text">GNU GENERAL PUBLIC LICENSE
 
 Version 3, 29 June 2007
 
@@ -497,7 +497,7 @@ The hypothetical commands `show w' and `show c' should show the appropriate part
 
 You should also get your employer (if you work as a programmer) or school, if any, to sign a “copyright disclaimer” for the program, if necessary.  For more information on this, and how to apply and follow the GNU GPL, see &lt;http://www.gnu.org/licenses/>.
 
-The GNU General Public License does not permit incorporating your program into proprietary programs.  If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library.  If this is what you want to do, use the GNU Lesser General Public License instead of this License.  But first, please read &lt;http://www.gnu.org/philosophy/why-not-lgpl.html>.</mutableString>
+The GNU General Public License does not permit incorporating your program into proprietary programs.  If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library.  If this is what you want to do, use the GNU Lesser General Public License instead of this License.  But first, please read &lt;http://www.gnu.org/philosophy/why-not-lgpl.html>.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -545,7 +545,7 @@ The GNU General Public License does not permit incorporating your program into p
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-qA-b7T">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-qA-b7T">
                                 <rect key="frame" x="92" y="439" width="136" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Saturday">
@@ -693,7 +693,7 @@ The GNU General Public License does not permit incorporating your program into p
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Xtide2 © David Flater" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-OA-2bf">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xtide2 © David Flater" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jQ-OA-2bf">
                                 <rect key="frame" x="20" y="185" width="280" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -703,7 +703,7 @@ The GNU General Public License does not permit incorporating your program into p
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="http://www.flaterco.com/xtide/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMt-1F-lyY">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.flaterco.com/xtide/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMt-1F-lyY">
                                 <rect key="frame" x="20" y="203" width="184" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -728,7 +728,7 @@ The GNU General Public License does not permit incorporating your program into p
                                 <rect key="frame" x="20" y="221" width="280" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83137261870000001" green="0.91764712329999998" blue="0.93333339689999995" alpha="1" colorSpace="deviceRGB"/>
-                                <mutableString key="text">The algorithm that XTide uses to predict tides is the one used by the National Ocean Service in the U.S.  It is significantly more accurate than the simple tide clocks that can be bought in novelty stores.  However, it takes more to predict tides accurately than just a spiffy algorithm—you also need some special data for each and every location for which you want to predict tides.  XTide reads these data from harmonics files.
+                                <string key="text">The algorithm that XTide uses to predict tides is the one used by the National Ocean Service in the U.S.  It is significantly more accurate than the simple tide clocks that can be bought in novelty stores.  However, it takes more to predict tides accurately than just a spiffy algorithm—you also need some special data for each and every location for which you want to predict tides.  XTide reads these data from harmonics files.
 
 Ultimately, XTide's predictions can only be as good as the available harmonics data.  It is up to you to verify that the predictions for your locale match up acceptably well with the officially sanctioned ones.
 
@@ -737,15 +737,15 @@ Deviations of 20 minutes are typical for locations that are using obsolete data.
 Much longer deviations indicate a problem.
 The XTide software distribution resides at http://www.flaterco.com/xtide/files.html.
 
-XTide and its documentation are maintained by David Flater (dave@flaterco.com).</mutableString>
+XTide and its documentation are maintained by David Flater (dave@flaterco.com).</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-XW-aYm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-XW-aYm">
                                 <rect key="frame" x="0.0" y="137" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MX Tides is a &quot;port&quot; of XTide2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeX-3A-Ygv">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MX Tides is a &quot;port&quot; of XTide2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeX-3A-Ygv">
                                         <rect key="frame" x="20" y="0.0" width="280" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -758,6 +758,7 @@ XTide and its documentation are maintained by David Flater (dave@flaterco.com).<
                                     <constraint firstAttribute="bottom" secondItem="KeX-3A-Ygv" secondAttribute="bottom" id="2cg-9o-VHL"/>
                                     <constraint firstItem="KeX-3A-Ygv" firstAttribute="leading" secondItem="sqW-XW-aYm" secondAttribute="leading" constant="20" symbolic="YES" id="Lsk-Rv-qtF"/>
                                     <constraint firstItem="KeX-3A-Ygv" firstAttribute="top" secondItem="sqW-XW-aYm" secondAttribute="top" id="Q5R-rJ-JKW"/>
+                                    <constraint firstAttribute="height" constant="40" id="bwZ-un-MrC"/>
                                     <constraint firstAttribute="trailing" secondItem="KeX-3A-Ygv" secondAttribute="trailing" constant="20" symbolic="YES" id="oQO-cD-zda"/>
                                 </constraints>
                             </view>
@@ -767,7 +768,7 @@ XTide and its documentation are maintained by David Flater (dave@flaterco.com).<
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ZIZ-0h-Gnx"/>
                                 </constraints>
-                                <string key="text">MX Tides provides tide and current predictions for the nearest 10 NOAA tide stations to your geographic location presented in a simple format.</string>
+                                <string key="text">MX Tides provides tide and current predictions for the nearest 10 NOAA tide stations to your geographic location presented in a simple format. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

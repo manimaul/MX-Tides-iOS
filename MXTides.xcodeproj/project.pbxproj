@@ -15,7 +15,6 @@
 		D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D00B967417F9CB250054E66F /* XTideConnector.mm */; };
 		D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967817F9CB3F0054E66F /* MXStation.m */; };
 		D00B968817F9CB9F0054E66F /* MXStationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */; };
-		D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D00B968917F9CBCB0054E66F /* MXTides-Info.plist */; };
 		D00B968C17F9CBF50054E66F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B968B17F9CBF50054E66F /* main.m */; };
 		D01CEEB017F0AEAE0008431C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D01CEEAF17F0AEAE0008431C /* AppDelegate.m */; };
 		D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01CEEB117F0AFB80008431C /* Images.xcassets */; };
@@ -111,6 +110,7 @@
 		D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = "harmonics-dwf-20121224-free.tcd"; path = "resources/harmonics-dwf-20121224-free.tcd"; sourceTree = "<group>"; };
 		D08960921801E0B900AB99C7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "MXTides/UIImage+Rotate.h"; sourceTree = "<group>"; };
 		D08960931801E0B900AB99C7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "MXTides/UIImage+Rotate.m"; sourceTree = "<group>"; };
+		D0C54D451802032D002C2C08 /* Seattle.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Seattle.gpx; sourceTree = "<group>"; };
 		D0CEA18717FCF76F0061E664 /* IPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPhone.storyboard; sourceTree = "<group>"; };
 		D0CEA1D817FE30340061E664 /* MXStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTableViewController.h; path = MXTides/MXStationTableViewController.h; sourceTree = "<group>"; };
 		D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTableViewController.m; path = MXTides/MXStationTableViewController.m; sourceTree = "<group>"; };
@@ -377,6 +377,7 @@
 		D0D3802917F1270F0071DDA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0C54D451802032D002C2C08 /* Seattle.gpx */,
 				D01CEEB117F0AFB80008431C /* Images.xcassets */,
 				D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */,
 			);
@@ -541,7 +542,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */,
-				D00B968A17F9CBCB0054E66F /* MXTides-Info.plist in Resources */,
 				D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */,
 				D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */,
 			);
