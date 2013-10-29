@@ -35,6 +35,13 @@ static bool debug = false;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    CGFloat version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (version <= 6.1) {
+        [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
+        self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    }
+    
     locMan = [CLLocationManager new];
     locMan.delegate = self;
     
@@ -42,9 +49,9 @@ static bool debug = false;
     
     //restart location when app resumes
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(startLocationOrShowAlert)
-                                               name:UIApplicationWillEnterForegroundNotification
-                                             object:nil];
+                                             selector:@selector(startLocationOrShowAlert)
+                                                 name:UIApplicationWillEnterForegroundNotification
+                                               object:nil];
     
     XTideConnector *xc = [XTideConnector sharedConnector];
     //completion block is posted on main threads
@@ -99,7 +106,7 @@ static bool debug = false;
 
 -(IBAction)tideButtonPress:(id)sender
 {
-    //NSLog(@"setting sType Tide");    
+    //NSLog(@"setting sType Tide");
     self.sType = TideStation;
     MXStationTableViewController *vc =[self.navigationController.storyboard instantiateViewControllerWithIdentifier:@"StationTable"];
     [vc setupData:self.sType withLocation:self.location];
@@ -125,7 +132,7 @@ static bool debug = false;
 #pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations {
-
+    
     self.location = [locations lastObject];
     NSDate* eventDate = self.location.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];

@@ -17,6 +17,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //use launch image for bg
+    UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage"]];
+    iv.contentMode = UIViewContentModeScaleAspectFill;
+    [iv setFrame:self.window.frame];
+    [self.window addSubview:iv];
+    
+    self.window.backgroundColor = [UIColor grayColor];
+    
+//    CGFloat version = [[[UIDevice currentDevice] systemVersion] floatValue];
+//    NSLog(@"version %f", version);
+//    if (version <= 6.1) {
+//        NSLog(@"setting navbar style to black");
+//        self.window.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+//    }
+    
     return YES;
 }
 

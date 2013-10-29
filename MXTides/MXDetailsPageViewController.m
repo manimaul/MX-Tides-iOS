@@ -30,10 +30,8 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.dataSource = self;
     self.delegate = self;
     self.dateFormatter = [[NSDateFormatter alloc] init];
-    [self.dateFormatter setDateFormat:@"EEEE"];
     self.queuedVcFwd = [self.storyboard instantiateViewControllerWithIdentifier:@"tidedetails"];
     self.queuedVcBak = [self.storyboard instantiateViewControllerWithIdentifier:@"tidedetails"];
 }
@@ -49,25 +47,37 @@ typedef enum {
     
     MXDetailsViewController *currentVC = [viewControllers objectAtIndex:0];
     
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        self.queuedVcFwd.station = currentVC.station;
+        self.queuedVcFwd.predictionDate = currentVC.predictionDate;
+        [self.queuedVcFwd nextDay];
+        self.queuedVcBak.station = currentVC.station;
+        self.queuedVcBak.predictionDate = currentVC.predictionDate;
+        [self.queuedVcBak prevDay];
+        [self setPageGesturesEnabled:true];
+    }];
     //cache the next and previous page views
-    self.queuedVcFwd.station = currentVC.station;
-    self.queuedVcFwd.predictionDate = currentVC.predictionDate;
-    [self.queuedVcFwd nextDay];
-    self.queuedVcBak.station = currentVC.station;
-    self.queuedVcBak.predictionDate = currentVC.predictionDate;
-    [self.queuedVcBak prevDay];
+    
     
     [self setTitleDateDay:currentVC];
 }
 
 - (void)setTitleDateDay:(MXDetailsViewController*)currentVC;
 {
-    //MXDetailsViewController *currentVC = self.viewControllers[0];
+    [self.dateFormatter setDateFormat:@"eeee"];
     NSString *dateDay = [self.dateFormatter stringFromDate:currentVC.predictionDate];
     
     if (dateDay) {
         [self.navigationItem setTitle:dateDay];
     }
+}
+
+- (void)setPageGesturesEnabled:(BOOL)enabled
+{
+    if (enabled)
+        self.dataSource = self;
+    else
+        self.dataSource = nil;
 }
 
 #pragma mark - datepicker
@@ -85,9 +95,6 @@ typedef enum {
 
 - (void)dismissDatePicker:(id)sender
 {
-    //re-enable page gestures
-    self.dataSource = self;
-    
     MXDetailsViewController *cvc = self.viewControllers[0];
     
     CGRect toolbarTargetFrame = CGRectMake(0, self.view.bounds.size.height, 320, 44);
@@ -100,10 +107,30 @@ typedef enum {
     [UIView setAnimationDidStopSelector:@selector(removeViews:)];
     [UIView commitAnimations];
     
-    MXDetailsViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"tidedetails"];
-    dvc.station = cvc.station;
-    [dvc setupViewForDate:self.datePickerDate];
-    [self setViewControllers:@[dvc] direction:UIPageViewControllerNavigationDirectionForward animated:true completion:Nil];
+    //animate the new selected view for date after dismissal of picker
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        UIPageViewControllerNavigationDirection pageDirection = UIPageViewControllerNavigationDirectionForward;
+        
+        //see if this is the same day so we can animate a page flip
+        BOOL useAnimation = false;
+        if (self.datePickerDate) {
+            [self.dateFormatter setDateFormat:@"D"]; // mm/dd/yy
+            NSString *currDateStr = [self.dateFormatter stringFromDate:self.datePickerDate];
+            NSString *newDateStr = [self.dateFormatter stringFromDate:cvc.predictionDate];
+            useAnimation = ![currDateStr isEqualToString:newDateStr];
+            
+            //now see which direction to flip
+            if ([self.datePickerDate compare:cvc.predictionDate] == NSOrderedAscending) {
+                pageDirection = UIPageViewControllerNavigationDirectionReverse;
+            }
+        }
+        
+        MXDetailsViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"tidedetails"];
+        dvc.station = cvc.station;
+        [dvc setupViewForDate:self.datePickerDate];
+        [self setViewControllers:@[dvc] direction:pageDirection animated:useAnimation completion:Nil];
+        [self setPageGesturesEnabled:true];
+    }];
 }
 
 -(IBAction)dateBtnSel:(id)sender
@@ -112,8 +139,7 @@ typedef enum {
         return;
     }
     
-    //disable page gestures
-    self.dataSource = nil;
+    [self setPageGesturesEnabled:false];
     
     MXDetailsViewController *cvc = self.viewControllers[0];
     
@@ -168,8 +194,7 @@ typedef enum {
 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
 {
-    //disable page gestures
-    self.dataSource = nil;
+    [self setPageGesturesEnabled:false];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
@@ -196,8 +221,8 @@ typedef enum {
     }
     
     if (finished) {
-        //re-enable page gestures
-        self.dataSource = self;
+        
+        [self setPageGesturesEnabled:true];
     }
 }
 

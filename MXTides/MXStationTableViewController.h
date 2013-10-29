@@ -12,8 +12,6 @@
 
 @interface MXStationTableViewController : UITableViewController <UITableViewDelegate>
 
-//@property (nonatomic) StationType sType;
-//@property (nonatomic) NSArray *stationList;
 - (void)setupData:(StationType)stationType withLocation:(CLLocation*)location;
 
 @end
