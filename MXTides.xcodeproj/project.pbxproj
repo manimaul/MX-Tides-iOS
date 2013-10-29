@@ -23,6 +23,8 @@
 		D0266F4217FE67EC002E7982 /* MXDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */; };
 		D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */; };
 		D08960941801E0B900AB99C7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08960931801E0B900AB99C7 /* UIImage+Rotate.m */; };
+		D0BD8AB6181F7996004F6A54 /* wav.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BD8AB5181F7996004F6A54 /* wav.png */; };
+		D0BD8ABC1820616F004F6A54 /* MXAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8ABB1820616F004F6A54 /* MXAboutViewController.m */; };
 		D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18717FCF76F0061E664 /* IPhone.storyboard */; };
 		D0CEA1DA17FE30340061E664 /* MXStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */; };
 		D0E345BE17F1099400872028 /* bit_pack.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E3456517F1092A00872028 /* bit_pack.c */; };
@@ -113,6 +115,9 @@
 		D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = "harmonics-dwf-20121224-free.tcd"; path = "resources/harmonics-dwf-20121224-free.tcd"; sourceTree = "<group>"; };
 		D08960921801E0B900AB99C7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "MXTides/UIImage+Rotate.h"; sourceTree = "<group>"; };
 		D08960931801E0B900AB99C7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "MXTides/UIImage+Rotate.m"; sourceTree = "<group>"; };
+		D0BD8AB5181F7996004F6A54 /* wav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wav.png; path = resources/wav.png; sourceTree = "<group>"; };
+		D0BD8ABA1820616F004F6A54 /* MXAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXAboutViewController.h; path = MXTides/MXAboutViewController.h; sourceTree = "<group>"; };
+		D0BD8ABB1820616F004F6A54 /* MXAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXAboutViewController.m; path = MXTides/MXAboutViewController.m; sourceTree = "<group>"; };
 		D0C54D451802032D002C2C08 /* Seattle.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Seattle.gpx; sourceTree = "<group>"; };
 		D0CEA18717FCF76F0061E664 /* IPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPhone.storyboard; sourceTree = "<group>"; };
 		D0CEA1D817FE30340061E664 /* MXStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTableViewController.h; path = MXTides/MXStationTableViewController.h; sourceTree = "<group>"; };
@@ -375,6 +380,8 @@
 				D00B967217F9CB250054E66F /* MXStationDatabase.m */,
 				D00B967317F9CB250054E66F /* XTideConnector.hh */,
 				D00B967417F9CB250054E66F /* XTideConnector.mm */,
+				D0BD8ABA1820616F004F6A54 /* MXAboutViewController.h */,
+				D0BD8ABB1820616F004F6A54 /* MXAboutViewController.m */,
 			);
 			name = Model_Controllers;
 			sourceTree = "<group>";
@@ -382,6 +389,7 @@
 		D0D3802917F1270F0071DDA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0BD8AB5181F7996004F6A54 /* wav.png */,
 				D0C54D451802032D002C2C08 /* Seattle.gpx */,
 				D01CEEB117F0AFB80008431C /* Images.xcassets */,
 				D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */,
@@ -546,6 +554,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0BD8AB6181F7996004F6A54 /* wav.png in Resources */,
 				D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */,
 				D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */,
 				D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */,
@@ -574,6 +583,7 @@
 				D0E345CA17F109DF00872028 /* HarmonicsFile.cc in Sources */,
 				D00B968C17F9CBF50054E66F /* main.m in Sources */,
 				D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */,
+				D0BD8ABC1820616F004F6A54 /* MXAboutViewController.m in Sources */,
 				D0E345CB17F109DF00872028 /* HarmonicsPath.cc in Sources */,
 				D0E345CC17F109DF00872028 /* Interval.cc in Sources */,
 				D0E345CD17F109DF00872028 /* MetaField.cc in Sources */,
