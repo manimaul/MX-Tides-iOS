@@ -12,6 +12,7 @@
 #import "MXStation.h"
 #import "MXStationTableViewCell.h"
 #import "MXDetailsViewController.h"
+#import "MXDetailsPageViewController.h"
 
 @interface MXStationTableViewController ()
 
@@ -79,13 +80,13 @@
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)theSender
-{
-    [super prepareForSegue:segue sender:theSender];
-    NSInteger index = self.tableView.indexPathForSelectedRow.item;
-    MXStation *stn = [self.stationList objectAtIndex:index];
-    MXDetailsViewController *vc = segue.destinationViewController;
-    vc.station = stn;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MXDetailsViewController *dvc = [self.storyboard instantiateViewControllerWithIdentifier:@"tidedetails"];
+    dvc.station = [self.stationList objectAtIndex:indexPath.row];
+    MXDetailsPageViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"tidedetailspages"];
+    [vc setViewControllers:@[dvc] direction:UIPageViewControllerNavigationDirectionForward animated:false completion:Nil];
+    
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 @end

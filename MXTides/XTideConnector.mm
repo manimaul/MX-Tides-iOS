@@ -49,15 +49,16 @@ static const double kPi = 3.14159265359;
     if (![XTideConnector sharedConnector].loaded) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [self loadz];
-            
+
+            [XTideConnector sharedConnector].loaded = YES;
+
             //put the completion block back on the mainQueue so UI stuff can happen
             [[NSOperationQueue mainQueue] addOperationWithBlock:completionBlock];
-            
+
             //notify listeners
             [[NSNotificationCenter defaultCenter] postNotificationName:@"xtide.index.loaded" object:self];
         });
     }
-    [XTideConnector sharedConnector].loaded = YES;
 }
 
 -(BOOL)isLoaded
@@ -81,7 +82,6 @@ static const double kPi = 3.14159265359;
         st.lng = [[NSNumber alloc] initWithDouble:stationIndex.operator [](i)->coordinates.lng()];
         [db addStation:st];
 	 }
-    //[XTideConnector sharedConnector].stations = [NSArray arrayWithArray:sarr];
 }
 
 -(void)setupStation:(MXStation*)station forDate:(NSDate*)date
@@ -132,8 +132,8 @@ static MXPrediction getPrediction(Dstr station, long epoch) {
     double pNow = value.val();
     value.print(data);
     
-    //prediction in another 30 minutes
-    ts += Interval(1800);
+    //prediction in another 5 minutes
+    ts += Interval(300);
     double pLater = sa->predictTideLevel(ts).val();
     
     
@@ -228,51 +228,6 @@ static Timestamp getEvening(long epoch) {
     
     return Timestamp(mktime(&evening));
 }
-
-//static char* getData(Dstr station, long epoch, Mode::Mode mode) {
-//    Dstr data;
-//    Station *sa = (stationIndex.getStationRefByName(station))->load();
-//    //std::auto_ptr<Station> sa (sr->load());
-//	sa->setUnits(Units::feet);
-//    
-//	struct tm morning;
-//	struct tm evening;
-//    
-//	//time(&rawtime);
-//	morning = *localtime(&epoch);
-//	evening = *localtime(&epoch);
-//    
-//	//rewind to the begining of the day
-//	morning.tm_hour = 0;
-//	morning.tm_min = 0;
-//	morning.tm_sec = 0;
-//    
-//	//fast forward to the end of the day
-//	evening.tm_hour = 24;
-//	evening.tm_min = 0;
-//	evening.tm_sec = 0;
-//    
-//	Timestamp starttime = Timestamp(mktime(&morning));
-//	Timestamp endtime = Timestamp(mktime(&evening));
-//    
-//	sa->print(data, starttime, endtime, mode, Format::text);
-//    
-//    delete sa;
-//    
-//    return data.utf8().asdupchar();
-//}
-
-//static char* getTimestamp(Dstr station, long epoch) {
-//    Dstr data;
-//	Station *sa = (stationIndex.getStationRefByName(station))->load();
-//	Timestamp t = Timestamp(epoch);
-//    
-//	t.print(data, sa->timezone);
-//    
-//    delete sa;
-//    
-//    return data.utf8().asdupchar();
-//}
 
 static void loadHarmonics(const char* path)
 {

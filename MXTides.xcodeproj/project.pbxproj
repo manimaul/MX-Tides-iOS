@@ -11,6 +11,7 @@
 		2B62DD6016E7F0BC001F52FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DD5F16E7F0BC001F52FC /* Foundation.framework */; };
 		2B62DD6216E7F0BC001F52FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DD6116E7F0BC001F52FC /* CoreGraphics.framework */; };
 		2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8218CC176FCB7C0012322A /* CoreLocation.framework */; };
+		D004F0BB181ED92600BD941A /* MXDetailsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D004F0BA181ED92600BD941A /* MXDetailsPageViewController.m */; };
 		D00B967517F9CB250054E66F /* MXStationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967217F9CB250054E66F /* MXStationDatabase.m */; };
 		D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D00B967417F9CB250054E66F /* XTideConnector.mm */; };
 		D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967817F9CB3F0054E66F /* MXStation.m */; };
@@ -78,6 +79,8 @@
 		2B8218CC176FCB7C0012322A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2BC989E117DC28350071DA9E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		2BEA1E6A171E0F300039F1A4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		D004F0B9181ED92600BD941A /* MXDetailsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXDetailsPageViewController.h; path = MXTides/MXDetailsPageViewController.h; sourceTree = "<group>"; };
+		D004F0BA181ED92600BD941A /* MXDetailsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXDetailsPageViewController.m; path = MXTides/MXDetailsPageViewController.m; sourceTree = "<group>"; };
 		D00B964F17F889120054E66F /* AFHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFHTTPClient.m"; sourceTree = "<group>"; };
 		D00B965117F8892D0054E66F /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFHTTPRequestOperation.m"; sourceTree = "<group>"; };
 		D00B965317F889630054E66F /* AFImageRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFImageRequestOperation.m"; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */,
 				D0266F4017FE67EC002E7982 /* MXDetailsViewController.h */,
 				D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */,
+				D004F0B9181ED92600BD941A /* MXDetailsPageViewController.h */,
+				D004F0BA181ED92600BD941A /* MXDetailsPageViewController.m */,
 			);
 			name = View_Controllers;
 			sourceTree = "<group>";
@@ -601,6 +606,7 @@
 				D0E345BE17F1099400872028 /* bit_pack.c in Sources */,
 				D0E345BF17F1099700872028 /* tide_db.c in Sources */,
 				D01CEEB017F0AEAE0008431C /* AppDelegate.m in Sources */,
+				D004F0BB181ED92600BD941A /* MXDetailsPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
