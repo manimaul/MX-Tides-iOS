@@ -49,7 +49,7 @@ typedef enum {
     
     MXDetailsViewController *currentVC = [viewControllers objectAtIndex:0];
     
-    //cache the next and previous page views 
+    //cache the next and previous page views
     self.queuedVcFwd.station = currentVC.station;
     self.queuedVcFwd.predictionDate = currentVC.predictionDate;
     [self.queuedVcFwd nextDay];
@@ -166,6 +166,12 @@ typedef enum {
 
 #pragma mark - UIPageViewController delegate methods
 
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
+{
+    //disable page gestures
+    self.dataSource = nil;
+}
+
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
 {
     if (completed) {
@@ -187,6 +193,11 @@ typedef enum {
                 [self.queuedVcBak prevDay];
                 break;
         }
+    }
+    
+    if (finished) {
+        //re-enable page gestures
+        self.dataSource = self;
     }
 }
 
