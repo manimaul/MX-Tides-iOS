@@ -23,6 +23,7 @@ typedef enum {
 @property (nonatomic) NSNumber *lng;
 @property (nonatomic) NSNumber *distMeters;
 
+-(id)copy;
 -(void)discardDetails;
 //detail properties to be discarded
 @property BOOL rising;

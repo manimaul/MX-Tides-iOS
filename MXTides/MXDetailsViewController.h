@@ -12,6 +12,10 @@
 
 @interface MXDetailsViewController : UIViewController
 
+-(void)nextDay;
+-(void)prevDay;
+-(void)setupViewForDate:(NSDate*)date;
+
 @property (nonatomic, weak) MXStation *station;
 @property (nonatomic) NSDate *predictionDate;
 

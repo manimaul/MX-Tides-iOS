@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "MXStation.h"
 
-@interface MXStationTableViewController : UITableViewController
+@interface MXStationTableViewController : UITableViewController <UITableViewDelegate>
 
 //@property (nonatomic) StationType sType;
 //@property (nonatomic) NSArray *stationList;

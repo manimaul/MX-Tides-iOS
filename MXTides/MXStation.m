@@ -10,6 +10,13 @@
 
 @implementation MXStation
 
+-(id)copy
+{
+    MXStation *stn = [MXStation new];
+    stn.name = [NSString stringWithString:self.name];
+    return stn;
+}
+
 -(StationType)getStationType
 {
     if ([self.name rangeOfString:@"Current"].location != NSNotFound) {
