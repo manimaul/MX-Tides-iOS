@@ -25,6 +25,7 @@ static const double kPi = 3.14159265359;
 @interface XTideConnector ()
 
 @property (nonatomic) BOOL loaded;
+@property (nonatomic) NSOperationQueue *opQueue;
 
 @end
 
@@ -38,6 +39,8 @@ static const double kPi = 3.14159265359;
     static XTideConnector *shared = nil;
     dispatch_once(&predicate, ^{
         shared = [[XTideConnector alloc] init];
+        shared.opQueue = [NSOperationQueue new];
+        [shared.opQueue setMaxConcurrentOperationCount:1];
     });
     return shared;
 }
@@ -82,6 +85,14 @@ static const double kPi = 3.14159265359;
         st.lng = [[NSNumber alloc] initWithDouble:stationIndex.operator [](i)->coordinates.lng()];
         [db addStation:st];
 	 }
+}
+
+-(void)setupStationAsync:(MXStation *)station forDate:(NSDate *)date withCompletionBlock:(void(^)(void))completionBlock
+{
+    [self.opQueue addOperationWithBlock:^{
+        [self setupStation:station forDate:date];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:completionBlock];
+    }];
 }
 
 -(void)setupStation:(MXStation*)station forDate:(NSDate*)date
