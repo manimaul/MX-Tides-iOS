@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "launch_ios6-7_2x.png"
+      "filename" : "640x960.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "launch_ios6-7_R4.png"
+      "filename" : "640x1136.png"
     }
   ],
   "info" : {

@@ -28,6 +28,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage"]];
+    iv.contentMode = UIViewContentModeScaleAspectFill;
+    [iv setFrame:self.view.frame];
+    [self.tableView setBackgroundView:iv];
+    
     NSString *tp = [[NSBundle mainBundle] pathForResource:@"tide" ofType:@"png"];
     self.tideImg = [UIImage imageWithContentsOfFile:tp];
     NSString *cp = [[NSBundle mainBundle] pathForResource:@"current" ofType:@"png"];
