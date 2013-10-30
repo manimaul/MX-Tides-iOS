@@ -1,0 +1,6 @@
+TODO:
+
+change arrow icon
+add today btn
+add map - location setter btn
+tide and current icon

@@ -18,12 +18,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //use launch image for bg
-    UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage"]];
-    iv.contentMode = UIViewContentModeScaleAspectFill;
-    [iv setFrame:self.window.frame];
-    [self.window addSubview:iv];
-    
-    self.window.backgroundColor = [UIColor grayColor];
+//    UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage"]];
+//    iv.contentMode = UIViewContentModeScaleAspectFill;
+//    CGRectMake(self.window.bounds.origin.x, self.window.bounds.origin.y+64., self.window.bounds.size.width, self.window.bounds.size.height-64.);
+//    [iv setFrame:self.window.bounds];
+//    [self.window addSubview:iv];
+//
+//    self.window.backgroundColor = [UIColor grayColor];
     
 //    CGFloat version = [[[UIDevice currentDevice] systemVersion] floatValue];
 //    NSLog(@"version %f", version);

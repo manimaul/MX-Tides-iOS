@@ -21,8 +21,8 @@ typedef enum {
 @property (nonatomic) MXDetailsViewController *queuedVcFwd;
 @property (nonatomic) MXDetailsViewController *queuedVcBak;
 @property (nonatomic) MXPageDirection directionWent;
-
 -(IBAction)dateBtnSel:(id)sender;
+
 @end
 
 @implementation MXDetailsPageViewController
@@ -56,8 +56,6 @@ typedef enum {
         [self.queuedVcBak prevDay];
         [self setPageGesturesEnabled:true];
     }];
-    //cache the next and previous page views
-    
     
     [self setTitleDateDay:currentVC];
 }
