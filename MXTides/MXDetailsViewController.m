@@ -46,27 +46,26 @@
             self.predictionDate = [NSDate date];
         }
         
-        [[XTideConnector sharedConnector] setupStation:self.station forDate:self.predictionDate];
-        
-        self.stationNameLabel.text = self.station.name;
-        self.txtView.text = self.station.predictionDetails;
-        self.dateLabel.text = self.station.predictionTime;
-        self.stationPredictionLabel.text = self.station.prediction;
-        
-        if (self.station.getStationType == TideStation) {
-            if (self.station.rising) {
-                NSString *risingPath = [[NSBundle mainBundle] pathForResource:@"arrowup" ofType:@"png"];
-                self.dirImage = [UIImage imageWithContentsOfFile:risingPath];
+        [[XTideConnector sharedConnector] setupStationAsync:self.station forDate:self.predictionDate withCompletionBlock:^{
+            self.stationNameLabel.text = self.station.name;
+            self.txtView.text = self.station.predictionDetails;
+            self.dateLabel.text = self.station.predictionTime;
+            self.stationPredictionLabel.text = self.station.prediction;
+            
+            if (self.station.getStationType == TideStation) {
+                if (self.station.rising) {
+                    NSString *risingPath = [[NSBundle mainBundle] pathForResource:@"arrowup" ofType:@"png"];
+                    self.dirImage = [UIImage imageWithContentsOfFile:risingPath];
+                } else {
+                    NSString *fallingPath = [[NSBundle mainBundle] pathForResource:@"arrowdown" ofType:@"png"];
+                    self.dirImage = [UIImage imageWithContentsOfFile:fallingPath];
+                }
             } else {
-                NSString *fallingPath = [[NSBundle mainBundle] pathForResource:@"arrowdown" ofType:@"png"];
-                self.dirImage = [UIImage imageWithContentsOfFile:fallingPath];
+                NSString *risingPath = [[NSBundle mainBundle] pathForResource:@"arrowup" ofType:@"png"];
+                self.dirImage = [[UIImage imageWithContentsOfFile:risingPath] imageRotatedByRadians:self.station.radians];
             }
-        } else {
-            NSString *risingPath = [[NSBundle mainBundle] pathForResource:@"arrowup" ofType:@"png"];
-            self.dirImage = [[UIImage imageWithContentsOfFile:risingPath] imageRotatedByRadians:self.station.radians];
-        }
-        self.imgView.image = self.dirImage;
-        
+            self.imgView.image = self.dirImage;
+        }];
     }
 }
 

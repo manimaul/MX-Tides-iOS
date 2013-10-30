@@ -17,6 +17,7 @@
 -(BOOL) isLoaded;
 
 //call theses after isLoaded
+-(void)setupStationAsync:(MXStation *)station forDate:(NSDate *)date withCompletionBlock:(void(^)(void))completionBlock;
 -(void)setupStation:(MXStation*)station forDate:(NSDate*)date;
 //-(NSString*)getAboutWithStationName:(NSString*)name andDate:(NSDate*)date;
 //-(NSString*)getPredictionWithStationName:(NSString*)name andDate:(NSDate*)date;

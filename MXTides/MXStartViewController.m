@@ -11,6 +11,7 @@
 #import "MXStation.h"
 #import "XTideConnector.hh"
 #import "MXStationDatabase.h"
+#import <QuartzCore/QuartzCore.h>
 
 static bool haveLocation = false;
 static bool debug = false;
@@ -19,6 +20,7 @@ static bool debug = false;
 
 @property (nonatomic) StationType sType;
 
+@property (weak, nonatomic) IBOutlet UIButton *aboutBtn;
 @property (nonatomic, weak) IBOutlet UILabel *latLabel;
 @property (nonatomic, weak) IBOutlet UILabel *lngLabel;
 @property (nonatomic, weak) IBOutlet UIButton *currentButton;
@@ -41,6 +43,13 @@ static bool debug = false;
         [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
         self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     }
+    
+    CGColorRef borderColor = self.aboutBtn.backgroundColor.CGColor;
+    NSLog(@"%@", self.aboutBtn.backgroundColor);
+    self.currentButton.layer.borderColor = borderColor;
+    self.currentButton.layer.borderWidth = 1.;
+    self.tideButton.layer.borderColor = borderColor;
+    self.tideButton.layer.borderWidth = 1.;
     
     locMan = [CLLocationManager new];
     locMan.delegate = self;
