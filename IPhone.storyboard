@@ -212,6 +212,23 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u7-CT-hJL">
+                                        <rect key="frame" x="189" y="45" width="121" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.51372551919999998" green="0.69803923369999998" blue="0.58431375029999999" alpha="0.5" colorSpace="deviceRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="121" id="0UI-qs-ghm"/>
+                                            <constraint firstAttribute="height" constant="45" id="Z67-h8-xNA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Map">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="JLA-xF-Azb" kind="push" id="0qU-zv-AiX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.87295068310000001" green="0.9781796049" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -220,11 +237,15 @@
                                     <constraint firstAttribute="trailing" secondItem="JZy-9j-SQi" secondAttribute="trailing" id="Tmw-bX-q7c"/>
                                     <constraint firstAttribute="bottom" secondItem="Er0-st-bXb" secondAttribute="bottom" constant="20" id="cEf-cA-FHJ"/>
                                     <constraint firstAttribute="trailing" secondItem="Ji0-Jf-hcG" secondAttribute="trailing" id="duN-fl-DqF"/>
+                                    <constraint firstAttribute="centerX" secondItem="8u7-CT-hJL" secondAttribute="centerX" constant="-94.5" id="eOp-TR-QHd"/>
                                     <constraint firstItem="Ji0-Jf-hcG" firstAttribute="leading" secondItem="FCq-jx-dc2" secondAttribute="leading" constant="20" id="eiI-Hb-jgJ"/>
                                     <constraint firstItem="JZy-9j-SQi" firstAttribute="top" secondItem="Ji0-Jf-hcG" secondAttribute="bottom" constant="12" id="eyf-GH-fZy"/>
+                                    <constraint firstAttribute="trailing" secondItem="8u7-CT-hJL" secondAttribute="trailing" id="kJl-xC-dp5"/>
+                                    <constraint firstItem="8u7-CT-hJL" firstAttribute="centerY" secondItem="FCq-jx-dc2" secondAttribute="centerY" id="oc5-X1-0wu"/>
                                     <constraint firstItem="Er0-st-bXb" firstAttribute="top" secondItem="JZy-9j-SQi" secondAttribute="bottom" constant="12" id="sXt-TS-Al1"/>
                                     <constraint firstAttribute="trailing" secondItem="Er0-st-bXb" secondAttribute="trailing" id="uIH-3f-HXb"/>
                                     <constraint firstItem="Er0-st-bXb" firstAttribute="leading" secondItem="FCq-jx-dc2" secondAttribute="leading" constant="20" id="v94-J0-CUw"/>
+                                    <constraint firstAttribute="trailing" secondItem="8u7-CT-hJL" secondAttribute="trailing" id="vKc-XQ-3rJ"/>
                                     <constraint firstAttribute="height" constant="135" id="vab-r8-cHO"/>
                                 </constraints>
                             </view>
@@ -699,6 +720,25 @@ The GNU General Public License does not permit incorporating your program into p
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Gl-W7-9dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2219" y="-372"/>
+        </scene>
+        <!--Map View Controller - Map-->
+        <scene sceneID="XSU-Ok-F0V">
+            <objects>
+                <viewController id="JLA-xF-Azb" customClass="MXMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Le6-Nd-SvB"/>
+                        <viewControllerLayoutGuide type="bottom" id="B64-UZ-1Hx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4A7-UB-QYR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="Bjo-bT-0ls"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ma7-q9-RIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="-1084"/>
         </scene>
         <!--About View Controller - About-->
         <scene sceneID="kOn-Qe-hnq">
