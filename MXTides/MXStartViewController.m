@@ -20,7 +20,7 @@ static bool debug = false;
 
 @property (nonatomic) StationType sType;
 
-@property (weak, nonatomic) IBOutlet UIButton *aboutBtn;
+@property (nonatomic, weak) IBOutlet UIButton *aboutBtn;
 @property (nonatomic, weak) IBOutlet UILabel *latLabel;
 @property (nonatomic, weak) IBOutlet UILabel *lngLabel;
 @property (nonatomic, weak) IBOutlet UIButton *currentButton;

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestFlight.h"
 
 @implementation AppDelegate
 {
@@ -17,21 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //use launch image for bg
-//    UIImageView *iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LaunchImage"]];
-//    iv.contentMode = UIViewContentModeScaleAspectFill;
-//    CGRectMake(self.window.bounds.origin.x, self.window.bounds.origin.y+64., self.window.bounds.size.width, self.window.bounds.size.height-64.);
-//    [iv setFrame:self.window.bounds];
-//    [self.window addSubview:iv];
-//
-//    self.window.backgroundColor = [UIColor grayColor];
-    
-//    CGFloat version = [[[UIDevice currentDevice] systemVersion] floatValue];
-//    NSLog(@"version %f", version);
-//    if (version <= 6.1) {
-//        NSLog(@"setting navbar style to black");
-//        self.window.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-//    }
+    [TestFlight takeOff:@"82fc52ec-218f-4370-bbc5-76666ce2b49f"];
     
     return YES;
 }

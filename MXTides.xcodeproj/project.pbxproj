@@ -21,9 +21,11 @@
 		D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D01CEEB117F0AFB80008431C /* Images.xcassets */; };
 		D0266F3C17FE31E3002E7982 /* MXStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F3B17FE31E3002E7982 /* MXStartViewController.m */; };
 		D0266F4217FE67EC002E7982 /* MXDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */; };
+		D03224101821C02A002D1B53 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D032240A1821C02A002D1B53 /* libTestFlight.a */; };
+		D03224131821C14A002D1B53 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC989E117DC28350071DA9E /* libz.dylib */; };
 		D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */ = {isa = PBXBuildFile; fileRef = D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */; };
 		D08960941801E0B900AB99C7 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08960931801E0B900AB99C7 /* UIImage+Rotate.m */; };
-		D0BD8AB6181F7996004F6A54 /* wav.png in Resources */ = {isa = PBXBuildFile; fileRef = D0BD8AB5181F7996004F6A54 /* wav.png */; };
+		D0A6E9991821E6F5003F0068 /* MXMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A6E9981821E6F5003F0068 /* MXMapViewController.m */; };
 		D0BD8ABC1820616F004F6A54 /* MXAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8ABB1820616F004F6A54 /* MXAboutViewController.m */; };
 		D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CEA18717FCF76F0061E664 /* IPhone.storyboard */; };
 		D0CEA1DA17FE30340061E664 /* MXStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */; };
@@ -112,9 +114,17 @@
 		D0266F3B17FE31E3002E7982 /* MXStartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStartViewController.m; path = MXTides/MXStartViewController.m; sourceTree = "<group>"; };
 		D0266F4017FE67EC002E7982 /* MXDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXDetailsViewController.h; path = MXTides/MXDetailsViewController.h; sourceTree = "<group>"; };
 		D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXDetailsViewController.m; path = MXTides/MXDetailsViewController.m; sourceTree = "<group>"; };
+		D032240A1821C02A002D1B53 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		D032240B1821C02A002D1B53 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D032240C1821C02A002D1B53 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		D032240D1821C02A002D1B53 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		D032240E1821C02A002D1B53 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		D032240F1821C02A002D1B53 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */ = {isa = PBXFileReference; lastKnownFileType = text; name = "harmonics-dwf-20121224-free.tcd"; path = "resources/harmonics-dwf-20121224-free.tcd"; sourceTree = "<group>"; };
 		D08960921801E0B900AB99C7 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Rotate.h"; path = "MXTides/UIImage+Rotate.h"; sourceTree = "<group>"; };
 		D08960931801E0B900AB99C7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "MXTides/UIImage+Rotate.m"; sourceTree = "<group>"; };
+		D0A6E9971821E6F5003F0068 /* MXMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMapViewController.h; path = MXTides/MXMapViewController.h; sourceTree = "<group>"; };
+		D0A6E9981821E6F5003F0068 /* MXMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMapViewController.m; path = MXTides/MXMapViewController.m; sourceTree = "<group>"; };
 		D0BD8AB5181F7996004F6A54 /* wav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wav.png; path = resources/wav.png; sourceTree = "<group>"; };
 		D0BD8ABA1820616F004F6A54 /* MXAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXAboutViewController.h; path = MXTides/MXAboutViewController.h; sourceTree = "<group>"; };
 		D0BD8ABB1820616F004F6A54 /* MXAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXAboutViewController.m; path = MXTides/MXAboutViewController.m; sourceTree = "<group>"; };
@@ -217,6 +227,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03224131821C14A002D1B53 /* libz.dylib in Frameworks */,
+				D03224101821C02A002D1B53 /* libTestFlight.a in Frameworks */,
 				2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */,
 				2B62DD6216E7F0BC001F52FC /* CoreGraphics.framework in Frameworks */,
 				2B62DD5E16E7F0BC001F52FC /* UIKit.framework in Frameworks */,
@@ -239,6 +251,7 @@
 		2B62DD5116E7F0BC001F52FC = {
 			isa = PBXGroup;
 			children = (
+				D03224091821C02A002D1B53 /* TestFlightSDK2.0.2 */,
 				D01CEEA317F09B500008431C /* MXTides */,
 				D0D3802917F1270F0071DDA9 /* Resources */,
 				D0E3456A17F1093B00872028 /* xtide */,
@@ -350,6 +363,8 @@
 				D0266F4117FE67EC002E7982 /* MXDetailsViewController.m */,
 				D004F0B9181ED92600BD941A /* MXDetailsPageViewController.h */,
 				D004F0BA181ED92600BD941A /* MXDetailsPageViewController.m */,
+				D0A6E9971821E6F5003F0068 /* MXMapViewController.h */,
+				D0A6E9981821E6F5003F0068 /* MXMapViewController.m */,
 			);
 			name = View_Controllers;
 			sourceTree = "<group>";
@@ -362,6 +377,19 @@
 				D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D03224091821C02A002D1B53 /* TestFlightSDK2.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				D032240A1821C02A002D1B53 /* libTestFlight.a */,
+				D032240B1821C02A002D1B53 /* README.md */,
+				D032240C1821C02A002D1B53 /* release_notes.md */,
+				D032240D1821C02A002D1B53 /* TestFlight+AsyncLogging.h */,
+				D032240E1821C02A002D1B53 /* TestFlight+ManualSessions.h */,
+				D032240F1821C02A002D1B53 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.2;
 			sourceTree = "<group>";
 		};
 		D088551717F111C100B4C6D5 /* Models */ = {
@@ -554,7 +582,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0BD8AB6181F7996004F6A54 /* wav.png in Resources */,
 				D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */,
 				D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */,
 				D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */,
@@ -596,6 +623,7 @@
 				D0E345D217F109DF00872028 /* PredictionValue.cc in Sources */,
 				D0E345D317F109DF00872028 /* Settings.cc in Sources */,
 				D0E345D417F109DF00872028 /* Skycal.cc in Sources */,
+				D0A6E9991821E6F5003F0068 /* MXMapViewController.m in Sources */,
 				D0E345D517F109DF00872028 /* Speed.cc in Sources */,
 				D0266F4217FE67EC002E7982 /* MXDetailsViewController.m in Sources */,
 				D0E345D617F109DF00872028 /* Station.cc in Sources */,
@@ -715,9 +743,15 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/williamkamp/Documents/workspace-ios/MXTides/TestFlightSDK2.0.2",
+				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				"VALID_ARCHS[sdk=*]" = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -742,9 +776,14 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/williamkamp/Documents/workspace-ios/MXTides/TestFlightSDK2.0.2",
+				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
