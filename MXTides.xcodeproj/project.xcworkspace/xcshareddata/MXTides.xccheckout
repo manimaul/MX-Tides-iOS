@@ -10,6 +10,8 @@
 	<string>MXTides</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>1445702E-D369-484E-9701-11B418FFA59A</key>
+		<string>https://github.com/robbiehanson/KissXML.git</string>
 		<key>4C9F3E27-44A5-4E16-BB2C-16ABDC3118C7</key>
 		<string>https://github.com/manimaul/MX-Tides-iOS.git</string>
 		<key>D1387117-2FD8-4B81-98DF-6281FAD4C1E7</key>
@@ -21,6 +23,8 @@
 	<string>MXTides.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>1445702E-D369-484E-9701-11B418FFA59A</key>
+		<string>../../../WhirlyGlobe/third-party/KissXML</string>
 		<key>4C9F3E27-44A5-4E16-BB2C-16ABDC3118C7</key>
 		<string>../..</string>
 		<key>D1387117-2FD8-4B81-98DF-6281FAD4C1E7</key>
@@ -51,6 +55,14 @@
 			<string>EF20F712-D847-43E1-9D80-C9EA984B09AC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AFNetworking</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1445702E-D369-484E-9701-11B418FFA59A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KissXML</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

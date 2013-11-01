@@ -9,6 +9,7 @@
 #import "MXDetailsPageViewController.h"
 #import "MXDetailsViewController.h"
 #import "MXStation.h"
+#import "Constants.h"
 
 typedef enum {
     mxpfwd,
@@ -153,7 +154,8 @@ typedef enum {
     [self.view addSubview:darkView];
     
     UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height+44, 320, 216)];
-    datePicker.backgroundColor = [UIColor colorWithRed:0.44493 green:0.645269 blue:0.512893 alpha:1.];
+    //datePicker.backgroundColor = [UIColor colorWithRed:0.44493 green:0.645269 blue:0.512893 alpha:1.];
+    datePicker.backgroundColor = themeGreenColor(255.);
     datePicker.tag = 10;
     datePicker.date = cvc.predictionDate;
     [datePicker addTarget:self action:@selector(changeDate:) forControlEvents:UIControlEventValueChanged];

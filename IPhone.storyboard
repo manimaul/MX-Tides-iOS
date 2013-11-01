@@ -730,11 +730,36 @@ The GNU General Public License does not permit incorporating your program into p
                         <viewControllerLayoutGuide type="bottom" id="B64-UZ-1Hx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4A7-UB-QYR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wavbg" translatesAutoresizingMaskIntoConstraints="NO" id="lgv-hk-gnT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMz-h1-yGa">
+                                <rect key="frame" x="5" y="5" width="310" height="406"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87295068310000001" green="0.9781796049" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lgv-hk-gnT" firstAttribute="leading" secondItem="4A7-UB-QYR" secondAttribute="leading" id="0B9-hg-Zpt"/>
+                            <constraint firstItem="TMz-h1-yGa" firstAttribute="leading" secondItem="4A7-UB-QYR" secondAttribute="leading" constant="5" id="Guc-94-BU2"/>
+                            <constraint firstItem="lgv-hk-gnT" firstAttribute="top" secondItem="Le6-Nd-SvB" secondAttribute="bottom" id="LhA-vb-ocv"/>
+                            <constraint firstItem="B64-UZ-1Hx" firstAttribute="top" secondItem="lgv-hk-gnT" secondAttribute="bottom" id="SnD-1P-4G5"/>
+                            <constraint firstAttribute="trailing" secondItem="lgv-hk-gnT" secondAttribute="trailing" id="avh-sR-dMo"/>
+                            <constraint firstItem="TMz-h1-yGa" firstAttribute="top" secondItem="Le6-Nd-SvB" secondAttribute="bottom" constant="5" id="ehu-BG-us3"/>
+                            <constraint firstAttribute="trailing" secondItem="TMz-h1-yGa" secondAttribute="trailing" constant="5" id="nze-7K-Gg6"/>
+                            <constraint firstItem="B64-UZ-1Hx" firstAttribute="top" secondItem="TMz-h1-yGa" secondAttribute="bottom" constant="5" id="uyP-U6-6Wi"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Map" id="Bjo-bT-0ls"/>
+                    <connections>
+                        <outlet property="mapViewBg" destination="TMz-h1-yGa" id="EPm-94-91L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ma7-q9-RIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

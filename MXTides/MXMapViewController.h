@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WhirlyGlobeComponent.h"
+#import "MXGlobeViewController.h"
 
-@interface MXMapViewController : UIViewController
+@interface MXMapViewController : UIViewController <MXShoudShowStationDelegate>
+{
+    MaplyBaseViewController *baseViewC;
+    WhirlyGlobeViewController *globeViewC;
+}
 
 @end

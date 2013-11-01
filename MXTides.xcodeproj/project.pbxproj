@@ -12,6 +12,18 @@
 		2B62DD6216E7F0BC001F52FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DD6116E7F0BC001F52FC /* CoreGraphics.framework */; };
 		2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8218CC176FCB7C0012322A /* CoreLocation.framework */; };
 		D004F0BB181ED92600BD941A /* MXDetailsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D004F0BA181ED92600BD941A /* MXDetailsPageViewController.m */; };
+		D0096A871822D972006D5FD6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B62DDB316E7F4FD001F52FC /* QuartzCore.framework */; };
+		D0096A991822E26F006D5FD6 /* libWhirlyGlobe-MaplyComponent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0096A8E1822D9A3006D5FD6 /* libWhirlyGlobe-MaplyComponent.a */; };
+		D0096A9B1822E27F006D5FD6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0096A9A1822E27F006D5FD6 /* libsqlite3.dylib */; };
+		D0096A9D1822E28C006D5FD6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0096A9C1822E28C006D5FD6 /* OpenGLES.framework */; };
+		D0096A9F1822E29E006D5FD6 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0096A9E1822E29E006D5FD6 /* libstdc++.dylib */; };
+		D0096AB71822ED7C006D5FD6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0096AB61822ED7C006D5FD6 /* CoreText.framework */; };
+		D0096AB91822EDA7006D5FD6 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0096AB81822EDA7006D5FD6 /* libc++.dylib */; };
+		D0096AC81822FC32006D5FD6 /* ne_110m_land.dbf in Resources */ = {isa = PBXBuildFile; fileRef = D0096AC41822FC32006D5FD6 /* ne_110m_land.dbf */; };
+		D0096AC91822FC32006D5FD6 /* ne_110m_land.prj in Resources */ = {isa = PBXBuildFile; fileRef = D0096AC51822FC32006D5FD6 /* ne_110m_land.prj */; };
+		D0096ACA1822FC32006D5FD6 /* ne_110m_land.shp in Resources */ = {isa = PBXBuildFile; fileRef = D0096AC61822FC32006D5FD6 /* ne_110m_land.shp */; };
+		D0096ACB1822FC32006D5FD6 /* ne_110m_land.shx in Resources */ = {isa = PBXBuildFile; fileRef = D0096AC71822FC32006D5FD6 /* ne_110m_land.shx */; };
+		D0096AD9182318B1006D5FD6 /* MXGlobeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0096AD8182318B1006D5FD6 /* MXGlobeViewController.m */; };
 		D00B967517F9CB250054E66F /* MXStationDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967217F9CB250054E66F /* MXStationDatabase.m */; };
 		D00B967617F9CB250054E66F /* XTideConnector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D00B967417F9CB250054E66F /* XTideConnector.mm */; };
 		D00B967B17F9CB3F0054E66F /* MXStation.m in Sources */ = {isa = PBXBuildFile; fileRef = D00B967817F9CB3F0054E66F /* MXStation.m */; };
@@ -68,33 +80,47 @@
 		D0E345E217F109DF00872028 /* ZoneIndex.cc in Sources */ = {isa = PBXBuildFile; fileRef = D0E345BB17F1093B00872028 /* ZoneIndex.cc */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D0096A8D1822D9A3006D5FD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0096A881822D9A3006D5FD6 /* WhirlyGlobe-MaplyComponent.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2B11E0DB15B4C030007AAE3F;
+			remoteInfo = "WhirlyGlobe-MaplyComponent";
+		};
+		D0096A8F1822DECA006D5FD6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0096A881822D9A3006D5FD6 /* WhirlyGlobe-MaplyComponent.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B11E0DA15B4C030007AAE3F;
+			remoteInfo = "WhirlyGlobe-MaplyComponent";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		2B0D630D17A2EE0400C3298D /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		2B62DD5A16E7F0BC001F52FC /* MX Tides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MX Tides.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B62DD5D16E7F0BC001F52FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2B62DD5F16E7F0BC001F52FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B62DD6116E7F0BC001F52FC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2B62DDB316E7F4FD001F52FC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		2B62DDB516E7F505001F52FC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		2B62DDB716E7F509001F52FC /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		2B62DDB916E7F514001F52FC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		2B62DDBB16E7F51B001F52FC /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
-		2B62DDBD16E7F54B001F52FC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2B8218CC176FCB7C0012322A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2BC989E117DC28350071DA9E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		2BEA1E6A171E0F300039F1A4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		D004F0B9181ED92600BD941A /* MXDetailsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXDetailsPageViewController.h; path = MXTides/MXDetailsPageViewController.h; sourceTree = "<group>"; };
 		D004F0BA181ED92600BD941A /* MXDetailsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXDetailsPageViewController.m; path = MXTides/MXDetailsPageViewController.m; sourceTree = "<group>"; };
-		D00B964F17F889120054E66F /* AFHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPClient.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFHTTPClient.m"; sourceTree = "<group>"; };
-		D00B965117F8892D0054E66F /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFHTTPRequestOperation.m"; sourceTree = "<group>"; };
-		D00B965317F889630054E66F /* AFImageRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFImageRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFImageRequestOperation.m"; sourceTree = "<group>"; };
-		D00B965517F889AC0054E66F /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFJSONRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFJSONRequestOperation.m"; sourceTree = "<group>"; };
-		D00B965617F889AC0054E66F /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
-		D00B965717F889AC0054E66F /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFPropertyListRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFPropertyListRequestOperation.m"; sourceTree = "<group>"; };
-		D00B965817F889AC0054E66F /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFURLConnectionOperation.m"; sourceTree = "<group>"; };
-		D00B965917F889AC0054E66F /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFXMLRequestOperation.m; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/AFXMLRequestOperation.m"; sourceTree = "<group>"; };
-		D00B965A17F889AC0054E66F /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "../WhirlyGlobe/third-party/AFNetworking/AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		D00B966117F889E60054E66F /* AFKissXMLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AFKissXMLRequestOperation.m; path = "../../workspace-ios/WhirlyGlobe/third-party/AFKissXMLRequestOperation/AFKissXMLRequestOperation.m"; sourceTree = "<group>"; };
+		D0096A881822D9A3006D5FD6 /* WhirlyGlobe-MaplyComponent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "WhirlyGlobe-MaplyComponent.xcodeproj"; path = "../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/WhirlyGlobe-MaplyComponent.xcodeproj"; sourceTree = "<group>"; };
+		D0096A9A1822E27F006D5FD6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D0096A9C1822E28C006D5FD6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D0096A9E1822E29E006D5FD6 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		D0096AAD1822E7EE006D5FD6 /* libWhirlyGlobeLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWhirlyGlobeLib.a; path = "../../../Library/Developer/Xcode/DerivedData/MXTides-amrhzqjscyuugcgmsbsuireuamsu/Build/Products/Debug-iphoneos/libWhirlyGlobeLib.a"; sourceTree = "<group>"; };
+		D0096AB61822ED7C006D5FD6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		D0096AB81822EDA7006D5FD6 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		D0096ABA1822F0A5006D5FD6 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D0096AC41822FC32006D5FD6 /* ne_110m_land.dbf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.dbf; path = resources/ne_110m_land/ne_110m_land.dbf; sourceTree = "<group>"; };
+		D0096AC51822FC32006D5FD6 /* ne_110m_land.prj */ = {isa = PBXFileReference; lastKnownFileType = text; name = ne_110m_land.prj; path = resources/ne_110m_land/ne_110m_land.prj; sourceTree = "<group>"; };
+		D0096AC61822FC32006D5FD6 /* ne_110m_land.shp */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shp; path = resources/ne_110m_land/ne_110m_land.shp; sourceTree = "<group>"; };
+		D0096AC71822FC32006D5FD6 /* ne_110m_land.shx */ = {isa = PBXFileReference; lastKnownFileType = file; name = ne_110m_land.shx; path = resources/ne_110m_land/ne_110m_land.shx; sourceTree = "<group>"; };
+		D0096AD7182318B1006D5FD6 /* MXGlobeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXGlobeViewController.h; path = MXTides/MXGlobeViewController.h; sourceTree = "<group>"; };
+		D0096AD8182318B1006D5FD6 /* MXGlobeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXGlobeViewController.m; path = MXTides/MXGlobeViewController.m; sourceTree = "<group>"; };
 		D00B967117F9CB250054E66F /* MXStationDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationDatabase.h; path = MXTides/MXStationDatabase.h; sourceTree = "<group>"; };
 		D00B967217F9CB250054E66F /* MXStationDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationDatabase.m; path = MXTides/MXStationDatabase.m; sourceTree = "<group>"; };
 		D00B967317F9CB250054E66F /* XTideConnector.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = XTideConnector.hh; path = MXTides/XTideConnector.hh; sourceTree = "<group>"; };
@@ -125,14 +151,12 @@
 		D08960931801E0B900AB99C7 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Rotate.m"; path = "MXTides/UIImage+Rotate.m"; sourceTree = "<group>"; };
 		D0A6E9971821E6F5003F0068 /* MXMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXMapViewController.h; path = MXTides/MXMapViewController.h; sourceTree = "<group>"; };
 		D0A6E9981821E6F5003F0068 /* MXMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXMapViewController.m; path = MXTides/MXMapViewController.m; sourceTree = "<group>"; };
-		D0BD8AB5181F7996004F6A54 /* wav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wav.png; path = resources/wav.png; sourceTree = "<group>"; };
 		D0BD8ABA1820616F004F6A54 /* MXAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXAboutViewController.h; path = MXTides/MXAboutViewController.h; sourceTree = "<group>"; };
 		D0BD8ABB1820616F004F6A54 /* MXAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXAboutViewController.m; path = MXTides/MXAboutViewController.m; sourceTree = "<group>"; };
 		D0C54D451802032D002C2C08 /* Seattle.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Seattle.gpx; sourceTree = "<group>"; };
 		D0CEA18717FCF76F0061E664 /* IPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IPhone.storyboard; sourceTree = "<group>"; };
 		D0CEA1D817FE30340061E664 /* MXStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXStationTableViewController.h; path = MXTides/MXStationTableViewController.h; sourceTree = "<group>"; };
 		D0CEA1D917FE30340061E664 /* MXStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXStationTableViewController.m; path = MXTides/MXStationTableViewController.m; sourceTree = "<group>"; };
-		D0E3455517F101E300872028 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D0E3456517F1092A00872028 /* bit_pack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bit_pack.c; sourceTree = "<group>"; };
 		D0E3456617F1092A00872028 /* tcd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tcd.h; sourceTree = "<group>"; };
 		D0E3456717F1092A00872028 /* tide_db.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tide_db.c; sourceTree = "<group>"; };
@@ -227,7 +251,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0096AB91822EDA7006D5FD6 /* libc++.dylib in Frameworks */,
+				D0096AB71822ED7C006D5FD6 /* CoreText.framework in Frameworks */,
+				D0096A9F1822E29E006D5FD6 /* libstdc++.dylib in Frameworks */,
 				D03224131821C14A002D1B53 /* libz.dylib in Frameworks */,
+				D0096A991822E26F006D5FD6 /* libWhirlyGlobe-MaplyComponent.a in Frameworks */,
+				D0096A9B1822E27F006D5FD6 /* libsqlite3.dylib in Frameworks */,
+				D0096A871822D972006D5FD6 /* QuartzCore.framework in Frameworks */,
+				D0096A9D1822E28C006D5FD6 /* OpenGLES.framework in Frameworks */,
 				D03224101821C02A002D1B53 /* libTestFlight.a in Frameworks */,
 				2B8218CD176FCB7C0012322A /* CoreLocation.framework in Frameworks */,
 				2B62DD6216E7F0BC001F52FC /* CoreGraphics.framework in Frameworks */,
@@ -239,15 +270,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2B0D633017A2EEE900C3298D /* AFKissXMLRequestOperation */ = {
-			isa = PBXGroup;
-			children = (
-				D00B966117F889E60054E66F /* AFKissXMLRequestOperation.m */,
-			);
-			name = AFKissXMLRequestOperation;
-			path = "WhirlyGlobeComponentTester.xcodeproj/../../../third-party/AFKissXMLRequestOperation";
-			sourceTree = "<group>";
-		};
 		2B62DD5116E7F0BC001F52FC = {
 			isa = PBXGroup;
 			children = (
@@ -257,8 +279,6 @@
 				D0E3456A17F1093B00872028 /* xtide */,
 				D0E3456417F1092A00872028 /* libtcd */,
 				2B62DD6416E7F0BC001F52FC /* Supporting Files */,
-				2B62DD9616E7F4D8001F52FC /* AFNetworking */,
-				2B0D633017A2EEE900C3298D /* AFKissXMLRequestOperation */,
 				2B62DD5C16E7F0BC001F52FC /* Frameworks */,
 				2B62DD5B16E7F0BC001F52FC /* Products */,
 			);
@@ -275,17 +295,16 @@
 		2B62DD5C16E7F0BC001F52FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0096AB81822EDA7006D5FD6 /* libc++.dylib */,
+				D0096AB61822ED7C006D5FD6 /* CoreText.framework */,
+				D0096AAD1822E7EE006D5FD6 /* libWhirlyGlobeLib.a */,
+				D0096A9E1822E29E006D5FD6 /* libstdc++.dylib */,
+				D0096A9C1822E28C006D5FD6 /* OpenGLES.framework */,
+				D0096A9A1822E27F006D5FD6 /* libsqlite3.dylib */,
+				D0096A881822D9A3006D5FD6 /* WhirlyGlobe-MaplyComponent.xcodeproj */,
 				2BC989E117DC28350071DA9E /* libz.dylib */,
-				2B0D630D17A2EE0400C3298D /* libxml2.dylib */,
 				2B8218CC176FCB7C0012322A /* CoreLocation.framework */,
-				2BEA1E6A171E0F300039F1A4 /* CoreText.framework */,
-				2B62DDBD16E7F54B001F52FC /* MobileCoreServices.framework */,
-				2B62DDBB16E7F51B001F52FC /* libstdc++.dylib */,
-				2B62DDB916E7F514001F52FC /* SystemConfiguration.framework */,
-				2B62DDB716E7F509001F52FC /* libsqlite3.dylib */,
-				2B62DDB516E7F505001F52FC /* OpenGLES.framework */,
 				2B62DDB316E7F4FD001F52FC /* QuartzCore.framework */,
-				D0E3455517F101E300872028 /* libc++.dylib */,
 				2B62DD5D16E7F0BC001F52FC /* UIKit.framework */,
 				2B62DD5F16E7F0BC001F52FC /* Foundation.framework */,
 				2B62DD6116E7F0BC001F52FC /* CoreGraphics.framework */,
@@ -305,20 +324,20 @@
 			path = WhirlyGlobeComponentTester;
 			sourceTree = "<group>";
 		};
-		2B62DD9616E7F4D8001F52FC /* AFNetworking */ = {
+		D0096A891822D9A3006D5FD6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D00B965517F889AC0054E66F /* AFJSONRequestOperation.m */,
-				D00B965617F889AC0054E66F /* AFNetworkActivityIndicatorManager.m */,
-				D00B965717F889AC0054E66F /* AFPropertyListRequestOperation.m */,
-				D00B965817F889AC0054E66F /* AFURLConnectionOperation.m */,
-				D00B965917F889AC0054E66F /* AFXMLRequestOperation.m */,
-				D00B965A17F889AC0054E66F /* UIImageView+AFNetworking.m */,
-				D00B965317F889630054E66F /* AFImageRequestOperation.m */,
-				D00B965117F8892D0054E66F /* AFHTTPRequestOperation.m */,
-				D00B964F17F889120054E66F /* AFHTTPClient.m */,
+				D0096A8E1822D9A3006D5FD6 /* libWhirlyGlobe-MaplyComponent.a */,
 			);
-			name = AFNetworking;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0096ABB1822F0F8006D5FD6 /* Inline */ = {
+			isa = PBXGroup;
+			children = (
+				D0096ABA1822F0A5006D5FD6 /* Constants.h */,
+			);
+			name = Inline;
 			sourceTree = "<group>";
 		};
 		D0109E6E1800916500311DDC /* Categories */ = {
@@ -333,6 +352,7 @@
 		D01CEEA317F09B500008431C /* MXTides */ = {
 			isa = PBXGroup;
 			children = (
+				D0096ABB1822F0F8006D5FD6 /* Inline */,
 				D0109E6E1800916500311DDC /* Categories */,
 				D088551917F111D300B4C6D5 /* Model_Controllers */,
 				D088551717F111C100B4C6D5 /* Models */,
@@ -375,6 +395,8 @@
 				D0CEA18717FCF76F0061E664 /* IPhone.storyboard */,
 				D00B968617F9CB9F0054E66F /* MXStationTableViewCell.h */,
 				D00B968717F9CB9F0054E66F /* MXStationTableViewCell.m */,
+				D0096AD7182318B1006D5FD6 /* MXGlobeViewController.h */,
+				D0096AD8182318B1006D5FD6 /* MXGlobeViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -417,7 +439,10 @@
 		D0D3802917F1270F0071DDA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D0BD8AB5181F7996004F6A54 /* wav.png */,
+				D0096AC41822FC32006D5FD6 /* ne_110m_land.dbf */,
+				D0096AC51822FC32006D5FD6 /* ne_110m_land.prj */,
+				D0096AC61822FC32006D5FD6 /* ne_110m_land.shp */,
+				D0096AC71822FC32006D5FD6 /* ne_110m_land.shx */,
 				D0C54D451802032D002C2C08 /* Seattle.gpx */,
 				D01CEEB117F0AFB80008431C /* Images.xcassets */,
 				D088551A17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd */,
@@ -540,6 +565,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D0096A901822DECA006D5FD6 /* PBXTargetDependency */,
 			);
 			name = MXTides;
 			productName = WhirlyGlobeComponentTester;
@@ -570,6 +596,12 @@
 			mainGroup = 2B62DD5116E7F0BC001F52FC;
 			productRefGroup = 2B62DD5B16E7F0BC001F52FC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D0096A891822D9A3006D5FD6 /* Products */;
+					ProjectRef = D0096A881822D9A3006D5FD6 /* WhirlyGlobe-MaplyComponent.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2B62DD5916E7F0BC001F52FC /* MXTides */,
@@ -577,11 +609,25 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		D0096A8E1822D9A3006D5FD6 /* libWhirlyGlobe-MaplyComponent.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libWhirlyGlobe-MaplyComponent.a";
+			remoteRef = D0096A8D1822D9A3006D5FD6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2B62DD5816E7F0BC001F52FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0096AC81822FC32006D5FD6 /* ne_110m_land.dbf in Resources */,
+				D0096AC91822FC32006D5FD6 /* ne_110m_land.prj in Resources */,
+				D0096ACA1822FC32006D5FD6 /* ne_110m_land.shp in Resources */,
+				D0096ACB1822FC32006D5FD6 /* ne_110m_land.shx in Resources */,
 				D088551B17F114EE00B4C6D5 /* harmonics-dwf-20121224-free.tcd in Resources */,
 				D01CEEB217F0AFB80008431C /* Images.xcassets in Resources */,
 				D0CEA18817FCF76F0061E664 /* IPhone.storyboard in Resources */,
@@ -606,6 +652,7 @@
 				D0E345C617F109DF00872028 /* CurrentBearing.cc in Sources */,
 				D0E345C717F109DF00872028 /* Date.cc in Sources */,
 				D0E345C817F109DF00872028 /* Dstr.cc in Sources */,
+				D0096AD9182318B1006D5FD6 /* MXGlobeViewController.m in Sources */,
 				D0E345C917F109DF00872028 /* Global.cc in Sources */,
 				D0E345CA17F109DF00872028 /* HarmonicsFile.cc in Sources */,
 				D00B968C17F9CBF50054E66F /* main.m in Sources */,
@@ -650,6 +697,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D0096A901822DECA006D5FD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "WhirlyGlobe-MaplyComponent";
+			targetProxy = D0096A8F1822DECA006D5FD6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		D00B969417F9CC710054E66F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -667,8 +722,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -677,7 +732,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -690,7 +745,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-lstdc++";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -700,8 +755,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -710,13 +765,13 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu89;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-lstdc++";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -735,17 +790,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MXTides/MXTides-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/",
-					"../WhirlyGlobe/third-party/KissXML/KissXML/",
-					/usr/include/libxml2/,
-					"../WhirlyGlobe/third-party/AFKissXMLRequestOperation/",
-					"../WhirlyGlobe/third-party/AFNetworking/AFNetworking",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/williamkamp/Documents/workspace-ios/MXTides/TestFlightSDK2.0.2",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MXTides-amrhzqjscyuugcgmsbsuireuamsu/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
@@ -768,17 +822,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MXTides/MXTides-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/",
-					"../WhirlyGlobe/third-party/KissXML/KissXML/",
-					/usr/include/libxml2/,
-					"../WhirlyGlobe/third-party/AFKissXMLRequestOperation/",
-					"../WhirlyGlobe/third-party/AFNetworking/AFNetworking",
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../WhirlyGlobe/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include\"",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/MXTides/MXTides-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/williamkamp/Documents/workspace-ios/MXTides/TestFlightSDK2.0.2",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MXTides-amrhzqjscyuugcgmsbsuireuamsu/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-lstdc++";
 				PRODUCT_NAME = "MX Tides";
